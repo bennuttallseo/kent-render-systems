@@ -1,0 +1,100 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Expert External Rendering in Kent | Kent Render Systems",
+  description = "Specialist external rendering across Kent — silicone, monocouche & K-Rend systems applied by a time-served installer with nearly 20 years' experience. Manufacturer-approved, fully insured. Free no-obligation quotes.",
+} = Astro.props;
+
+// NOTE: placeholders below to confirm with Jack before launch.
+const business = {
+  name: "Kent Render Systems",
+  phone: "07707 564597", // [confirm business number]
+  phoneHref: "tel:+447707564597",
+  email: "info@kentrendersystems.co.uk",
+  region: "Kent",
+  country: "GB",
+};
+
+const siteUrl = "https://www.kentrendersystems.co.uk";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  name: business.name,
+  description,
+  url: siteUrl,
+  telephone: business.phone,
+  email: business.email,
+  areaServed: {
+    "@type": "AdministrativeArea",
+    name: "Kent, England",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressRegion: "Kent",
+    addressCountry: "GB",
+  },
+  knowsAbout: [
+    "External rendering",
+    "Silicone render",
+    "Monocouche render",
+    "K-Rend",
+    "External wall insulation",
+  ],
+  slogan: "Kent's external rendering specialists",
+};
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/logo-mark.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={siteUrl + "/"} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={business.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={siteUrl + "/"} />
+    <meta property="og:locale" content="en_GB" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(schema)}
+    />
+  </head>
+  <body>
+    <Header phone={business.phone} phoneHref={business.phoneHref} />
+    <main>
+      <slot />
+    </main>
+    <Footer
+      phone={business.phone}
+      phoneHref={business.phoneHref}
+      email={business.email}
+    />
+  </body>
+</html>
