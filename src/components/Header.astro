@@ -16,13 +16,7 @@ const navLinks = [
 <header class="site-header" id="top">
   <div class="container header-inner">
     <a class="brand" href="#top" aria-label="Kent Render Systems — home">
-      <span class="brand-mark">
-        <img src="/logo-mark.png" alt="" width="46" height="46" />
-      </span>
-      <span class="brand-text">
-        <strong>KENT</strong>
-        <small>Render Systems Ltd</small>
-      </span>
+      <img class="brand-logo" src="/logo-stacked.png" alt="Kent Render Systems Ltd" width="794" height="717" />
     </a>
 
     <nav class="nav" aria-label="Primary">
@@ -66,39 +60,15 @@ const navLinks = [
     gap: 24px;
   }
   .brand {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 12px;
     margin-right: auto;
   }
-  .brand-mark {
-    display: grid;
-    place-items: center;
-    flex: none;
-  }
-  .brand-mark img {
-    width: 46px;
-    height: 46px;
+  .brand-logo {
+    height: 70px;
+    width: auto;
+    display: block;
     object-fit: contain;
-  }
-  .brand-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.05;
-  }
-  .brand-text strong {
-    font-family: var(--font-display);
-    font-size: 1.32rem;
-    font-weight: 800;
-    color: var(--krs-navy);
-    letter-spacing: 0.16em;
-  }
-  .brand-text small {
-    font-size: 0.62rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--krs-royal);
   }
 
   .nav {
