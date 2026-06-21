@@ -363,6 +363,49 @@ const icons: Record<string, string> = {
     </div>
   </section>
 
+  <!-- SECTION 4b — Gallery -->
+  <section class="section section--blue" id="gallery">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Gallery</p>
+        <h2>See the difference</h2>
+        <p class="lead">
+          Real Kent homes, transformed. Browse our before-and-after gallery to
+          see the difference quality rendering makes and the finish we deliver on
+          every job.
+        </p>
+      </div>
+      <div class="carousel" data-carousel>
+        <button class="carousel-btn carousel-prev" type="button" aria-label="Previous projects">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <ul class="carousel-track" data-carousel-track>
+          {gallery.map((g) => (
+            <li class="carousel-slide">
+              <figure class="gallery-tile">
+                <img src={g.src} alt={g.alt} loading="lazy" width="800" height="600" />
+                <figcaption>{g.caption}</figcaption>
+              </figure>
+            </li>
+          ))}
+          <li class="carousel-slide">
+            <div class="gallery-tile gallery-placeholder">
+              <span class="ph-mark">+</span>
+              <strong>More projects coming soon</strong>
+              <small>New before &amp; after photos added regularly</small>
+            </div>
+          </li>
+        </ul>
+        <button class="carousel-btn carousel-next" type="button" aria-label="Next projects">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+      <div class="gallery-cta">
+        <a class="btn btn--light" href="#quote">Get your project quoted</a>
+      </div>
+    </div>
+  </section>
+
   <!-- SECTION 5 — Benefits -->
   <section class="section">
     <div class="container">
@@ -597,49 +640,6 @@ const icons: Record<string, string> = {
       <ul class="area-tags">
         {areas.map((a) => <li>{a}</li>)}
       </ul>
-    </div>
-  </section>
-
-  <!-- SECTION 11 — Gallery -->
-  <section class="section section--dark" id="gallery">
-    <div class="container">
-      <div class="section-head center">
-        <p class="eyebrow">Gallery</p>
-        <h2>See the difference</h2>
-        <p class="lead">
-          Real Kent homes, transformed. Browse our before-and-after gallery to
-          see the difference quality rendering makes and the finish we deliver on
-          every job.
-        </p>
-      </div>
-      <div class="carousel" data-carousel>
-        <button class="carousel-btn carousel-prev" type="button" aria-label="Previous projects">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-        </button>
-        <ul class="carousel-track" data-carousel-track>
-          {gallery.map((g) => (
-            <li class="carousel-slide">
-              <figure class="gallery-tile">
-                <img src={g.src} alt={g.alt} loading="lazy" width="800" height="600" />
-                <figcaption>{g.caption}</figcaption>
-              </figure>
-            </li>
-          ))}
-          <li class="carousel-slide">
-            <div class="gallery-tile gallery-placeholder">
-              <span class="ph-mark">+</span>
-              <strong>More projects coming soon</strong>
-              <small>New before &amp; after photos added regularly</small>
-            </div>
-          </li>
-        </ul>
-        <button class="carousel-btn carousel-next" type="button" aria-label="Next projects">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-        </button>
-      </div>
-      <div class="gallery-cta">
-        <a class="btn btn--light" href="#quote">Get your project quoted</a>
-      </div>
     </div>
   </section>
 
