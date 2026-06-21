@@ -144,17 +144,6 @@ ul {
   color: #fff;
 }
 
-.section--blue {
-  background:
-    radial-gradient(820px 360px at 82% -12%, rgba(91, 143, 217, 0.4), transparent 60%),
-    linear-gradient(135deg, #1d52a3 0%, #18488f 100%);
-  color: #e3edfb;
-}
-.section--blue h2,
-.section--blue h3 {
-  color: #fff;
-}
-
 .section-head {
   max-width: 720px;
   margin-bottom: 48px;
@@ -177,9 +166,6 @@ ul {
 .section--dark .eyebrow {
   color: var(--gold);
 }
-.section--blue .eyebrow {
-  color: #bcd6ff;
-}
 
 .lead {
   font-size: 1.12rem;
@@ -187,9 +173,6 @@ ul {
 }
 .section--dark .lead {
   color: #c2ccd6;
-}
-.section--blue .lead {
-  color: #d4e2f7;
 }
 
 /* ---------- Buttons ---------- */
