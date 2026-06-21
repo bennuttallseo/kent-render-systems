@@ -5,12 +5,16 @@ const phoneHref = "tel:+447707564597";
 const phone = "07707 564597"; // [confirm business number with Jack]
 const email = "info@kentrendersystems.co.uk";
 
-const heroTrust = [
-  "Nearly 20 Years' Experience",
-  "Manufacturer-Approved Installer",
-  "Fully Insured",
-  "Manufacturer-Backed Guarantees",
-  "Free No-Obligation Quotes",
+const heroStats = [
+  { value: "20", unit: "yrs", label: "In the rendering trade" },
+  { value: "4", unit: "", label: "Manufacturer accreditations" },
+];
+
+const heroPoints = [
+  "Manufacturer-trained, approved installer",
+  "Fully insured for peace of mind",
+  "Manufacturer-backed guarantees",
+  "Free, no-obligation quotes",
 ];
 
 // [Confirm exact accreditation wording + source official badge artwork]
@@ -228,26 +232,40 @@ const icons: Record<string, string> = {
   <!-- SECTION 1 — Hero -->
   <section class="hero">
     <div class="container hero-inner">
-      <p class="eyebrow hero-eyebrow">Baumit · Weber · EcoRend Approved Installer</p>
-      <h1>Expert External Rendering in Kent</h1>
-      <p class="hero-sub">
-        Silicone, monocouche and K-Rend rendering systems, applied by a
-        time-served specialist with nearly 20 years' experience. We protect,
-        insulate and transform homes across Kent, backed by
-        manufacturer-approved guarantees.
-      </p>
-      <div class="hero-cta">
-        <a class="btn" href="#quote">Get Your Free Quote</a>
-        <a class="btn btn--ghost" href="#gallery">View Our Work</a>
+      <div class="hero-text">
+        <p class="eyebrow hero-eyebrow">Baumit · Weber · EcoRend Approved Installer</p>
+        <h1>Expert External Rendering in Kent</h1>
+        <p class="hero-sub">
+          Silicone, monocouche and K-Rend rendering systems, applied by a
+          time-served specialist with nearly 20 years' experience. We protect,
+          insulate and transform homes across Kent, backed by
+          manufacturer-approved guarantees.
+        </p>
+        <div class="hero-cta">
+          <a class="btn" href="#quote">Get Your Free Quote</a>
+          <a class="btn btn--ghost" href="#gallery">View Our Work</a>
+        </div>
       </div>
-      <ul class="hero-trust">
-        {heroTrust.map((t) => (
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" set:html={icons.check} />
-            {t}
-          </li>
-        ))}
-      </ul>
+
+      <aside class="hero-credentials">
+        <p class="cred-title">Our credentials</p>
+        <div class="cred-stats">
+          {heroStats.map((s) => (
+            <div class="cred-stat">
+              <span class="cred-value">{s.value}{s.unit && <i>{s.unit}</i>}</span>
+              <span class="cred-label">{s.label}</span>
+            </div>
+          ))}
+        </div>
+        <ul class="cred-points">
+          {heroPoints.map((p) => (
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" set:html={icons.check} />
+              {p}
+            </li>
+          ))}
+        </ul>
+      </aside>
     </div>
   </section>
 
@@ -718,8 +736,19 @@ const icons: Record<string, string> = {
   .hero-inner {
     position: relative;
     z-index: 1;
-    padding-block: clamp(64px, 7vw, 120px);
-    max-width: 880px;
+    padding-block: clamp(56px, 6vw, 104px);
+    display: grid;
+    gap: 40px;
+    align-items: center;
+  }
+  @media (min-width: 940px) {
+    .hero-inner {
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+    }
+  }
+  .hero-text {
+    max-width: 640px;
   }
   .hero-eyebrow {
     color: var(--gold);
@@ -731,16 +760,15 @@ const icons: Record<string, string> = {
     margin-bottom: 22px;
   }
   .hero-sub {
-    font-size: clamp(1.05rem, 0.98rem + 0.5vw, 1.3rem);
+    font-size: clamp(1.05rem, 0.98rem + 0.5vw, 1.25rem);
     color: #c7d0da;
-    max-width: 60ch;
     margin-bottom: 30px;
   }
   .hero-cta {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
-    margin-bottom: 38px;
+    margin-bottom: 0;
   }
   .hero-cta .btn--ghost {
     --btn-fg: #fff;
@@ -751,27 +779,76 @@ const icons: Record<string, string> = {
     border-color: #fff;
     color: #fff;
   }
-  .hero-trust {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px 26px;
-    padding-top: 26px;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  /* Hero credentials panel */
+  .hero-credentials {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    backdrop-filter: blur(8px);
+    box-shadow: var(--shadow-lg);
   }
-  .hero-trust li {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
+  .cred-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.74rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+  .cred-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  }
+  .cred-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .cred-value {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: #fff;
+  }
+  .cred-value i {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--krs-sky);
+    margin-left: 3px;
+  }
+  .cred-label {
+    font-size: 0.82rem;
+    line-height: 1.3;
+    color: #c2ccd6;
+  }
+  .cred-points {
+    display: grid;
+    gap: 13px;
+  }
+  .cred-points li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
     font-family: var(--font-display);
     font-weight: 600;
     font-size: 0.92rem;
-    color: #d7dee6;
+    color: #dde4ec;
   }
-  .hero-trust svg {
+  .cred-points svg {
     width: 18px;
     height: 18px;
     color: var(--gold);
     flex: none;
+    margin-top: 1px;
   }
 
   /* ---------- Trust bar ---------- */
