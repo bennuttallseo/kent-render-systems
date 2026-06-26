@@ -6,17 +6,23 @@ interface Props {
 const { phone, phoneHref } = Astro.props;
 
 const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "Render Types", href: "#render-types" },
-  { label: "Areas", href: "#areas" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 ---
 
 <header class="site-header" id="top">
   <div class="container header-inner">
-    <a class="brand" href="#top" aria-label="Kent Render Systems — home">
-      <img class="brand-logo" src="/logo-stacked.png" alt="Kent Render Systems Ltd" width="794" height="717" />
+    <a class="brand" href="/" aria-label="Kent Render Systems home">
+      <img class="brand-logo brand-logo--full" src="/logo-stacked.png" alt="Kent Render Systems Ltd" width="794" height="717" />
+      <span class="brand-stack" aria-hidden="true">
+        <img class="brand-mark" src="/logo-mark.png" alt="" width="120" height="108" />
+        <span class="brand-text">
+          <strong>KENT</strong>
+          <small>Render Systems Ltd</small>
+        </span>
+      </span>
     </a>
 
     <nav class="nav" aria-label="Primary">
@@ -28,7 +34,7 @@ const navLinks = [
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
         <span>{phone}</span>
       </a>
-      <a class="btn btn--sm" href="#quote">Get Your Free Quote</a>
+      <a class="btn btn--sm" href="/#quote">Get Your Free Quote</a>
     </div>
 
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
@@ -38,7 +44,7 @@ const navLinks = [
 
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
     {navLinks.map((l) => <a href={l.href}>{l.label}</a>)}
-    <a class="btn" href="#quote">Get Your Free Quote</a>
+    <a class="btn" href="/#quote">Get Your Free Quote</a>
     <a class="mobile-phone" href={phoneHref}>Call {phone}</a>
   </nav>
 </header>
@@ -65,10 +71,49 @@ const navLinks = [
     margin-right: auto;
   }
   .brand-logo {
-    height: 70px;
+    height: 96px;
+    width: auto;
+    object-fit: contain;
+  }
+  /* Default (mobile): show stacked lockup, hide full combined logo */
+  .brand-logo--full {
+    display: none;
+  }
+  .brand-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .brand-stack .brand-mark {
+    height: 52px;
     width: auto;
     display: block;
     object-fit: contain;
+  }
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.05;
+  }
+  .brand-text strong {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--krs-navy);
+    letter-spacing: 0.28em;
+    margin-left: 0.28em;
+  }
+  .brand-text small {
+    font-size: 0.56rem;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--krs-royal);
+    margin-left: 0.24em;
+    margin-top: 1px;
   }
 
   .nav {
@@ -174,6 +219,12 @@ const navLinks = [
       display: flex;
     }
     .nav-toggle {
+      display: none;
+    }
+    .brand-logo--full {
+      display: block;
+    }
+    .brand-stack {
       display: none;
     }
   }

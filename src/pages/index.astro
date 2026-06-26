@@ -1,9 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ContactSection from "../components/ContactSection.astro";
 
 const phoneHref = "tel:+447707564597";
 const phone = "07707 564597"; // [confirm business number with Jack]
-const email = "info@kentrendersystems.co.uk";
 
 const heroStats = [
   { value: "20", unit: "yrs", label: "In the rendering trade" },
@@ -31,18 +31,24 @@ const services = [
     tag: "Most popular",
     body: "Silicone render is our most popular finish. A flexible, breathable, self-cleaning thin-coat render that resists cracking and holds its colours for years. It is water-repellent yet lets your walls breathe, protecting the wall beneath while keeping your home looking fresh. It is an ideal rendering choice for older and modern houses.",
     icon: "drop",
+    img: "/images/silicone-render-house-kent.jpg",
+    imgAlt: "House finished in smooth white silicone render with a modern entrance in Kent",
   },
   {
     name: "Monocouche rendering",
     tag: "One-coat",
     body: "Monocouche rendering is a through-coloured, one-coat finish that is hard-wearing and easy to live with. Because the colour runs all the way through, there is no painting needed, just a clean, modern finish. Monocouche rendering is applied for an even, consistent coat and a long-lasting finish.",
     icon: "layers",
+    img: "/images/monocouche-render-house-kent.jpg",
+    imgAlt: "Through-coloured monocouche render on the rear of a house in Kent",
   },
   {
     name: "K-Rend",
     tag: "Market-leading",
     body: "K-Rend is the UK's market-leading silicone render brand. As an approved installer, we fit the full K-Rend range to deliver a premium, durable and virtually maintenance-free exterior. K-Rend gives your home a high-quality rendering finish built to last.",
     icon: "shield",
+    img: "/images/k-rend-render-texture-kent.jpg",
+    imgAlt: "Close-up of textured K-Rend silicone render finish on a wall in Kent",
   },
 ];
 
@@ -85,7 +91,7 @@ const whyUs = [
   },
   {
     title: "Quality workmanship, every time",
-    body: "A skilled, reliable team, sharp detailing and a tidy site throughout. We treat your home and your walls with respect, take pride in the finishing and standard of our work and leave your house clean.",
+    body: "A skilled, reliable team, sharp detailing and a tidy site throughout. We machine spray our renders, the industry-leading method of application, for a more consistent, higher-quality finish. We treat your home and your walls with respect, take pride in the standard of our work and leave your house clean.",
   },
   {
     title: "Fully insured and local",
@@ -107,12 +113,12 @@ const renderTypes = [
   {
     name: "Acrylic render",
     body: "A flexible thin-coat acrylic finish that resists cracking well, often used on walls prone to movement. Acrylic render is hard-wearing and comes in a wide range of colours.",
-    us: false,
+    us: true,
   },
   {
-    name: "Cement render",
-    body: "The traditional sand and cement render. Cement render is hard-wearing and affordable, usually painted once cured, though it is less breathable and more prone to cracking than modern finishes. Many older houses were finished in cement render or pebbledash.",
-    us: false,
+    name: "Sand & cement render",
+    body: "We fit a modern, pre-bagged sand and cement render that is high polymer-based, which means it does not crack like traditional sand and cement. It is hard-wearing and versatile, and can be left bare or painted, giving older and newer walls a strong, durable finish without the brittleness of old-style cement render.",
+    us: true,
   },
   {
     name: "Insulated render",
@@ -139,8 +145,8 @@ const process = [
   },
   {
     step: "03",
-    title: "Application",
-    body: "We apply the render correctly, base coat, mesh and top coat, to create a strong, even finish on your walls.",
+    title: "Machine-sprayed application",
+    body: "We apply the render correctly, base coat, mesh and top coat, and the top coat is machine sprayed. Spray application is the industry-leading method, delivering a more consistent, even and higher-quality finish across your walls than hand application alone.",
   },
   {
     step: "04",
@@ -153,7 +159,7 @@ const areas = [
   "Maidstone", "Medway", "Canterbury", "Ashford", "Sittingbourne",
   "Faversham", "Folkestone", "Dover", "Deal", "Sandwich",
   "Margate", "Ramsgate", "Broadstairs", "Whitstable", "Herne Bay",
-  "Tonbridge", "Tunbridge Wells",
+  "Tonbridge", "Tunbridge Wells", "Bromley", "Sidcup",
 ];
 
 const faqs = [
@@ -175,7 +181,7 @@ const faqs = [
   },
   {
     q: "Do you do lime render for period or listed homes?",
-    a: "We specialise in modern monocouche and K-Rend rendering. If you have a heritage home that may need traditional lime render, we will advise you on the most appropriate, breathable lime or modern option for your walls.",
+    a: "Yes. Alongside modern silicone, monocouche and K-Rend systems, we offer lime render for period, heritage and listed homes. Modern lime render comes pre-bagged for a consistent, breathable finish, so we can supply and apply the right lime system to suit your walls.",
   },
   {
     q: "Will rendering help with damp?",
@@ -200,19 +206,34 @@ const gallery = [
     caption: "External rendering, Kent",
   },
   {
-    src: "/images/silicone-render-detached-house-kent.jpg",
-    alt: "Silicone render on a newly built detached house in Kent",
-    caption: "Silicone render, Kent",
-  },
-  {
     src: "/images/render-job-kent.jpg",
     alt: "Completed silicone render job on a semi-detached house in Kent",
     caption: "Render job, Kent",
   },
   {
-    src: "/images/rendering-terraced-house-kent.jpg",
-    alt: "Smooth render on an older terraced house in Kent",
-    caption: "Terraced house rendering, Kent",
+    src: "/images/new-build-house-rendering-kent.jpg",
+    alt: "Newly rendered detached new-build house with brick plinth in Kent",
+    caption: "New-build rendering, Kent",
+  },
+  {
+    src: "/images/premium-render-extension-kent.jpg",
+    alt: "Premium render extension with stone detailing and round windows in Kent",
+    caption: "Render &amp; stone detailing, Kent",
+  },
+  {
+    src: "/images/rendered-garden-room-kent.jpg",
+    alt: "White rendered garden room with bifold doors in Kent",
+    caption: "Garden room rendering, Kent",
+  },
+  {
+    src: "/images/rendered-detached-house-brick-kent.jpg",
+    alt: "Large detached house with cream render and red brick in Kent",
+    caption: "Full house render, Kent",
+  },
+  {
+    src: "/images/rendered-garden-feature-kent.jpg",
+    alt: "Rendered garden BBQ and fireplace feature with rendered fence panels in Kent",
+    caption: "Rendered garden feature, Kent",
   },
 ];
 
@@ -243,7 +264,7 @@ const icons: Record<string, string> = {
         </p>
         <div class="hero-cta">
           <a class="btn" href="#quote">Get Your Free Quote</a>
-          <a class="btn btn--ghost" href="#gallery">View Our Work</a>
+          <a class="btn btn--ghost" href="#quote">View Our Work</a>
         </div>
       </div>
 
@@ -350,13 +371,18 @@ const icons: Record<string, string> = {
       <div class="grid grid-3">
         {services.map((s) => (
           <article class="card service-card">
-            <span class="icon-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" set:html={icons[s.icon]} />
-            </span>
-            <span class="pill">{s.tag}</span>
-            <h3>{s.name}</h3>
-            <p>{s.body}</p>
-            <a class="text-link" href="#quote">{s.name} &rarr;</a>
+            <div class="service-media">
+              <img src={s.img} alt={s.imgAlt} loading="lazy" width="900" height="600" />
+              <span class="pill">{s.tag}</span>
+            </div>
+            <div class="service-body">
+              <span class="icon-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" set:html={icons[s.icon]} />
+              </span>
+              <h3>{s.name}</h3>
+              <p>{s.body}</p>
+              <a class="text-link" href="#quote">{s.name} &rarr;</a>
+            </div>
           </article>
         ))}
       </div>
@@ -504,26 +530,19 @@ const icons: Record<string, string> = {
       </div>
       <div class="lime-body">
         <p class="lead">
-          Not every property suits a modern render. Older, period and heritage
-          buildings were built to breathe, and traditional lime render is often
-          the most appropriate finish for them. Lime rendering has been used on
-          buildings for centuries, and the natural breathability of lime and lime
-          rendering lets moisture escape rather than becoming trapped in the
-          walls.
+          Not every property suits a modern render, so we also offer lime
+          rendering for older, period and heritage buildings. These walls were
+          built to breathe, and lime render is often the most appropriate finish
+          &mdash; flexing with the building and letting moisture escape rather
+          than becoming trapped in the walls. That is why it is still specified
+          for listed buildings, conservation areas and traditional solid-wall
+          homes.
         </p>
         <p>
-          Where modern cement traps damp and can lead to cracking on an older
-          wall, lime rendering flexes with the building and lets the walls
-          breathe. That is why lime rendering is still specified for listed
-          buildings, conservation areas and traditional solid-wall homes. Quality
-          lime rendering handles movement and moisture far better than rigid
-          alternatives, helping to preserve the original fabric and appearance of
-          an older home.
-        </p>
-        <p>
-          There are different types of lime rendering, from hydraulic lime to
-          lime putty and lime-based systems, and the right specification depends
-          on the age, construction and exposure of the building.
+          Modern lime render now comes pre-bagged, making it a practical and
+          consistent option. We supply and apply it where it is the right choice
+          for your building, giving you a sympathetic, breathable finish without
+          the guesswork.
         </p>
       </div>
       </div>
@@ -533,16 +552,15 @@ const icons: Record<string, string> = {
         <div class="lime-cta-text">
           <h3>Got a period or listed building?</h3>
           <p>
-            We specialise in modern monocouche and K-Rend rendering, but we
-            understand that lime rendering is sometimes the right answer for a
-            heritage home. If you own a period or listed building and are weighing
-            up lime rendering against a modern system, contact us and we will
-            advise you honestly on the most appropriate, breathable rendering
-            choice for your home.
+            We fit lime render as well as modern silicone, monocouche and K-Rend
+            systems, so we can finish a heritage home the way it should be
+            finished. If you own a period or listed building and need a breathable
+            lime render, get in touch and we will specify and apply the right,
+            sympathetic finish for your walls.
           </p>
         </div>
         <div class="lime-cta-actions">
-          <a class="btn btn--light" href="#quote">Get Honest Advice</a>
+          <a class="btn btn--light" href="#quote">Get a Lime Render Quote</a>
           <a class="btn btn--on-dark btn--ghost" href={phoneHref}>Call {phone}</a>
         </div>
       </div>
@@ -577,6 +595,16 @@ const icons: Record<string, string> = {
         <li><strong>Adds long-term value</strong><span>A modern, insulated exterior</span></li>
         <li><strong>Ideal for solid walls</strong><span>Best fix for cold external walls</span></li>
       </ul>
+    </div>
+    <div class="container">
+      <img
+        class="ewi-media"
+        src="/images/external-wall-insulation-render-kent.jpg"
+        alt="Rendered single-storey extension with bifold doors on a brick house in Kent"
+        loading="lazy"
+        width="1000"
+        height="630"
+      />
     </div>
   </section>
 
@@ -614,13 +642,6 @@ const icons: Record<string, string> = {
           area.
         </p>
         <p>
-          Rendering in Tunbridge Wells is a regular part of our work, and
-          rendering in Kent more widely, from Tunbridge Wells out to the coast.
-          Our rendering services in Kent also reach toward the London borders for
-          larger jobs, and from a single exterior rendering job to a full house
-          rendering, the rendering Kent homeowners rely on is only a call away.
-        </p>
-        <p>
           Not sure if we cover you? Contact us. If you are in Kent, there is a
           good chance we can help. Rendering in Kent is our specialism, and our
           services cover the whole county.
@@ -640,6 +661,22 @@ const icons: Record<string, string> = {
       <ul class="area-tags">
         {areas.map((a) => <li>{a}</li>)}
       </ul>
+    </div>
+  </section>
+
+  <!-- SECTION 11b — Mid-page CTA -->
+  <section class="final-cta">
+    <div class="container final-inner">
+      <p class="eyebrow">Free no-obligation quote</p>
+      <h2>Get your free rendering quote today</h2>
+      <p class="lead">
+        Ready to protect, preserve and upgrade your home? Contact Kent's external
+        rendering specialists for a free, no-obligation quote today.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn--light" href="#quote">Get Your Free Quote</a>
+        <a class="btn btn--on-dark btn--ghost" href={phoneHref}>Call us on {phone}</a>
+      </div>
     </div>
   </section>
 
@@ -671,7 +708,7 @@ const icons: Record<string, string> = {
   </section>
 
   <!-- SECTION 13 — FAQ -->
-  <section class="section section--sand" id="faq">
+  <section class="section faq-section" id="faq">
     <div class="container faq-wrap">
       <div class="section-head center">
         <p class="eyebrow">FAQs</p>
@@ -691,20 +728,20 @@ const icons: Record<string, string> = {
     </div>
   </section>
 
-  <!-- SECTION 14 — Final CTA -->
-  <section class="final-cta" id="quote">
-    <div class="container final-inner">
-      <p class="eyebrow">Free no-obligation quote</p>
-      <h2>Get your free rendering quote today</h2>
-      <p class="lead">
-        Ready to protect, preserve and upgrade your home? Contact Kent's external
-        rendering specialists for a free, no-obligation quote today.
-      </p>
-      <div class="hero-cta">
-        <a class="btn btn--light" href={phoneHref}>Call us on {phone}</a>
-        <a class="btn btn--on-dark btn--ghost" href={`mailto:${email}`}>Email {email}</a>
+  <!-- SECTION 15 — Contact form -->
+  <section class="section section--sand" id="quote">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Get your free rendering quote</h2>
+        <p class="lead">
+          Send us a message about your project, or call and we will talk it
+          through. We cover Kent and the surrounding areas and are happy to advise
+          on the right render system for your property.
+        </p>
       </div>
     </div>
+    <ContactSection />
   </section>
 </Layout>
 
@@ -923,14 +960,44 @@ const icons: Record<string, string> = {
   .service-card {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
+    align-items: stretch;
+    padding: 0;
+    overflow: hidden;
     transition: transform 0.18s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   }
   .service-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
     border-color: var(--terracotta);
+  }
+  .service-media {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: var(--sand-2);
+  }
+  .service-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .service-card:hover .service-media img {
+    transform: scale(1.05);
+  }
+  .service-media .pill {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+  }
+  .service-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 26px 28px 30px;
+    flex: 1;
   }
   .pill {
     font-family: var(--font-display);
@@ -1193,6 +1260,16 @@ const icons: Record<string, string> = {
   .ewi-points span {
     color: var(--ink-soft);
     font-size: 0.92rem;
+  }
+  .ewi-media {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center 58%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    margin-top: 48px;
+    display: block;
   }
 
   /* ---------- Process ---------- */
@@ -1494,6 +1571,33 @@ const icons: Record<string, string> = {
     margin: 0;
     padding-bottom: 20px;
     color: var(--ink-soft);
+  }
+
+  /* FAQ on blue gradient */
+  .faq-section {
+    background:
+      radial-gradient(900px 420px at 15% 0%, rgba(30, 91, 184, 0.42), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+    color: #e7ecf1;
+  }
+  .faq-section .eyebrow {
+    color: var(--gold);
+  }
+  .faq-section h2 {
+    color: #fff;
+  }
+  .faq-section .faq-item {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.16);
+  }
+  .faq-section .faq-item summary {
+    color: #fff;
+  }
+  .faq-section .faq-icon {
+    color: var(--krs-sky);
+  }
+  .faq-section .faq-item p {
+    color: #c2ccd6;
   }
 
   /* ---------- Final CTA ---------- */

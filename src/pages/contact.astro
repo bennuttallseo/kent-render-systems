@@ -1,0 +1,145 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContactSection from "../components/ContactSection.astro";
+
+const phone = "07707 564597";
+const phoneHref = "tel:+447707564597";
+
+// Phone icon for the closing call strip
+const phoneIcon =
+  '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/>';
+---
+
+<Layout
+  title="Contact Kent Render Systems | Free Rendering Quotes in Kent"
+  description="Contact Kent Render Systems for a free, no-obligation rendering quote. Call 07707 564597 or email info@kentrendersystems.co.uk. Serving Kent and the surrounding areas."
+  path="/contact"
+>
+  <!-- SECTION 1 — Hero / Intro -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <p class="eyebrow">Contact Us</p>
+      <h1>Get In Touch</h1>
+      <p class="lead">
+        Ready to protect and transform your home? Contact Kent Render Systems
+        today for a free, no-obligation quote. We cover Kent and the surrounding
+        areas and are happy to advise on the right render system for your
+        property.
+      </p>
+      <div class="page-hero-cta">
+        <a class="btn btn--light" href="#contact-form">Send Us a Message</a>
+        <a class="btn btn--on-dark btn--ghost" href={phoneHref}>Call {phone}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 + 3 — Contact form and details -->
+  <section class="section">
+    <ContactSection />
+  </section>
+
+  <!-- SECTION 4b — Map -->
+  <section class="section section--sand">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Find us</p>
+        <h2>Based in Kent</h2>
+      </div>
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19951.111763441968!2d0.8655301099013419!3d51.31316699323968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ded31a2458d20d%3A0x4bcb5d6aedb23f5a!2sJ%20T%20Plastering!5e0!3m2!1sen!2suk!4v1782011110027!5m2!1sen!2suk"
+          title="Kent Render Systems service area map"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — CTA strip -->
+  <section class="call-strip">
+    <div class="container call-inner">
+      <p>
+        Prefer to call? We are always happy to talk through your project. Call us
+        on {phone}
+      </p>
+      <a class="btn btn--light" href={phoneHref}>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={phoneIcon} />
+        Call {phone}
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* ---------- Hero / Intro ---------- */
+  .page-hero {
+    background:
+      radial-gradient(900px 420px at 15% 0%, rgba(30, 91, 184, 0.42), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+    color: #e7ecf1;
+    padding-block: clamp(56px, 6vw, 104px);
+  }
+  .page-hero .eyebrow {
+    color: var(--gold);
+  }
+  .page-hero h1 {
+    color: #fff;
+    font-size: clamp(2.1rem, 1.3rem + 3vw, 3.3rem);
+    margin-bottom: 0.45em;
+    max-width: 16ch;
+  }
+  .page-hero .lead {
+    color: #c7d0da;
+    margin-bottom: 30px;
+    max-width: 60ch;
+  }
+  .page-hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  /* ---------- Map ---------- */
+  .map-embed {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-sm);
+    min-height: 420px;
+  }
+  .map-embed iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    border: 0;
+  }
+
+  /* ---------- Call strip ---------- */
+  .call-strip {
+    background: var(--charcoal);
+    color: #e7ecf1;
+    padding-block: clamp(36px, 4vw, 56px);
+  }
+  .call-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .call-inner p {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.12rem;
+    color: #fff;
+    max-width: 58ch;
+  }
+  .call-inner .btn svg {
+    width: 18px;
+    height: 18px;
+  }
+</style>

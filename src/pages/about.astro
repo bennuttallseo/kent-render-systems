@@ -1,0 +1,343 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const phone = "07707 564597";
+const phoneHref = "tel:+447707564597";
+const email = "info@kentrendersystems.co.uk";
+
+// [Confirm exact accreditation wording + source official badge artwork]
+const accreditations = [
+  { name: "Baumit", note: "Approved Installer" },
+  { name: "Weber", note: "Registered Applicator" },
+  { name: "EcoRend", note: "Registered Contractor" },
+  { name: "EWI", note: "Accredited Installer" },
+];
+
+const expectPoints = [
+  "Free, no-obligation survey and quote",
+  "Jack on site leading every job",
+  "Machine spray application for a consistent finish",
+  "Clean, tidy site throughout",
+  "Walk-round on completion so you are happy before we leave",
+  "Fully insured, with manufacturer-backed guarantees on every job",
+];
+
+const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
+---
+
+<Layout
+  title="About Kent Render Systems | Owner-Led Rendering Specialists in Kent"
+  description="Kent Render Systems is an owner-led external rendering company serving Kent. Every job is led by Jack Tewkesbury, a time-served specialist with nearly 20 years in the rendering and plastering trade."
+  path="/about"
+>
+  <!-- SECTION 1 — Hero / Intro -->
+  <section class="about-hero">
+    <div class="container about-hero-inner">
+      <p class="eyebrow">About Us</p>
+      <h1>About Kent Render Systems</h1>
+      <p class="lead">
+        A specialist, owner-led external rendering company serving homeowners and
+        builders across Kent. Every job is led by Jack from first survey to final
+        finish.
+      </p>
+      <div class="about-hero-cta">
+        <a class="btn btn--light" href="/#quote">Get Your Free Quote</a>
+        <a class="btn btn--on-dark btn--ghost" href="/#services">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 — Meet Jack -->
+  <section class="section">
+    <div class="container about-split">
+      <div class="about-split-text">
+        <div class="section-head">
+          <p class="eyebrow">Owner-led</p>
+          <h2>Meet Jack</h2>
+        </div>
+        <p class="lead">
+          Jack Tewkesbury has been in the plastering and rendering trade for
+          nearly 20 years.
+        </p>
+        <p>
+          As the owner of Kent Render Systems, Jack leads every job himself - you
+          are not handed off to a subcontractor or a general labourer. That
+          hands-on approach, combined with a deep plastering background, is what
+          allows Kent Render Systems to deliver a level of finish that a general
+          builder simply cannot match.
+        </p>
+        <p>
+          If you want rendering done right, you deal with a specialist from start
+          to finish.
+        </p>
+      </div>
+      <div class="about-split-media">
+        <img
+          src="/images/kent-render-systems-van.jpg"
+          alt="Jack from Kent Render Systems standing in front of the branded company van in Kent"
+          loading="lazy"
+          width="1200"
+          height="800"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — Accreditations -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Approved and accredited</p>
+        <h2>Manufacturer approved and accredited</h2>
+        <p class="lead">
+          We are approved installers for Baumit, Weber and EcoRend, and accredited
+          EWI installers. Manufacturer approval means we use the correct
+          materials, apply them correctly, and every job we carry out comes with
+          manufacturer-backed guarantees. That is peace of mind for you as a
+          homeowner.
+        </p>
+      </div>
+      <ul class="badge-row">
+        {accreditations.map((a) => (
+          <li class="badge">
+            <span class="badge-name">{a.name}</span>
+            <span class="badge-note">{a.note}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — What you can expect -->
+  <section class="section section--dark">
+    <div class="container expect-grid">
+      <div class="expect-intro">
+        <p class="eyebrow">What to expect</p>
+        <h2>What to expect when you work with us</h2>
+        <p class="lead">
+          A straightforward, specialist service from first call to final
+          walk-round.
+        </p>
+        <a class="btn btn--light" href="/#quote">Get Your Free Quote</a>
+      </div>
+      <ul class="expect-list">
+        {expectPoints.map((p) => (
+          <li>
+            <span class="expect-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" set:html={checkIcon} />
+            </span>
+            <span>{p}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — Why specialist matters -->
+  <section class="section section--sand">
+    <div class="container narrow">
+      <div class="section-head center">
+        <p class="eyebrow">A specialist trade</p>
+        <h2>Rendering is a specialist trade</h2>
+      </div>
+      <p class="lead">
+        Rendering is one of the most demanding branches of plastering. Getting it
+        right takes experience, the correct materials and proper preparation.
+      </p>
+      <p>
+        We bring nearly two decades of plastering expertise to every job, apply
+        our renders by machine spray for a consistent, high-quality finish, and
+        hand-finish every job to the standard it deserves. That is why our clients
+        trust us with their homes.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — Final CTA -->
+  <section class="final-cta">
+    <div class="container final-inner">
+      <p class="eyebrow">Free no-obligation quote</p>
+      <h2>Ready to get started?</h2>
+      <p class="lead">
+        Contact Kent Render Systems today for a free, no-obligation quote. Call us
+        on {phone} or email {email}.
+      </p>
+      <div class="final-actions">
+        <a class="btn btn--light" href="/#quote">Get Your Free Quote</a>
+        <a class="btn btn--on-dark btn--ghost" href={phoneHref}>Call {phone}</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* ---------- Hero / Intro ---------- */
+  .about-hero {
+    background:
+      radial-gradient(900px 420px at 15% 0%, rgba(30, 91, 184, 0.42), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+    color: #e7ecf1;
+    padding-block: clamp(56px, 6vw, 104px);
+  }
+  .about-hero .eyebrow {
+    color: var(--gold);
+  }
+  .about-hero h1 {
+    color: #fff;
+    font-size: clamp(2.1rem, 1.3rem + 3vw, 3.3rem);
+    margin-bottom: 0.45em;
+    max-width: 16ch;
+  }
+  .about-hero .lead {
+    color: #c7d0da;
+    margin-bottom: 30px;
+    max-width: 60ch;
+  }
+  .about-hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  /* ---------- Meet Jack (split) ---------- */
+  .about-split {
+    display: grid;
+    gap: 40px 56px;
+    align-items: center;
+  }
+  @media (min-width: 880px) {
+    .about-split {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .about-split-text p:last-child {
+    margin-bottom: 0;
+  }
+  .about-split-media img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* ---------- Specialist trade ---------- */
+  .narrow {
+    max-width: 760px;
+  }
+  .narrow .section-head {
+    margin-bottom: 28px;
+  }
+  .narrow p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ---------- Accreditation badges ---------- */
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 18px;
+  }
+  .badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 12px 26px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--sand);
+    min-width: 160px;
+  }
+  .badge-name {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+  }
+  .badge-note {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--terracotta-dark);
+    font-weight: 600;
+  }
+
+  /* ---------- What to expect ---------- */
+  .expect-grid {
+    display: grid;
+    gap: 40px;
+  }
+  @media (min-width: 920px) {
+    .expect-grid {
+      grid-template-columns: 0.95fr 1.25fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .expect-intro {
+      position: sticky;
+      top: calc(var(--header-h) + 30px);
+    }
+  }
+  .expect-intro .btn {
+    margin-top: 8px;
+  }
+  .expect-list {
+    display: grid;
+    gap: 18px;
+  }
+  .expect-list li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #dde4ec;
+  }
+  .expect-check {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: rgba(91, 143, 217, 0.18);
+    color: var(--gold);
+    flex: none;
+  }
+  .expect-check svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* ---------- Final CTA ---------- */
+  .final-cta {
+    background:
+      radial-gradient(900px 420px at 15% 0%, rgba(30, 91, 184, 0.42), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+    color: #e7ecf1;
+    padding-block: clamp(64px, 6vw, 110px);
+    text-align: center;
+  }
+  .final-inner {
+    max-width: 720px;
+    margin-inline: auto;
+  }
+  .final-cta .eyebrow {
+    color: var(--gold);
+  }
+  .final-cta h2 {
+    color: #fff;
+  }
+  .final-cta .lead {
+    color: #c7d0da;
+    margin-bottom: 30px;
+  }
+  .final-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+  }
+</style>
