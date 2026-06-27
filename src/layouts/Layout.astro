@@ -11,7 +11,7 @@ interface Props {
 
 const {
   title = "Expert External Rendering in Kent | Kent Render Systems",
-  description = "Specialist external rendering across Kent, silicone, monocouche and K-Rend systems applied by a time-served installer with nearly 20 years' experience. Manufacturer-approved, fully insured. Free no-obligation quotes.",
+  description = "Specialist external rendering across Kent, silicone and monocouche systems applied by a time-served installer with nearly 20 years' experience. Manufacturer-approved, fully insured. Free no-obligation quotes.",
   path = "/",
 } = Astro.props;
 
@@ -41,14 +41,17 @@ const schema = {
   },
   address: {
     "@type": "PostalAddress",
+    streetAddress: "4 Heritage Close, Seasalter",
+    addressLocality: "Whitstable",
     addressRegion: "Kent",
+    postalCode: "CT5 4QG",
     addressCountry: "GB",
   },
   knowsAbout: [
     "External rendering",
     "Silicone render",
     "Monocouche render",
-    "K-Rend",
+    "Lime render",
     "External wall insulation",
   ],
   slogan: "Kent's external rendering specialists",

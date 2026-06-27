@@ -31,24 +31,16 @@ const services = [
     tag: "Most popular",
     body: "Silicone render is our most popular finish. A flexible, breathable, self-cleaning thin-coat render that resists cracking and holds its colours for years. It is water-repellent yet lets your walls breathe, protecting the wall beneath while keeping your home looking fresh. It is an ideal rendering choice for older and modern houses.",
     icon: "drop",
-    img: "/images/silicone-render-house-kent.jpg",
-    imgAlt: "House finished in smooth white silicone render with a modern entrance in Kent",
+    img: "/images/silicone-render-bungalow-kent.png",
+    imgAlt: "Bungalow finished in smooth white silicone render with bifold doors in Kent",
   },
   {
     name: "Monocouche rendering",
     tag: "One-coat",
     body: "Monocouche rendering is a through-coloured, one-coat finish that is hard-wearing and easy to live with. Because the colour runs all the way through, there is no painting needed, just a clean, modern finish. Monocouche rendering is applied for an even, consistent coat and a long-lasting finish.",
     icon: "layers",
-    img: "/images/monocouche-render-house-kent.jpg",
+    img: "/images/silicone-render-house-kent.jpg",
     imgAlt: "Through-coloured monocouche render on the rear of a house in Kent",
-  },
-  {
-    name: "K-Rend",
-    tag: "Market-leading",
-    body: "K-Rend is the UK's market-leading silicone render brand. As an approved installer, we fit the full K-Rend range to deliver a premium, durable and virtually maintenance-free exterior. K-Rend gives your home a high-quality rendering finish built to last.",
-    icon: "shield",
-    img: "/images/k-rend-render-texture-kent.jpg",
-    imgAlt: "Close-up of textured K-Rend silicone render finish on a wall in Kent",
   },
 ];
 
@@ -160,6 +152,8 @@ const areas = [
   "Faversham", "Folkestone", "Dover", "Deal", "Sandwich",
   "Margate", "Ramsgate", "Broadstairs", "Whitstable", "Herne Bay",
   "Tonbridge", "Tunbridge Wells", "Bromley", "Sidcup",
+  "Chislehurst", "Orpington", "Bexley", "Bexleyheath", "Erith",
+  "Eltham", "Swanley",
 ];
 
 const faqs = [
@@ -169,7 +163,7 @@ const faqs = [
   },
   {
     q: "How long does render last?",
-    a: "Applied correctly, modern silicone and K-Rend rendering can look good and protect your walls for 20 to 30 years or more, with very little maintenance.",
+    a: "Applied correctly, modern silicone rendering can look good and protect your walls for 20 to 30 years or more, with very little maintenance.",
   },
   {
     q: "Can you render over pebbledash and carry out repairs?",
@@ -181,7 +175,7 @@ const faqs = [
   },
   {
     q: "Do you do lime render for period or listed homes?",
-    a: "Yes. Alongside modern silicone, monocouche and K-Rend systems, we offer lime render for period, heritage and listed homes. Modern lime render comes pre-bagged for a consistent, breathable finish, so we can supply and apply the right lime system to suit your walls.",
+    a: "Yes. Alongside modern silicone and monocouche systems, we offer lime render for period, heritage and listed homes. Modern lime render comes pre-bagged for a consistent, breathable finish, so we can supply and apply the right lime system to suit your walls.",
   },
   {
     q: "Will rendering help with damp?",
@@ -257,7 +251,7 @@ const icons: Record<string, string> = {
         <p class="eyebrow hero-eyebrow">Baumit · Weber · EcoRend Approved Installer</p>
         <h1>Expert External Rendering in Kent</h1>
         <p class="hero-sub">
-          Silicone, monocouche and K-Rend rendering systems, applied by a
+          Silicone and monocouche rendering systems, applied by a
           time-served specialist with nearly 20 years' experience. We protect,
           insulate and transform homes across Kent, backed by
           manufacturer-approved guarantees.
@@ -326,7 +320,7 @@ const icons: Record<string, string> = {
           carry out is finished by hand to a high standard rather than rushed by
           a general builder. Our plastering background is what lets us deliver a
           flawless finish, because external rendering is plastering at its most
-          demanding. From silicone render and monocouche rendering to K-Rend, we
+          demanding. From silicone render to monocouche rendering, we
           apply the right rendering services to suit your walls, your home and
           your budget. Whether you want to refresh tired walls, render a new
           build house, or protect an older property from damp and the Kent
@@ -368,7 +362,7 @@ const icons: Record<string, string> = {
           projects, our services are tailored to your home and your walls.
         </p>
       </div>
-      <div class="grid grid-3">
+      <div class="grid grid-2 services-grid">
         {services.map((s) => (
           <article class="card service-card">
             <div class="service-media">
@@ -493,7 +487,7 @@ const icons: Record<string, string> = {
         <p class="eyebrow">Render systems explained</p>
         <h2>Which render is right for your home?</h2>
         <p class="lead">
-          We specialise in modern silicone, monocouche and K-Rend rendering, but
+          We specialise in modern silicone and monocouche rendering, but
           it helps to understand the main render types before you decide.
         </p>
       </div>
@@ -552,7 +546,7 @@ const icons: Record<string, string> = {
         <div class="lime-cta-text">
           <h3>Got a period or listed building?</h3>
           <p>
-            We fit lime render as well as modern silicone, monocouche and K-Rend
+            We fit lime render as well as modern silicone and monocouche
             systems, so we can finish a heritage home the way it should be
             finished. If you own a period or listed building and need a breathable
             lime render, get in touch and we will specify and apply the right,
@@ -650,7 +644,7 @@ const icons: Record<string, string> = {
       </div>
       <div class="areas-map">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19951.111763441968!2d0.8655301099013419!3d51.31316699323968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ded31a2458d20d%3A0x4bcb5d6aedb23f5a!2sJ%20T%20Plastering!5e0!3m2!1sen!2suk!4v1782011110027!5m2!1sen!2suk"
+          src="https://www.google.com/maps?q=4+Heritage+Close,+Seasalter,+Whitstable,+Kent,+CT5+4QG&output=embed"
           title="Kent Render Systems service area map"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
