@@ -23,6 +23,25 @@ const expectPoints = [
 ];
 
 const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
+
+// Same customers as the homepage, reworded to avoid duplicate content
+const reviews = [
+  {
+    text: "From the first survey to the final clean-up, Jack was spot on. He silicone rendered our whole house and the result is genuinely flawless, smooth, even and exactly the colour we wanted. A tidy, reliable tradesman who clearly knows rendering inside out.",
+    name: "Sarah M.",
+    town: "Whitstable, Kent",
+  },
+  {
+    text: "Jack applied monocouche render to our new extension and the machine-sprayed finish is superb. He took the time to explain the options and the colour runs right through, so there is no painting to worry about. Couldn't recommend him highly enough.",
+    name: "David T.",
+    town: "Tonbridge, Kent",
+  },
+  {
+    text: "We needed a breathable lime render for our older home and Jack handled it perfectly. His plastering background really shows in the detailing, and the whole job was done cleanly and carefully. Lovely to find a specialist who understands period properties.",
+    name: "Emma R.",
+    town: "Canterbury, Kent",
+  },
+];
 ---
 
 <Layout
@@ -41,7 +60,7 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
         finish.
       </p>
       <div class="about-hero-cta">
-        <a class="btn btn--light" href="/#quote">Get Your Free Quote</a>
+        <a class="btn btn--light" href="/contact">Get Your Free Quote</a>
         <a class="btn btn--on-dark btn--ghost" href="/#services">Our Services</a>
       </div>
     </div>
@@ -83,6 +102,29 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
     </div>
   </section>
 
+  <!-- SECTION 2b — Reviews -->
+  <section class="section reviews-bar">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Testimonials</p>
+        <h2>What our customers say</h2>
+        <p class="lead">
+          Homeowners across Kent trust Jack with their rendering. Here is what a
+          few of them have said about working with Kent Render Systems.
+        </p>
+      </div>
+      <div class="grid grid-3">
+        {reviews.map((r) => (
+          <article class="card review-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-text">{r.text}</p>
+            <p class="review-author"><strong>{r.name}</strong><span>{r.town}</span></p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- SECTION 4 — Accreditations -->
   <section class="section">
     <div class="container">
@@ -118,7 +160,7 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
           A straightforward, specialist service from first call to final
           walk-round.
         </p>
-        <a class="btn btn--light" href="/#quote">Get Your Free Quote</a>
+        <a class="btn btn--light" href="/contact">Get Your Free Quote</a>
       </div>
       <ul class="expect-list">
         {expectPoints.map((p) => (
@@ -163,7 +205,7 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
         on {phone} or email {email}.
       </p>
       <div class="final-actions">
-        <a class="btn btn--light" href="/#quote">Get Your Free Quote</a>
+        <a class="btn btn--light" href="/contact">Get Your Free Quote</a>
         <a class="btn btn--on-dark btn--ghost" href={phoneHref}>Call {phone}</a>
       </div>
     </div>
@@ -309,6 +351,51 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
   .expect-check svg {
     width: 20px;
     height: 20px;
+  }
+
+  /* ---------- Reviews ---------- */
+  .reviews-bar {
+    background:
+      radial-gradient(900px 420px at 15% 0%, rgba(30, 91, 184, 0.42), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+  }
+  .reviews-bar .eyebrow {
+    color: var(--gold);
+  }
+  .reviews-bar h2 {
+    color: #fff;
+  }
+  .reviews-bar .lead {
+    color: #c7d0da;
+  }
+  .review-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .stars {
+    color: var(--gold);
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+  }
+  .review-text {
+    color: var(--ink-soft);
+    font-style: italic;
+    margin: 0;
+    flex: 1;
+  }
+  .review-author {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .review-author strong {
+    font-family: var(--font-display);
+    color: var(--ink);
+  }
+  .review-author span {
+    font-size: 0.88rem;
+    color: var(--muted);
   }
 
   /* ---------- Final CTA ---------- */

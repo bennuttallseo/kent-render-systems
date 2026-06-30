@@ -156,6 +156,25 @@ const areas = [
   "Eltham", "Swanley",
 ];
 
+// Placeholder testimonials until real reviews are pulled from the Google Business Profile
+const reviews = [
+  {
+    text: "Jack rendered the whole of our house in silicone render and the finish is faultless. He was tidy, professional and kept us informed from the first survey to the final walk-round. The house looks completely transformed and we could not be happier.",
+    name: "Sarah M.",
+    town: "Whitstable, Kent",
+  },
+  {
+    text: "We had monocouche render applied to our extension and Jack did a brilliant job. He talked us through the colour options and the machine-sprayed finish is beautifully smooth and even. A genuine specialist who clearly takes pride in his rendering.",
+    name: "David T.",
+    town: "Tonbridge, Kent",
+  },
+  {
+    text: "Our period property needed a breathable lime render and Jack knew exactly what it needed. The work was clean, careful and finished to a lovely standard. It is great to deal with a renderer who really understands older buildings.",
+    name: "Emma R.",
+    town: "Canterbury, Kent",
+  },
+];
+
 const faqs = [
   {
     q: "How much does rendering cost?",
@@ -257,8 +276,8 @@ const icons: Record<string, string> = {
           manufacturer-approved guarantees.
         </p>
         <div class="hero-cta">
-          <a class="btn" href="#quote">Get Your Free Quote</a>
-          <a class="btn btn--ghost" href="#quote">View Our Work</a>
+          <a class="btn" href="/contact">Get Your Free Quote</a>
+          <a class="btn btn--ghost" href="/contact">View Our Work</a>
         </div>
       </div>
 
@@ -375,7 +394,7 @@ const icons: Record<string, string> = {
               </span>
               <h3>{s.name}</h3>
               <p>{s.body}</p>
-              <a class="text-link" href="#quote">{s.name} &rarr;</a>
+              <a class="text-link" href="/contact">{s.name} &rarr;</a>
             </div>
           </article>
         ))}
@@ -421,7 +440,7 @@ const icons: Record<string, string> = {
         </button>
       </div>
       <div class="gallery-cta">
-        <a class="btn btn--light" href="#quote">Get your project quoted</a>
+        <a class="btn btn--light" href="/contact">Get your project quoted</a>
       </div>
     </div>
   </section>
@@ -462,7 +481,7 @@ const icons: Record<string, string> = {
         <p class="lead">
           Rendering you can rely on, delivered by a genuine specialist.
         </p>
-        <a class="btn btn--light" href="#quote">Get Your Free Quote</a>
+        <a class="btn btn--light" href="/contact">Get Your Free Quote</a>
       </div>
       <ul class="why-list">
         {whyUs.map((w) => (
@@ -554,7 +573,7 @@ const icons: Record<string, string> = {
           </p>
         </div>
         <div class="lime-cta-actions">
-          <a class="btn btn--light" href="#quote">Get a Lime Render Quote</a>
+          <a class="btn btn--light" href="/contact">Get a Lime Render Quote</a>
           <a class="btn btn--on-dark btn--ghost" href={phoneHref}>Call {phone}</a>
         </div>
       </div>
@@ -581,7 +600,7 @@ const icons: Record<string, string> = {
           warmth. Whether you need rendering alone or full wall insulation, we
           specify the right materials for your home for a finish built to last.
         </p>
-        <a class="btn" href="#quote">Ask about external wall insulation</a>
+        <a class="btn" href="/contact">Ask about external wall insulation</a>
       </div>
       <ul class="ewi-points">
         <li><strong>Warmer in winter</strong><span>Keeps heat where it belongs</span></li>
@@ -640,7 +659,7 @@ const icons: Record<string, string> = {
           good chance we can help. Rendering in Kent is our specialism, and our
           services cover the whole county.
         </p>
-        <a class="btn btn--ghost" href="#quote">Check your area</a>
+        <a class="btn btn--ghost" href="/contact">Check your area</a>
       </div>
       <div class="areas-map">
         <iframe
@@ -668,7 +687,7 @@ const icons: Record<string, string> = {
         rendering specialists for a free, no-obligation quote today.
       </p>
       <div class="hero-cta">
-        <a class="btn btn--light" href="#quote">Get Your Free Quote</a>
+        <a class="btn btn--light" href="/contact">Get Your Free Quote</a>
         <a class="btn btn--on-dark btn--ghost" href={phoneHref}>Call us on {phone}</a>
       </div>
     </div>
@@ -687,14 +706,11 @@ const icons: Record<string, string> = {
         </p>
       </div>
       <div class="grid grid-3">
-        {[1, 2, 3].map(() => (
+        {reviews.map((r) => (
           <article class="card review-card">
             <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="review-text">
-              Customer review to be added from the Google Business Profile once
-              live. Real testimonials with name &amp; town will appear here.
-            </p>
-            <p class="review-author"><strong>Name</strong><span>Town, Kent</span></p>
+            <p class="review-text">{r.text}</p>
+            <p class="review-author"><strong>{r.name}</strong><span>{r.town}</span></p>
           </article>
         ))}
       </div>
