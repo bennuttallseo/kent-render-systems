@@ -2,18 +2,28 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import LocalBusinessSchema from "../components/LocalBusinessSchema.astro";
+import BreadcrumbSchema, { type BreadcrumbItem } from "../components/BreadcrumbSchema.astro";
+import { assetUrl, canonicalUrl } from "../utils/siteUrl";
 
 interface Props {
   title?: string;
   description?: string;
   path?: string;
+  ogImage?: string;
+  breadcrumbs?: BreadcrumbItem[];
 }
 
 const {
   title = "Expert External Rendering in Kent | Kent Render Systems",
   description = "Specialist external rendering across Kent. Silicone and monocouche systems by a time-served, fully insured installer offering free no-obligation quotes.",
   path = "/",
+  ogImage = "/images/rendering-kent-hero.jpg",
+  breadcrumbs,
 } = Astro.props;
+
+const pageUrl = canonicalUrl(path);
+const ogImageUrl = assetUrl(ogImage);
 
 // NOTE: placeholders below to confirm with Jack before launch.
 const business = {
@@ -25,37 +35,6 @@ const business = {
   country: "GB",
 };
 
-const siteUrl = "https://www.kentrendersystems.co.uk";
-
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  name: business.name,
-  description,
-  url: siteUrl,
-  telephone: business.phone,
-  email: business.email,
-  areaServed: {
-    "@type": "AdministrativeArea",
-    name: "Kent, England",
-  },
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "4 Heritage Close, Seasalter",
-    addressLocality: "Whitstable",
-    addressRegion: "Kent",
-    postalCode: "CT5 4QG",
-    addressCountry: "GB",
-  },
-  knowsAbout: [
-    "External rendering",
-    "Silicone render",
-    "Monocouche render",
-    "Lime render",
-    "External wall insulation",
-  ],
-  slogan: "Kent's external rendering specialists",
-};
 ---
 
 <!doctype html>
@@ -70,15 +49,17 @@ const schema = {
 
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={siteUrl + path} />
+    <link rel="canonical" href={pageUrl} />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={business.name} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={siteUrl + path} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:image" content={ogImageUrl} />
     <meta property="og:locale" content="en_GB" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={ogImageUrl} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -87,10 +68,8 @@ const schema = {
       rel="stylesheet"
     />
 
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify(schema)}
-    />
+    <LocalBusinessSchema />
+    {breadcrumbs && <BreadcrumbSchema items={breadcrumbs} />}
   </head>
   <body>
     <Header phone={business.phone} phoneHref={business.phoneHref} />

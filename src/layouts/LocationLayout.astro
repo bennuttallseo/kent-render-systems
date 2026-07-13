@@ -1,0 +1,26 @@
+---
+import Layout from "./Layout.astro";
+import LocationPage from "../components/LocationPage.astro";
+import type { LocationPageContent } from "../components/LocationPage.astro";
+
+interface Props {
+  data: LocationPageContent;
+}
+
+const { data } = Astro.props;
+
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Areas We Cover", path: "/areas-we-cover" },
+  { name: `Rendering ${data.town}`, path: data.path },
+];
+---
+
+<Layout
+  title={data.title}
+  description={data.description}
+  path={data.path}
+  breadcrumbs={breadcrumbs}
+>
+  <LocationPage {...data} />
+</Layout>

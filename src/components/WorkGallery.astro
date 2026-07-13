@@ -1,0 +1,264 @@
+---
+const gallery = [
+  {
+    src: "/images/rendering-kent.jpg",
+    alt: "White silicone rendering on a detached house in Kent",
+    caption: "Rendering, Kent",
+  },
+  {
+    src: "/images/external-rendering-kent.jpg",
+    alt: "External rendering with stone detailing on a modern extension in Kent",
+    caption: "External rendering, Kent",
+  },
+  {
+    src: "/images/render-job-kent.jpg",
+    alt: "Completed silicone render job on a semi-detached house in Kent",
+    caption: "Render job, Kent",
+  },
+  {
+    src: "/images/new-build-house-rendering-kent.jpg",
+    alt: "Silicone rendered detached new-build house with brick plinth in Kent",
+    caption: "New-build rendering, Kent",
+  },
+  {
+    src: "/images/premium-render-extension-kent.jpg",
+    alt: "Premium render extension with stone detailing and round windows in Kent",
+    caption: "Render &amp; stone detailing, Kent",
+  },
+  {
+    src: "/images/rendered-garden-room-kent.jpg",
+    alt: "White rendered garden room with bifold doors in Kent",
+    caption: "Garden room rendering, Kent",
+  },
+  {
+    src: "/images/rendered-detached-house-brick-kent.jpg",
+    alt: "Large detached house with cream external render and red brick in Kent",
+    caption: "Full house render, Kent",
+  },
+  {
+    src: "/images/rendered-garden-feature-kent.jpg",
+    alt: "Rendered garden BBQ and fireplace feature with rendered fence panels in Kent",
+    caption: "Rendered garden feature, Kent",
+  },
+];
+---
+
+<section class="section work-gallery">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">Our work</p>
+      <h2>Completed rendering projects</h2>
+      <p class="lead">
+        Real Kent homes, transformed. Browse our gallery to see the finish we
+        deliver on silicone and monocouche rendering jobs across the county.
+      </p>
+    </div>
+    <div class="carousel" data-carousel>
+      <button class="carousel-btn carousel-prev" type="button" aria-label="Previous projects">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <ul class="carousel-track" data-carousel-track>
+        {gallery.map((g) => (
+          <li class="carousel-slide">
+            <figure class="gallery-tile">
+              <img src={g.src} alt={g.alt} loading="lazy" width="800" height="600" />
+              <figcaption set:html={g.caption} />
+            </figure>
+          </li>
+        ))}
+        <li class="carousel-slide">
+          <div class="gallery-tile gallery-placeholder">
+            <span class="ph-mark">+</span>
+            <strong>More projects coming soon</strong>
+            <small>New before &amp; after photos added regularly</small>
+          </div>
+        </li>
+      </ul>
+      <button class="carousel-btn carousel-next" type="button" aria-label="Next projects">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+    <div class="gallery-cta">
+      <a class="btn btn--light" href="/contact">Get your project quoted</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+    const track = carousel.querySelector<HTMLElement>("[data-carousel-track]");
+    if (!track) return;
+    const prev = carousel.querySelector(".carousel-prev");
+    const next = carousel.querySelector(".carousel-next");
+
+    const step = () => {
+      const slide = track.querySelector<HTMLElement>(".carousel-slide");
+      const styles = getComputedStyle(track);
+      const gap = parseFloat(styles.columnGap || styles.gap || "18") || 18;
+      return slide ? slide.getBoundingClientRect().width + gap : track.clientWidth;
+    };
+
+    prev?.addEventListener("click", () =>
+      track.scrollBy({ left: -step(), behavior: "smooth" })
+    );
+    next?.addEventListener("click", () =>
+      track.scrollBy({ left: step(), behavior: "smooth" })
+    );
+  });
+</script>
+
+<style>
+  .work-gallery {
+    background:
+      radial-gradient(900px 420px at 15% 0%, rgba(30, 91, 184, 0.42), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+  }
+  .work-gallery .eyebrow {
+    color: var(--gold);
+  }
+  .work-gallery h2 {
+    color: #fff;
+  }
+  .work-gallery .lead {
+    color: #c7d0da;
+  }
+  .work-gallery .btn--light:hover {
+    opacity: 0.88;
+    background: #fff;
+    border-color: #fff;
+    color: var(--ink);
+    transform: translateY(-1px);
+  }
+
+  .carousel {
+    position: relative;
+  }
+  .carousel-track {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+  }
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel-slide {
+    flex: 0 0 86%;
+    scroll-snap-align: center;
+  }
+  @media (min-width: 640px) {
+    .carousel-slide {
+      flex-basis: calc((100% - 18px) / 2);
+    }
+  }
+  @media (min-width: 1000px) {
+    .carousel-slide {
+      flex-basis: calc((100% - 36px) / 3);
+    }
+  }
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: none;
+    background: #fff;
+    color: var(--krs-navy);
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+  }
+  .carousel-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+  .carousel-btn:hover {
+    background: var(--krs-royal);
+    color: #fff;
+    transform: translateY(-50%) scale(1.06);
+  }
+  .carousel-prev {
+    left: -14px;
+  }
+  .carousel-next {
+    right: -14px;
+  }
+  @media (max-width: 560px) {
+    .carousel-prev {
+      left: 6px;
+    }
+    .carousel-next {
+      right: 6px;
+    }
+  }
+  .gallery-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 6px;
+    padding: 20px;
+    background: transparent;
+    border: 2px dashed rgba(255, 255, 255, 0.28);
+  }
+  .gallery-placeholder .ph-mark {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--gold);
+  }
+  .gallery-placeholder strong {
+    font-family: var(--font-display);
+    color: #fff;
+    font-size: 1.02rem;
+  }
+  .gallery-placeholder small {
+    color: #9fb0c4;
+    font-size: 0.85rem;
+    max-width: 22ch;
+  }
+  .gallery-tile {
+    position: relative;
+    margin: 0;
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius);
+    background: linear-gradient(135deg, #1d2a4a, #28396a);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+  }
+  .gallery-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .gallery-tile:hover img {
+    transform: scale(1.05);
+  }
+  .gallery-tile figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 28px 16px 14px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #fff;
+    background: linear-gradient(transparent, rgba(8, 14, 24, 0.78));
+  }
+  .gallery-cta {
+    text-align: center;
+    margin-top: 36px;
+  }
+</style>

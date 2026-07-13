@@ -1,6 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ContactSection from "../components/ContactSection.astro";
+import GoogleReviewsSection from "../components/GoogleReviewsSection.astro";
+import { locationHrefByLabel } from "../data/locationHub";
+
+const areaHrefByLabel = locationHrefByLabel;
 
 const phoneHref = "tel:+447707564597";
 const phone = "07707 564597"; // [confirm business number with Jack]
@@ -29,6 +33,7 @@ const services = [
   {
     name: "Silicone render",
     tag: "Most popular",
+    href: "/silicone-rendering-kent",
     body: "Silicone render is our most popular finish. A flexible, breathable, self-cleaning thin-coat render that resists cracking and holds its colours for years. It is water-repellent yet lets your walls breathe, protecting the wall beneath while keeping your home looking fresh. It is an ideal rendering choice for older and modern houses.",
     icon: "drop",
     img: "/images/silicone-render-bungalow-kent.png",
@@ -37,6 +42,7 @@ const services = [
   {
     name: "Monocouche rendering",
     tag: "One-coat",
+    href: "/monocouche-rendering-kent",
     body: "Monocouche rendering is a through-coloured, one-coat finish that is hard-wearing and easy to live with. Because the colour runs all the way through, there is no painting needed, just a clean, modern finish. Monocouche rendering is applied for an even, consistent coat and a long-lasting finish.",
     icon: "layers",
     img: "/images/monocouche-render-detached-house-kent.jpg",
@@ -94,11 +100,13 @@ const whyUs = [
 const renderTypes = [
   {
     name: "Silicone render",
+    href: "/silicone-rendering-kent",
     body: "Flexible, breathable and water-repellent, with excellent durability and a self-cleaning finish. The best all-round modern rendering choice for most homes.",
     us: true,
   },
   {
     name: "Monocouche render",
+    href: "/monocouche-rendering-kent",
     body: "A through-coloured, one-coat finish that is quick to apply, ideal where a long-wearing, no-repaint result is the priority.",
     us: true,
   },
@@ -156,25 +164,6 @@ const areas = [
   "Eltham", "Swanley",
 ];
 
-// Placeholder testimonials until real reviews are pulled from the Google Business Profile
-const reviews = [
-  {
-    text: "Jack rendered the whole of our house in silicone render and the finish is faultless. He was tidy, professional and kept us informed from the first survey to the final walk-round. The house looks completely transformed and we could not be happier.",
-    name: "Sarah M.",
-    town: "Whitstable, Kent",
-  },
-  {
-    text: "We had monocouche render applied to our extension and Jack did a brilliant job. He talked us through the colour options and the machine-sprayed finish is beautifully smooth and even. A genuine specialist who clearly takes pride in his rendering.",
-    name: "David T.",
-    town: "Tonbridge, Kent",
-  },
-  {
-    text: "Our period property needed a breathable lime render and Jack knew exactly what it needed. The work was clean, careful and finished to a lovely standard. It is great to deal with a renderer who really understands older buildings.",
-    name: "Emma R.",
-    town: "Canterbury, Kent",
-  },
-];
-
 const faqs = [
   {
     q: "How much does rendering cost?",
@@ -182,7 +171,8 @@ const faqs = [
   },
   {
     q: "How long does render last?",
-    a: "Applied correctly, modern silicone rendering can look good and protect your walls for 20 to 30 years or more, with very little maintenance.",
+    a: 'Applied correctly, modern <a href="/silicone-rendering-kent">silicone rendering</a> can look good and protect your walls for 20 to 30 years or more, with very little maintenance.',
+    rich: true,
   },
   {
     q: "Can you render over pebbledash and carry out repairs?",
@@ -190,11 +180,13 @@ const faqs = [
   },
   {
     q: "Silicone or monocouche, which is better?",
-    a: "Both are excellent. Silicone render is more flexible and self-cleaning, while monocouche rendering is a hard-wearing, through-coloured, one-coat finish. We recommend the right render for your walls and budget.",
+    a: 'Both are excellent. <a href="/silicone-rendering-kent">Silicone render</a> is more flexible and self-cleaning, while <a href="/monocouche-rendering-kent">monocouche rendering</a> is a hard-wearing, through-coloured, one-coat finish. We recommend the right render for your walls and budget.',
+    rich: true,
   },
   {
     q: "Do you do lime render for period or listed homes?",
-    a: "Yes. Alongside modern silicone and monocouche systems, we offer lime render for period, heritage and listed homes. Modern lime render comes pre-bagged for a consistent, breathable finish, so we can supply and apply the right lime system to suit your walls.",
+    a: 'Yes. Alongside modern <a href="/silicone-rendering-kent">silicone</a> and <a href="/monocouche-rendering-kent">monocouche</a> systems, we offer lime render for period, heritage and listed homes. Modern lime render comes pre-bagged for a consistent, breathable finish, so we can supply and apply the right lime system to suit your walls.',
+    rich: true,
   },
   {
     q: "Will rendering help with damp?",
@@ -270,7 +262,7 @@ const icons: Record<string, string> = {
         <p class="eyebrow hero-eyebrow">Baumit · Weber · EcoRend Approved Installer</p>
         <h1>Expert External Rendering in Kent</h1>
         <p class="hero-sub">
-          Silicone and monocouche rendering systems, applied by a
+          <a href="/silicone-rendering-kent">Silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> systems, applied by a
           time-served specialist with nearly 20 years' experience. We protect,
           insulate and transform homes across Kent, backed by
           manufacturer-approved guarantees.
@@ -339,7 +331,7 @@ const icons: Record<string, string> = {
           carry out is finished by hand to a high standard rather than rushed by
           a general builder. Our plastering background is what lets us deliver a
           flawless finish, because external rendering is plastering at its most
-          demanding. From silicone render to monocouche rendering, we
+          demanding. From <a href="/silicone-rendering-kent">silicone render</a> to <a href="/monocouche-rendering-kent">monocouche rendering</a>, we
           apply the right rendering services to suit your walls, your home and
           your budget. Whether you want to refresh tired walls, render a new
           build house, or protect an older property from damp and the Kent
@@ -373,7 +365,7 @@ const icons: Record<string, string> = {
         <p class="eyebrow">Our rendering services</p>
         <h2>Modern render systems, expertly applied</h2>
         <p class="lead">
-          We specialise in three of the most popular modern rendering finishes,
+          We specialise in two of the most popular modern rendering finishes,
           chosen to suit your home and the finish you want. These core services
           suit most homes, and we tailor our services to the home in front of us.
           All of our rendering services in Kent are carried out with the right
@@ -392,9 +384,9 @@ const icons: Record<string, string> = {
               <span class="icon-badge">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" set:html={icons[s.icon]} />
               </span>
-              <h3>{s.name}</h3>
+              <h3><a href={s.href}>{s.name}</a></h3>
               <p>{s.body}</p>
-              <a class="text-link" href="/contact">{s.name} &rarr;</a>
+              <a class="text-link" href={s.href}>{s.name} &rarr;</a>
             </div>
           </article>
         ))}
@@ -506,7 +498,7 @@ const icons: Record<string, string> = {
         <p class="eyebrow">Render systems explained</p>
         <h2>Which render is right for your home?</h2>
         <p class="lead">
-          We specialise in modern silicone and monocouche rendering, but
+          We specialise in modern <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a>, but
           it helps to understand the main render types before you decide.
         </p>
       </div>
@@ -514,10 +506,11 @@ const icons: Record<string, string> = {
         {renderTypes.map((t) => (
           <article class={`type-card${t.us ? " type-card--us" : ""}`}>
             <div class="type-head">
-              <h3>{t.name}</h3>
+              <h3>{t.href ? <a href={t.href}>{t.name}</a> : t.name}</h3>
               {t.us && <span class="we-fit">We fit this</span>}
             </div>
             <p>{t.body}</p>
+            {t.href && <a class="text-link" href={t.href}>Learn about {t.name.toLowerCase()} &rarr;</a>}
           </article>
         ))}
       </div>
@@ -565,7 +558,7 @@ const icons: Record<string, string> = {
         <div class="lime-cta-text">
           <h3>Got a period or listed building?</h3>
           <p>
-            We fit lime render as well as modern silicone and monocouche
+            We fit lime render as well as modern <a href="/silicone-rendering-kent">silicone</a> and <a href="/monocouche-rendering-kent">monocouche</a>
             systems, so we can finish a heritage home the way it should be
             finished. If you own a period or listed building and need a breathable
             lime render, get in touch and we will specify and apply the right,
@@ -659,20 +652,28 @@ const icons: Record<string, string> = {
           good chance we can help. Rendering in Kent is our specialism, and our
           services cover the whole county.
         </p>
-        <a class="btn btn--ghost" href="/contact">Check your area</a>
+        <a class="btn btn--ghost" href="/areas-we-cover">View all locations</a>
       </div>
       <div class="areas-map">
         <iframe
-          src="https://www.google.com/maps?q=4+Heritage+Close,+Seasalter,+Whitstable,+Kent,+CT5+4QG&output=embed"
-          title="Kent Render Systems service area map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d377067.30211204704!2d0.506499357236282!3d51.18023840076859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ab573456f40e9bf%3A0x5be64ecf19ccfddb!2sKent%20Render%20Systems%20Ltd!5e0!3m2!1sen!2suk!4v1783910861327!5m2!1sen!2suk"
+          title="Kent Render Systems Ltd on Google Maps"
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
         ></iframe>
       </div>
       </div>
       <ul class="area-tags">
-        {areas.map((a) => <li>{a}</li>)}
+        {areas.map((a) => (
+          <li>
+            {areaHrefByLabel[a] ? (
+              <a href={areaHrefByLabel[a]}>{a}</a>
+            ) : (
+              a
+            )}
+          </li>
+        ))}
       </ul>
     </div>
   </section>
@@ -694,28 +695,7 @@ const icons: Record<string, string> = {
   </section>
 
   <!-- SECTION 12 — Reviews -->
-  <section class="section" id="reviews">
-    <div class="container">
-      <div class="section-head center">
-        <p class="eyebrow">Testimonials</p>
-        <h2>What our customers say</h2>
-        <p class="lead">
-          We are proud of the work we do and the reputation we have built with our
-          clients and homeowners across Kent. Read what our customers say about
-          our services and the finish they got.
-        </p>
-      </div>
-      <div class="grid grid-3">
-        {reviews.map((r) => (
-          <article class="card review-card">
-            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="review-text">{r.text}</p>
-            <p class="review-author"><strong>{r.name}</strong><span>{r.town}</span></p>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
+  <GoogleReviewsSection id="reviews" />
 
   <!-- SECTION 13 — FAQ -->
   <section class="section faq-section" id="faq">
@@ -731,7 +711,7 @@ const icons: Record<string, string> = {
               <span>{f.q}</span>
               <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
             </summary>
-            <p>{f.a}</p>
+            {f.rich ? <p set:html={f.a} /> : <p>{f.a}</p>}
           </details>
         ))}
       </div>
@@ -810,6 +790,43 @@ const icons: Record<string, string> = {
     font-size: clamp(1.05rem, 0.98rem + 0.5vw, 1.25rem);
     color: #c7d0da;
     margin-bottom: 30px;
+  }
+  .hero-sub a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .hero-sub a:hover {
+    color: var(--gold);
+  }
+  .intro-body a,
+  .section-head .lead a,
+  .lime-cta-text a {
+    color: var(--terracotta-dark);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .intro-body a:hover,
+  .section-head .lead a:hover,
+  .lime-cta-text a:hover {
+    color: var(--terracotta);
+  }
+  .service-body h3 a,
+  .type-head h3 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .service-body h3 a:hover,
+  .type-head h3 a:hover {
+    color: var(--terracotta-dark);
+  }
+  .faq-item a {
+    color: var(--terracotta-dark);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
   .hero-cta {
     display: flex;
@@ -1367,6 +1384,10 @@ const icons: Record<string, string> = {
     color: var(--ink-soft);
     transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
   }
+  .area-tags li a {
+    color: inherit;
+    text-decoration: none;
+  }
   .area-tags li:hover {
     border-color: var(--terracotta);
     color: var(--terracotta-dark);
@@ -1504,37 +1525,6 @@ const icons: Record<string, string> = {
   .gallery-cta {
     text-align: center;
     margin-top: 36px;
-  }
-
-  /* ---------- Reviews ---------- */
-  .review-card {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  .stars {
-    color: var(--gold);
-    font-size: 1.15rem;
-    letter-spacing: 2px;
-  }
-  .review-text {
-    color: var(--ink-soft);
-    font-style: italic;
-    margin: 0;
-    flex: 1;
-  }
-  .review-author {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-  }
-  .review-author strong {
-    font-family: var(--font-display);
-    color: var(--ink);
-  }
-  .review-author span {
-    font-size: 0.88rem;
-    color: var(--muted);
   }
 
   /* ---------- FAQ ---------- */

@@ -1,0 +1,43 @@
+---
+const mapSrc =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d377067.30211204704!2d0.506499357236282!3d51.18023840076859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ab573456f40e9bf%3A0x5be64ecf19ccfddb!2sKent%20Render%20Systems%20Ltd!5e0!3m2!1sen!2suk!4v1783910861327!5m2!1sen!2suk";
+---
+
+<section class="section section--sand">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">Find us</p>
+      <h2>Rendering across Kent</h2>
+      <p class="lead">
+        Kent Render Systems is based in Kent and covers the county and the London
+        border areas. Get in touch to check we cover your town.
+      </p>
+    </div>
+    <div class="map-embed">
+      <iframe
+        src={mapSrc}
+        title="Kent Render Systems Ltd on Google Maps"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<style>
+  .map-embed {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-sm);
+    min-height: 420px;
+  }
+  .map-embed iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    border: 0;
+  }
+</style>

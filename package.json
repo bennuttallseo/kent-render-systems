@@ -9,6 +9,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "audit": "node scripts/prelaunch-audit.mjs",
     "astro": "astro"
   },
   "dependencies": {

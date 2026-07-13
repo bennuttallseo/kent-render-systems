@@ -1,0 +1,27 @@
+---
+export interface BreadcrumbItem {
+  name: string;
+  path: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+}
+
+import { canonicalUrl } from "../utils/siteUrl";
+
+const { items } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: items.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.name,
+    item: canonicalUrl(item.path),
+  })),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

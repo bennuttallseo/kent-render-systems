@@ -1,0 +1,558 @@
+---
+import ContactSection from "./ContactSection.astro";
+import GoogleReviewsSection from "./GoogleReviewsSection.astro";
+import ServiceMap from "./ServiceMap.astro";
+import WorkGallery from "./WorkGallery.astro";
+
+export interface LocationService {
+  title: string;
+  body: string;
+}
+
+export interface LocationPageContent {
+  path: string;
+  town: string;
+  title: string;
+  description: string;
+  heroEyebrow: string;
+  h1: string;
+  heroLead: string;
+  heroImage: string;
+  heroImageAlt: string;
+  localTitle: string;
+  localParagraphs: string[];
+  localImage: string;
+  localImageAlt: string;
+  localImage2?: string;
+  localImage2Alt?: string;
+  servicesTitle: string;
+  servicesIntro: string;
+  services: LocationService[];
+  servicesFooter?: string;
+  whyTitle: string;
+  whyParagraphs: string[];
+  whyPoints: string[];
+  ctaTitle: string;
+  ctaLead: string;
+}
+
+interface Props extends LocationPageContent {}
+
+const {
+  town,
+  heroEyebrow,
+  h1,
+  heroLead,
+  heroImage,
+  heroImageAlt,
+  localTitle,
+  localParagraphs,
+  localImage,
+  localImageAlt,
+  localImage2,
+  localImage2Alt,
+  servicesTitle,
+  servicesIntro,
+  services,
+  servicesFooter,
+  whyTitle,
+  whyParagraphs,
+  whyPoints,
+  ctaTitle,
+  ctaLead,
+} = Astro.props;
+
+const phone = "07707 564597";
+const phoneHref = "tel:+447707564597";
+
+const heroPoints = [
+  "Manufacturer-trained, approved installer",
+  "Fully insured for peace of mind",
+  "Manufacturer-backed guarantees",
+  "Free, no-obligation quotes",
+];
+
+const accreditations = [
+  { name: "Baumit", note: "Approved Installer" },
+  { name: "Weber", note: "Registered Applicator" },
+  { name: "EcoRend", note: "Registered Contractor" },
+  { name: "EWI", note: "Accredited Installer" },
+];
+
+const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
+const phoneIcon =
+  '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/>';
+
+const localSplitAt = Math.ceil(localParagraphs.length / 2);
+const localFirstParagraphs = localParagraphs.slice(0, localSplitAt);
+const localSecondParagraphs = localParagraphs.slice(localSplitAt);
+const localSecondImage = localImage2 ?? localImage;
+const localSecondImageAlt = localImage2Alt ?? localImageAlt;
+---
+
+<section class="location-hero">
+  <div class="container location-hero-grid">
+    <div class="location-hero-text">
+      <p class="eyebrow hero-eyebrow">{heroEyebrow}</p>
+      <h1>{h1}</h1>
+      <p class="hero-sub" set:html={heroLead} />
+      <div class="hero-cta">
+        <a class="btn" href="/contact">Get Your Free Quote</a>
+        <a class="btn btn--light" href={phoneHref}>Call {phone}</a>
+      </div>
+      <ul class="hero-points">
+        {heroPoints.map((p) => (
+          <li>
+            <span class="hero-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" set:html={checkIcon} />
+            </span>
+            {p}
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div class="location-hero-media">
+      <img src={heroImage} alt={heroImageAlt} width="900" height="700" loading="eager" />
+    </div>
+  </div>
+</section>
+
+<section class="section trust-strip">
+  <div class="container">
+    <p class="trust-label">Accredited and approved by the UK's leading render manufacturers</p>
+    <ul class="badge-row">
+      {accreditations.map((a) => (
+        <li class="badge">
+          <span class="badge-name">{a.name}</span>
+          <span class="badge-note">{a.note}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div class="split-text prose">
+      <div class="section-head">
+        <p class="eyebrow">Local rendering specialists</p>
+        <h2>{localTitle}</h2>
+      </div>
+      {localFirstParagraphs.map((p) => <p set:html={p} />)}
+    </div>
+    <div class="split-media">
+      <img src={localImage} alt={localImageAlt} loading="lazy" width="900" height="700" />
+    </div>
+  </div>
+</section>
+
+<section class="local-mid-cta">
+  <div class="container local-mid-cta-inner">
+    <p class="local-mid-cta-text">
+      Want a free quote for rendering in {town}? Jack surveys every property personally.
+    </p>
+    <div class="local-mid-cta-actions">
+      <a class="btn btn--light" href="/contact">Get Your Free Quote</a>
+      <a class="btn btn--on-dark btn--ghost" href={phoneHref}>Call {phone}</a>
+    </div>
+  </div>
+</section>
+
+{localSecondParagraphs.length > 0 && (
+  <section class="section section--sand">
+    <div class="container split split--reverse">
+      <div class="split-text prose">
+        {localSecondParagraphs.map((p) => <p set:html={p} />)}
+      </div>
+      <div class="split-media">
+        <img src={localSecondImage} alt={localSecondImageAlt} loading="lazy" width="900" height="700" />
+      </div>
+    </div>
+  </section>
+)}
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">What we offer</p>
+      <h2>{servicesTitle}</h2>
+      <p class="lead" set:html={servicesIntro} />
+    </div>
+    <div class="grid grid-2 services-list">
+      {services.map((s) => (
+        <article class="card service-item">
+          <h3>{s.title}</h3>
+          <p set:html={s.body} />
+        </article>
+      ))}
+    </div>
+    {servicesFooter && <p class="services-footer center" set:html={servicesFooter} />}
+    <p class="services-hub center">
+      We cover towns across Kent and the south east London border.
+      View <a href="/areas-we-cover">all areas we cover</a>.
+    </p>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container why-grid">
+    <div class="why-intro prose-dark">
+      <p class="eyebrow">Why choose us</p>
+      <h2>{whyTitle}</h2>
+      {whyParagraphs.map((p) => <p set:html={p} />)}
+      <a class="btn btn--light" href={phoneHref}>Call {phone}</a>
+    </div>
+    <ul class="why-points">
+      {whyPoints.map((point) => (
+        <li>
+          <span class="why-check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" set:html={checkIcon} />
+          </span>
+          <span set:html={point} />
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<GoogleReviewsSection />
+
+<WorkGallery />
+
+<ServiceMap />
+
+<section class="section section--sand">
+  <ContactSection />
+</section>
+
+<section class="final-cta">
+  <div class="container final-inner">
+    <p class="eyebrow">Free no-obligation quote</p>
+    <h2>{ctaTitle}</h2>
+    <p class="lead" set:html={ctaLead} />
+    <div class="final-actions">
+      <a class="btn btn--light" href="/contact">Get Your Free Quote</a>
+      <a class="btn btn--on-dark btn--ghost" href={phoneHref}>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={phoneIcon} />
+        Call {phone}
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .location-hero {
+    background:
+      radial-gradient(900px 420px at 85% 0%, rgba(30, 91, 184, 0.35), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+    color: #e7ecf1;
+    padding-block: clamp(56px, 6vw, 96px);
+  }
+  .location-hero-grid {
+    display: grid;
+    gap: 40px;
+    align-items: center;
+  }
+  @media (min-width: 920px) {
+    .location-hero-grid {
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 56px;
+    }
+  }
+  .hero-eyebrow { color: var(--gold); }
+  .location-hero h1 {
+    color: #fff;
+    font-size: clamp(2.1rem, 1.3rem + 3vw, 3.2rem);
+    max-width: 16ch;
+  }
+  .hero-sub {
+    color: #c7d0da;
+    max-width: 58ch;
+    margin-bottom: 28px;
+  }
+  .hero-sub :global(a) {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .hero-sub :global(a:hover) { color: var(--gold); }
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .hero-cta .btn--light:hover {
+    opacity: 0.88;
+    background: #fff;
+    border-color: #fff;
+    color: var(--ink);
+    transform: translateY(-1px);
+  }
+  .hero-points {
+    display: grid;
+    gap: 10px;
+  }
+  .hero-points li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #dde4ec;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  .hero-check {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    background: rgba(91, 143, 217, 0.2);
+    color: var(--gold);
+    flex: none;
+  }
+  .hero-check svg { width: 16px; height: 16px; }
+  .location-hero-media img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .trust-strip { padding-block: 36px; }
+  .trust-label {
+    text-align: center;
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-bottom: 18px;
+  }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 18px;
+  }
+  .badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 12px 26px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--sand);
+    min-width: 160px;
+  }
+  .badge-name {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: var(--ink);
+  }
+  .badge-note {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--terracotta-dark);
+    font-weight: 600;
+  }
+
+  .split {
+    display: grid;
+    gap: 40px;
+    align-items: start;
+  }
+  @media (min-width: 880px) {
+    .split {
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+    }
+    .split--reverse .split-media {
+      order: -1;
+    }
+  }
+  .split-text p:last-child {
+    margin-bottom: 0;
+  }
+  .prose p {
+    margin-bottom: 1em;
+  }
+  .prose p:last-child {
+    margin-bottom: 0;
+  }
+
+  .local-mid-cta {
+    background:
+      radial-gradient(900px 420px at 15% 0%, rgba(30, 91, 184, 0.42), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+    color: #e7ecf1;
+    padding-block: clamp(40px, 4vw, 56px);
+  }
+  .local-mid-cta-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .local-mid-cta-text {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(1.05rem, 0.9rem + 0.6vw, 1.25rem);
+    color: #fff;
+    max-width: 42ch;
+  }
+  .local-mid-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .local-mid-cta-actions .btn--light:hover {
+    opacity: 0.88;
+    background: #fff;
+    border-color: #fff;
+    color: var(--ink);
+  }
+
+  .split-media img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  .prose :global(a) {
+    color: var(--terracotta-dark);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .prose :global(a:hover) { color: var(--terracotta); }
+
+  .service-item h3 {
+    font-size: 1.18rem;
+    margin-bottom: 0.55em;
+  }
+  .service-item p {
+    margin: 0;
+    color: var(--ink-soft);
+  }
+  .service-item :global(a) {
+    color: var(--terracotta-dark);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .services-footer {
+    margin: 32px auto 0;
+    max-width: 68ch;
+    color: var(--ink-soft);
+  }
+  .services-footer :global(a) {
+    color: var(--terracotta-dark);
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  .services-hub {
+    margin: 24px auto 0;
+    max-width: 68ch;
+    color: var(--ink-soft);
+    font-size: 0.97rem;
+  }
+  .services-hub :global(a) {
+    color: var(--terracotta-dark);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .why-grid {
+    display: grid;
+    gap: 40px;
+  }
+  @media (min-width: 920px) {
+    .why-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+  }
+  .prose-dark h2 { color: #fff; }
+  .prose-dark p { color: #c7d0da; }
+  .prose-dark .eyebrow { color: var(--gold); }
+  .prose-dark :global(a:not(.btn)) {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .prose-dark :global(.btn--light) {
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .prose-dark :global(.btn--light:hover) {
+    opacity: 0.88;
+    background: #fff;
+    border-color: #fff;
+    color: var(--ink);
+    transform: translateY(-1px);
+  }
+  .why-points {
+    display: grid;
+    gap: 16px;
+  }
+  .why-points li {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    color: #dde4ec;
+    font-weight: 500;
+  }
+  .why-points :global(a) {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  .why-check {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: rgba(91, 143, 217, 0.18);
+    color: var(--gold);
+    flex: none;
+  }
+  .why-check svg { width: 18px; height: 18px; }
+
+  .final-cta {
+    background:
+      radial-gradient(900px 420px at 15% 0%, rgba(30, 91, 184, 0.42), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+    color: #e7ecf1;
+    padding-block: clamp(64px, 6vw, 110px);
+    text-align: center;
+  }
+  .final-inner { max-width: 720px; margin-inline: auto; }
+  .final-cta .eyebrow { color: var(--gold); }
+  .final-cta h2 { color: #fff; }
+  .final-cta .lead {
+    color: #c7d0da;
+    margin-bottom: 30px;
+  }
+  .final-cta .lead :global(a) {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  .final-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+  }
+  .final-actions .btn svg { width: 18px; height: 18px; }
+</style>

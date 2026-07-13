@@ -1,0 +1,138 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ServicePage from "../components/ServicePage.astro";
+
+const process = [
+  {
+    step: "01",
+    title: "Free survey and quote",
+    body: "Jack visits your property, assesses the walls and talks through whether silicone rendering is the right finish. You receive a clear, no-obligation quote with no pressure.",
+  },
+  {
+    step: "02",
+    title: "Preparation",
+    body: "Scaffolding is erected, surfaces are prepared and any repairs are carried out so the silicone render has a sound, stable base to bond to.",
+  },
+  {
+    step: "03",
+    title: "Machine-sprayed application",
+    body: "Base coats, mesh and the silicone top coat are applied correctly, with both base coats and the finish machine sprayed for a consistent, high-quality result.",
+  },
+  {
+    step: "04",
+    title: "Finishing and clean-up",
+    body: "Final detailing is completed, the site is left tidy and we walk the job with you so you are happy before we leave.",
+  },
+];
+---
+
+<Layout
+  title="Silicone Rendering in Kent | Kent Render Systems"
+  description="Expert silicone rendering in Kent from Kent Render Systems. Exterior silicone render by Jack. Free surveys with clear, itemised Kent prices."
+  path="/silicone-rendering-kent"
+>
+  <ServicePage
+    path="/silicone-rendering-kent"
+    title="Silicone Rendering in Kent | Kent Render Systems"
+    description="Expert silicone rendering in Kent from Kent Render Systems. Exterior silicone render by Jack. Free surveys with clear, itemised Kent prices."
+    heroEyebrow="Silicone rendering specialists"
+    heroH1="Silicone Rendering Kent"
+    heroLead="Kent Render Systems provides specialist silicone rendering across Kent. Flexible, breathable and self-cleaning, exterior silicone render protects your walls and transforms your home with a finish built to last."
+    heroImage="/images/silicone-render-bungalow-kent.png"
+    heroImageAlt="Silicone render on a white bungalow with bifold doors in Kent"
+    whatIsTitle="What is silicone rendering?"
+    whatIsLead="Silicone rendering is a modern thin-coat render finish known for flexibility, breathability and long-term performance."
+    whatIsParagraphs={[
+      "Silicone rendering is a through-designed exterior finish applied in thin coats over a prepared wall. The silicone technology makes the render water-repellent on the surface while still allowing the wall beneath to breathe, which helps manage moisture and reduces the risk of trapped damp.",
+      "It is one of the most popular choices for external silicone render in Kent because it copes well with our weather, resists cracking better than traditional cement renders and stays cleaner for longer thanks to its self-cleaning properties. Rain washes away much of the surface dirt, so your walls keep looking fresh with very little upkeep.",
+      "At Kent Render Systems, we apply silicone render using manufacturer-approved systems from Baumit, Weber and EcoRend. Jack machine sprays every coat for a consistent finish and hand-details every job to the standard your home deserves.",
+    ]}
+    whatIsImage="/images/silicone-render-detached-house-kent.jpg"
+    whatIsImageAlt="External silicone render on a newly built detached house in Kent"
+    benefitsTitle="Why choose silicone render for your home?"
+    benefitsLead="Silicone rendering offers a strong balance of protection, appearance and low maintenance for homes across Kent."
+    benefits={[
+      {
+        title: "Flexible and crack-resistant",
+        body: "Silicone render moves with the building, making it far less prone to the cracking issues common with older sand and cement finishes.",
+        icon: "shield",
+      },
+      {
+        title: "Self-cleaning surface",
+        body: "The silicone technology helps dirt wash away naturally in the rain, keeping exterior walls looking cleaner for longer with minimal maintenance.",
+        icon: "drop",
+      },
+      {
+        title: "Breathable protection",
+        body: "Walls can breathe while still being protected from driving rain, making silicone rendering a smart choice for many older and modern homes in Kent.",
+        icon: "leaf",
+      },
+      {
+        title: "Transforms kerb appeal",
+        body: "A fresh silicone render finish gives your home a clean, modern appearance and lifts kerb appeal whether you are updating tired walls or finishing a new build.",
+        icon: "sparkle",
+      },
+    ]}
+    whyUsTitle="Why choose Kent Render Systems for silicone rendering?"
+    whyUsLead="Silicone rendering is a specialist job. You want a time-served renderer who uses the right products and applies them correctly, not a general builder fitting render on the side."
+    whyUs={[
+      {
+        title: "Owner-led by Jack",
+        body: "Every silicone rendering job is led by Jack from survey to completion. You deal with a specialist who has nearly 20 years in the rendering and plastering trade, not a subcontractor.",
+      },
+      {
+        title: "Manufacturer-approved systems",
+        body: "We are approved installers for Baumit, Weber and EcoRend. That means the correct silicone render products, applied to manufacturer standards, with backed guarantees on every job.",
+      },
+      {
+        title: "Machine-sprayed application",
+        body: "We machine spray our base coats and top coats for a more even, consistent finish across your walls. It is the industry-leading application method and it shows in the final result.",
+      },
+      {
+        title: "Based in Kent, covering the county",
+        body: "We know Kent housing stock and weather. From Whitstable and Canterbury to Maidstone, Tonbridge and the London borders, we provide silicone rendering where you need it.",
+      },
+    ]}
+    pricingTitle="Silicone render Kent prices"
+    pricingParagraphs={[
+      "Silicone render Kent prices depend on the size of your property, the condition of the walls, access, scaffolding and the extent of any repairs needed before rendering begins. Render type, finish and colour can also affect the cost.",
+      "The best way to get an accurate price is a free, no-obligation survey. Jack will assess your walls in person and provide a clear, itemised quote so you know exactly what your silicone rendering will cost before any work starts.",
+    ]}
+    pricingPoints={[
+      "Free survey and no-obligation quote",
+      "Clear, itemised pricing with no hidden extras",
+      "Covers preparation, scaffolding and application",
+      "Manufacturer-backed guarantees included",
+      "Fully insured, owner-led service",
+    ]}
+    process={process}
+    faqs={[
+      {
+        q: "How much does silicone rendering cost in Kent?",
+        a: "Silicone render Kent prices vary by property size, wall condition, access and preparation needed. After a free survey, we provide a clear, itemised quote so you know the full cost upfront.",
+      },
+      {
+        q: "What is the difference between silicone render and monocouche?",
+        a: "Silicone rendering is a flexible, thin-coat, self-cleaning finish ideal for most homes. Monocouche is a through-coloured one-coat render. We will recommend the right system for your walls during the survey.",
+      },
+      {
+        q: "Can you apply exterior silicone render over pebbledash?",
+        a: "In many cases, yes, provided the existing surface is sound. Where it is not, we carry out repairs or removal first. Jack will advise on the best approach during your free survey.",
+      },
+      {
+        q: "How long does silicone rendering last?",
+        a: "Applied correctly with proper preparation, modern silicone rendering can protect and enhance your walls for 20 to 30 years or more with very little maintenance.",
+      },
+      {
+        q: "Do you cover my area of Kent?",
+        a: "We cover Kent and the surrounding areas including Whitstable, Canterbury, Maidstone, Tonbridge, Tunbridge Wells, Bromley, Sidcup and the wider London border towns. Contact us to confirm we cover your location.",
+      },
+    ]}
+    reviewsLead="Homeowners across Kent trust Kent Render Systems for silicone rendering. Read what our customers say on Google."
+    relatedService={{
+      name: "Monocouche Rendering Kent",
+      href: "/monocouche-rendering-kent",
+      body: "Looking for a through-coloured one-coat finish? We also provide monocouche rendering across Kent with a wide choice of render colours and no repainting required.",
+    }}
+  />
+</Layout>

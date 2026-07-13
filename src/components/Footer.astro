@@ -1,4 +1,7 @@
 ---
+import { serviceLinks } from "../data/serviceLinks";
+import { footerAreaLinks } from "../data/locationHub";
+
 interface Props {
   phone: string;
   phoneHref: string;
@@ -7,8 +10,25 @@ interface Props {
 const { phone, phoneHref, email } = Astro.props;
 const year = new Date().getFullYear();
 
-const services = ["Silicone Render", "Monocouche Render", "Lime Render", "External Wall Insulation"];
-const areas = ["Maidstone", "Medway", "Canterbury", "Ashford", "Folkestone", "Tunbridge Wells"];
+const services = [
+  ...serviceLinks.map((s) => ({ label: s.label.replace(" Kent", ""), href: s.href })),
+  { label: "Lime Render", href: "/#lime" },
+  { label: "External Wall Insulation", href: "/#ewi" },
+];
+const areas = footerAreaLinks;
+
+const socialLinks = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/jtplasteringkent.co.uk",
+    icon: '<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>',
+  },
+  {
+    label: "TikTok",
+    href: "https://www.tiktok.com/@kent.render.system",
+    icon: '<path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>',
+  },
+];
 ---
 
 <footer class="site-footer">
@@ -21,7 +41,7 @@ const areas = ["Maidstone", "Medway", "Canterbury", "Ashford", "Folkestone", "Tu
         <strong>Kent Render Systems</strong>
       </div>
       <p>
-        Specialist external rendering across Kent, silicone and monocouche
+        Specialist external rendering across Kent, <a href="/silicone-rendering-kent">silicone</a> and <a href="/monocouche-rendering-kent">monocouche</a>
         systems applied by a time-served installer with nearly 20 years'
         experience.
       </p>
@@ -30,12 +50,13 @@ const areas = ["Maidstone", "Medway", "Canterbury", "Ashford", "Folkestone", "Tu
 
     <div class="footer-col">
       <h4>Services</h4>
-      <ul>{services.map((s) => <li>{s}</li>)}</ul>
+      <ul>{services.map((s) => <li>{s.href ? <a href={s.href}>{s.label}</a> : s.label}</li>)}</ul>
     </div>
 
     <div class="footer-col">
       <h4>Areas We Cover</h4>
-      <ul>{areas.map((a) => <li>{a}</li>)}</ul>
+      <ul>{areas.map((a) => <li>{a.href ? <a href={a.href}>{a.label}</a> : a.label}</li>)}</ul>
+      <a class="footer-areas-more" href="/areas-we-cover">View all areas &rarr;</a>
     </div>
 
     <div class="footer-col">
@@ -50,6 +71,16 @@ const areas = ["Maidstone", "Medway", "Canterbury", "Ashford", "Folkestone", "Tu
 
   <div class="container footer-bottom">
     <p>&copy; {year} Kent Render Systems. All rights reserved.</p>
+    <ul class="footer-social">
+      {socialLinks.map((s) => (
+        <li>
+          <a href={s.href} target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={s.icon} />
+            <span>{s.label}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
     <p>External rendering specialists serving Kent.</p>
   </div>
 </footer>
@@ -74,6 +105,15 @@ const areas = ["Maidstone", "Medway", "Canterbury", "Ashford", "Folkestone", "Tu
   }
   .footer-brand p {
     max-width: 38ch;
+  }
+  .footer-brand a {
+    color: #d8dee6;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .footer-brand a:hover {
+    color: var(--gold);
   }
   .brand {
     display: flex;
@@ -119,6 +159,18 @@ const areas = ["Maidstone", "Medway", "Canterbury", "Ashford", "Folkestone", "Tu
   .footer-col a:hover {
     color: var(--gold);
   }
+  .footer-areas-more {
+    display: inline-block;
+    margin-top: 14px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--gold);
+    text-decoration: none;
+  }
+  .footer-areas-more:hover {
+    color: #fff;
+  }
   .contact a {
     font-weight: 600;
     color: #d8dee6;
@@ -131,12 +183,35 @@ const areas = ["Maidstone", "Medway", "Canterbury", "Ashford", "Folkestone", "Tu
     padding-block: 22px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-    gap: 8px;
+    gap: 16px;
     font-size: 0.85rem;
     color: #7d8896;
   }
   .footer-bottom p {
     margin: 0;
+  }
+  .footer-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+  .footer-social a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #d8dee6;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .footer-social a:hover {
+    color: var(--gold);
+  }
+  .footer-social svg {
+    width: 18px;
+    height: 18px;
+    flex: none;
   }
 </style>

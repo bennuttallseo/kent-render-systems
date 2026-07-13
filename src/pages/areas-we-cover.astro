@@ -1,0 +1,244 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { locationHubGroups } from "../data/locationHub";
+
+const phone = "07707 564597";
+const phoneHref = "tel:+447707564597";
+
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Areas We Cover", path: "/areas-we-cover" },
+];
+---
+
+<Layout
+  title="Areas We Cover | Kent Render Systems"
+  description="Kent Render Systems covers towns across Kent and the south east London border. Find your local rendering page for silicone and monocouche. Free quotes."
+  path="/areas-we-cover"
+  breadcrumbs={breadcrumbs}
+>
+  <section class="page-hero">
+    <div class="container page-hero-grid">
+      <div class="page-hero-text">
+        <p class="eyebrow">Coverage across Kent</p>
+        <h1>Areas We Cover</h1>
+        <p class="lead">
+          <a href="/">Kent Render Systems</a> is based in Whitstable and provides
+          specialist <a href="/silicone-rendering-kent">silicone rendering</a> and
+          <a href="/monocouche-rendering-kent">monocouche rendering</a> across Kent
+          and the south east London border. From coastal towns on the north Kent
+          coast to county towns in mid and west Kent, and suburban areas around
+          Bromley and Orpington, we cover homeowners who want a durable, professional
+          exterior finish. Select your town below for local information, services
+          and a free, no-obligation quote.
+        </p>
+        <div class="page-hero-cta">
+          <a class="btn btn--light" href="/contact">Get Your Free Quote</a>
+          <a class="btn btn--light" href={phoneHref}>Call {phone}</a>
+        </div>
+      </div>
+      <div class="page-hero-logo" aria-hidden="true">
+        <img src="/logo-stacked.png" alt="" width="794" height="717" loading="eager" />
+      </div>
+    </div>
+  </section>
+
+  {locationHubGroups.map((group) => (
+    <section class="section" id={group.id}>
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Coverage area</p>
+          <h2>{group.title}</h2>
+          <p class="lead">{group.description}</p>
+        </div>
+        <ul class="area-list">
+          {group.towns.map((town) => (
+            <li>
+              {town.href ? (
+                <a class="area-link" href={town.href}>
+                  <span class="area-name">{town.label}</span>
+                  <span class="area-cta">Rendering in {town.label} &rarr;</span>
+                </a>
+              ) : (
+                <span class="area-plain">
+                  <span class="area-name">{town.label}</span>
+                </span>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  ))}
+
+  <section class="section section--sand">
+    <div class="container hub-note">
+      <h2>Cannot see your town?</h2>
+      <p>
+        We cover Kent and the surrounding areas beyond the towns listed here.
+        If your postcode is not shown, <a href="/contact">contact us</a> anyway.
+        Jack will let you know if we can help and arrange a free survey where
+        appropriate.
+      </p>
+      <a class="btn" href="/contact">Request a free quote</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-hero {
+    background:
+      radial-gradient(900px 420px at 15% 0%, rgba(30, 91, 184, 0.42), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+    color: #e7ecf1;
+    padding-block: clamp(56px, 6vw, 104px);
+  }
+  .page-hero-grid {
+    display: grid;
+    gap: 40px;
+    align-items: center;
+  }
+  @media (min-width: 920px) {
+    .page-hero-grid {
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 56px;
+    }
+  }
+  .page-hero .eyebrow {
+    color: var(--gold);
+  }
+  .page-hero h1 {
+    color: #fff;
+    font-size: clamp(2.1rem, 1.3rem + 3vw, 3.3rem);
+    margin-bottom: 0.45em;
+    max-width: 16ch;
+  }
+  .page-hero .lead {
+    color: #c7d0da;
+    margin-bottom: 30px;
+    max-width: 60ch;
+  }
+  .page-hero .lead :global(a) {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .page-hero .lead :global(a:hover) {
+    color: var(--gold);
+  }
+  .page-hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .page-hero-cta .btn--light:hover {
+    opacity: 0.88;
+    background: #fff;
+    border-color: #fff;
+    color: var(--ink);
+    transform: translateY(-1px);
+  }
+  .page-hero-logo {
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (min-width: 920px) {
+    .page-hero-logo {
+      display: flex;
+    }
+  }
+  .page-hero-logo img {
+    width: min(100%, 380px);
+    height: auto;
+    opacity: 0.14;
+    filter: grayscale(1) brightness(2);
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .area-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  @media (min-width: 560px) {
+    .area-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 900px) {
+    .area-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .area-link {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 18px 20px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .area-link:hover {
+    border-color: var(--terracotta);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .area-plain {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 18px 20px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+    background: var(--sand);
+    color: var(--ink-soft);
+  }
+  .area-name {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--ink);
+  }
+  .area-plain .area-name {
+    color: var(--ink-soft);
+  }
+  .area-cta {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--terracotta-dark);
+  }
+  .area-link:hover .area-cta {
+    color: var(--terracotta);
+  }
+
+  .hub-note {
+    max-width: 640px;
+    text-align: center;
+    margin-inline: auto;
+  }
+  .hub-note h2 {
+    margin-bottom: 0.5em;
+  }
+  .hub-note p {
+    color: var(--ink-soft);
+    margin-bottom: 24px;
+  }
+  .hub-note :global(a:not(.btn)) {
+    color: var(--terracotta-dark);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .hub-note :global(.btn) {
+    color: #fff;
+    text-decoration: none;
+  }
+</style>
