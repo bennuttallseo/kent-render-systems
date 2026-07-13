@@ -3,9 +3,9 @@ import type { LocationPageContent } from "../components/LocationPage.astro";
 export const maidstone: LocationPageContent = {
   path: "/rendering-maidstone",
   town: "Maidstone",
-  title: "Rendering Maidstone | Silicone & Monocouche Specialists",
+  title: "Rendering Maidstone | Victorian Terrace & New Build Render",
   description:
-    "Rendering in Maidstone by Kent Render Systems. Silicone and monocouche render for Victorian terraces, semis and new builds. Free quotes. Call 07707 564597.",
+    "Rendering in Maidstone by Kent Render Systems. Silicone and monocouche for Victorian terraces, semis and new builds. Free quotes. Call 07707 564597.",
   heroEyebrow: "West and mid Kent rendering",
   h1: "Rendering in Maidstone",
   heroLead:
@@ -80,9 +80,9 @@ export const maidstone: LocationPageContent = {
 export const medway: LocationPageContent = {
   path: "/rendering-medway",
   town: "Medway",
-  title: "Rendering Medway | Silicone & Monocouche Specialists",
+  title: "Rendering Medway | Silicone & Monocouche House Render",
   description:
-    "Rendering in Medway from Kent Render Systems. Silicone and monocouche render for Rochester, Chatham, Gillingham and Strood. Free quotes. Call 07707 564597.",
+    "Rendering in Medway by Kent Render Systems. Silicone and monocouche for post-war semis and Victorian terraces. Free quotes. Call 07707 564597.",
   heroEyebrow: "Kent-wide rendering coverage",
   h1: "House Rendering Across Medway",
   heroLead:
@@ -154,9 +154,9 @@ export const medway: LocationPageContent = {
 export const tonbridge: LocationPageContent = {
   path: "/rendering-tonbridge",
   town: "Tonbridge",
-  title: "Rendering Tonbridge | Silicone & Monocouche Specialists",
+  title: "House Rendering Tonbridge | Silicone & Monocouche",
   description:
-    "Rendering in Tonbridge from Kent Render Systems, Whitstable. Silicone and monocouche render for period and suburban homes. Free quotes. Call 07707 564597.",
+    "Rendering in Tonbridge by Kent Render Systems. Silicone and monocouche for period homes and garden room extensions. Free quotes. Call 07707 564597.",
   heroEyebrow: "West Kent rendering specialists",
   h1: "Render in Tonbridge",
   heroLead:
@@ -230,9 +230,9 @@ export const tonbridge: LocationPageContent = {
 export const tunbridgeWells: LocationPageContent = {
   path: "/rendering-tunbridge-wells",
   town: "Tunbridge Wells",
-  title: "Rendering Tunbridge Wells | Silicone & Monocouche",
+  title: "Rendering Tunbridge Wells | Victorian Villa Specialists",
   description:
-    "Rendering in Tunbridge Wells by Kent Render Systems. Sympathetic silicone and monocouche render for Victorian villas. Free quotes. Call 07707 564597.",
+    "Rendering in Tunbridge Wells by Kent Render Systems. Silicone and monocouche for Victorian villas and semis. Free quotes. Call 07707 564597.",
   heroEyebrow: "Sympathetic finishes for period homes",
   h1: "Rendering in Tunbridge Wells",
   heroLead:

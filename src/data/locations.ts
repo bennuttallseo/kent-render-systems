@@ -3,9 +3,9 @@ import type { LocationPageContent } from "../components/LocationPage.astro";
 export const whitstable: LocationPageContent = {
   path: "/rendering-whitstable",
   town: "Whitstable",
-  title: "Rendering Whitstable | Silicone & Monocouche Specialists",
+  title: "Rendering Whitstable | Local Silicone & Monocouche Specialists",
   description:
-    "Rendering in Whitstable by Kent Render Systems, your local specialists. Silicone and monocouche render for coastal homes. Free quotes. Call 07707 564597.",
+    "Rendering in Whitstable by Kent Render Systems, your local team. Silicone and monocouche for coastal homes. Free quotes. Call 07707 564597.",
   heroEyebrow: "Your local rendering team",
   h1: "Rendering in Whitstable",
   heroLead:
@@ -75,9 +75,9 @@ export const whitstable: LocationPageContent = {
 export const herneBay: LocationPageContent = {
   path: "/rendering-herne-bay",
   town: "Herne Bay",
-  title: "Rendering Herne Bay | Silicone & Monocouche Specialists",
+  title: "House Rendering Herne Bay | Coastal Silicone & Monocouche",
   description:
-    "Professional rendering in Herne Bay from Kent Render Systems. Silicone and monocouche render for coastal homes. Free quotes. Call 07707 564597.",
+    "Rendering in Herne Bay by Kent Render Systems. Silicone and monocouche for seafront and bungalow homes. Free quotes. Call 07707 564597.",
   heroEyebrow: "Coastal rendering specialists",
   h1: "House Rendering in Herne Bay",
   heroLead:
@@ -142,9 +142,9 @@ export const herneBay: LocationPageContent = {
 export const canterbury: LocationPageContent = {
   path: "/rendering-canterbury",
   town: "Canterbury",
-  title: "Rendering Canterbury | Silicone & Monocouche Specialists",
+  title: "Rendering Canterbury | Period & Modern Home Specialists",
   description:
-    "Rendering in Canterbury by Kent Render Systems. Silicone and monocouche render for period and modern homes. Based in Whitstable. Free quotes available.",
+    "Rendering in Canterbury by Kent Render Systems. Silicone and monocouche for period terraces and modern estates. Free quotes. Call 07707 564597.",
   heroEyebrow: "Canterbury rendering specialists",
   h1: "Rendering in Canterbury",
   heroLead:
@@ -213,9 +213,9 @@ export const canterbury: LocationPageContent = {
 export const faversham: LocationPageContent = {
   path: "/rendering-faversham",
   town: "Faversham",
-  title: "Rendering Faversham | Silicone & Monocouche Specialists",
+  title: "Render in Faversham | Market Town Rendering Specialists",
   description:
-    "Rendering in Faversham from Kent Render Systems, Whitstable. Silicone and monocouche render for period and modern homes. Free no-obligation quotes.",
+    "Rendering in Faversham by Kent Render Systems. Silicone and monocouche for period town-centre and newer homes. Free quotes. Call 07707 564597.",
   heroEyebrow: "Faversham rendering",
   h1: "Render in Faversham",
   heroLead:
@@ -280,9 +280,9 @@ export const faversham: LocationPageContent = {
 export const sittingbourne: LocationPageContent = {
   path: "/rendering-sittingbourne",
   town: "Sittingbourne",
-  title: "Rendering Sittingbourne | Silicone & Monocouche Render",
+  title: "Rendering Sittingbourne | New Build & Terrace Specialists",
   description:
-    "Rendering in Sittingbourne by Kent Render Systems. Silicone and monocouche render for new builds and period terraces. Free quotes. Call 07707 564597.",
+    "Rendering in Sittingbourne by Kent Render Systems. Silicone and monocouche for new estates and Victorian terraces. Free quotes. Call 07707 564597.",
   heroEyebrow: "Sittingbourne rendering",
   h1: "Rendering in Sittingbourne",
   heroLead:
@@ -348,9 +348,9 @@ export const sittingbourne: LocationPageContent = {
 export const ashford: LocationPageContent = {
   path: "/rendering-ashford",
   town: "Ashford",
-  title: "Rendering Ashford | Silicone & Monocouche Specialists",
+  title: "Ashford Rendering | Silicone & Monocouche for Growing Estates",
   description:
-    "Rendering in Ashford from Kent Render Systems. Silicone and monocouche render for new estates and established homes. Free quotes across Kent.",
+    "Rendering in Ashford by Kent Render Systems. Silicone and monocouche for new-build estates and established homes. Free quotes. Call 07707 564597.",
   heroEyebrow: "Ashford rendering",
   h1: "Ashford Rendering Specialists",
   heroLead:

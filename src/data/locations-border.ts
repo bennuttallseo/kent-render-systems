@@ -3,9 +3,9 @@ import type { LocationPageContent } from "../components/LocationPage.astro";
 export const bromley: LocationPageContent = {
   path: "/rendering-bromley",
   town: "Bromley",
-  title: "Rendering Bromley | Silicone & Monocouche Specialists",
+  title: "Rendering Bromley | Suburban Silicone & Monocouche",
   description:
-    "Rendering in Bromley from Kent Render Systems, Whitstable. Silicone and monocouche for Victorian to modern homes. Free quotes. Call 07707 564597.",
+    "Rendering in Bromley by Kent Render Systems. Silicone and monocouche for Victorian semis to modern detached homes. Free quotes. Call 07707 564597.",
   heroEyebrow: "Bromley rendering specialists",
   h1: "Rendering in Bromley",
   heroLead:
@@ -80,9 +80,9 @@ export const bromley: LocationPageContent = {
 export const sidcup: LocationPageContent = {
   path: "/rendering-sidcup",
   town: "Sidcup",
-  title: "Rendering Sidcup | Silicone & Monocouche Render",
+  title: "Render in Sidcup | 1930s & 1950s Home Rendering",
   description:
-    "Rendering in Sidcup from Kent Render Systems, Whitstable. Silicone and monocouche for 1930s-1950s homes. Free no-obligation quotes. Call 07707 564597.",
+    "Rendering in Sidcup by Kent Render Systems. Silicone and monocouche for 1930s semis and 1950s detached homes. Free quotes. Call 07707 564597.",
   heroEyebrow: "Sidcup rendering",
   h1: "House Rendering in Sidcup",
   heroLead:
@@ -154,9 +154,9 @@ export const sidcup: LocationPageContent = {
 export const chislehurst: LocationPageContent = {
   path: "/rendering-chislehurst",
   town: "Chislehurst",
-  title: "Rendering Chislehurst | Silicone & Monocouche",
+  title: "Rendering Chislehurst | Period Detached Home Specialists",
   description:
-    "Rendering in Chislehurst by Kent Render Systems, Whitstable. Silicone and monocouche for detached and period homes. Free quotes. Call 07707 564597.",
+    "Rendering in Chislehurst by Kent Render Systems. Silicone and monocouche for detached and period properties. Free quotes. Call 07707 564597.",
   heroEyebrow: "Chislehurst rendering",
   h1: "Render in Chislehurst",
   heroLead:
@@ -232,9 +232,9 @@ export const chislehurst: LocationPageContent = {
 export const orpington: LocationPageContent = {
   path: "/rendering-orpington",
   town: "Orpington",
-  title: "Rendering Orpington | Silicone & Monocouche Render",
+  title: "House Rendering Orpington | Extensions & Garden Rooms",
   description:
-    "Rendering in Orpington from Kent Render Systems. Silicone and monocouche for extensions, garden rooms and suburban homes. Free quotes. Call 07707 564597.",
+    "Rendering in Orpington by Kent Render Systems. Silicone and monocouche for extensions, garden rooms and semis. Free quotes. Call 07707 564597.",
   heroEyebrow: "Orpington rendering specialists",
   h1: "Orpington Rendering Specialists",
   heroLead:
@@ -308,9 +308,9 @@ export const orpington: LocationPageContent = {
 export const bexley: LocationPageContent = {
   path: "/rendering-bexley",
   town: "Bexley",
-  title: "Rendering Bexley | Silicone & Monocouche Specialists",
+  title: "Rendering Bexley | Pebble-Dash Replacement Specialists",
   description:
-    "Rendering in Bexley from Kent Render Systems in Whitstable. Silicone and monocouche render for mixed housing across the borough. Free no-obligation quotes.",
+    "Rendering in Bexley by Kent Render Systems. Silicone and monocouche for pebble-dash replacement and mixed housing. Free quotes. Call 07707 564597.",
   heroEyebrow: "Bexley borough rendering",
   h1: "Rendering in Bexley",
   heroLead:
@@ -385,9 +385,9 @@ export const bexley: LocationPageContent = {
 export const bexleyheath: LocationPageContent = {
   path: "/rendering-bexleyheath",
   town: "Bexleyheath",
-  title: "Rendering Bexleyheath | Silicone & Monocouche",
+  title: "Render in Bexleyheath | Estate & Older Home Specialists",
   description:
-    "Rendering in Bexleyheath by Kent Render Systems, Whitstable. Silicone and monocouche for estates and older homes. Free quotes. Call 07707 564597.",
+    "Rendering in Bexleyheath by Kent Render Systems. Silicone and monocouche for 1930s estates and older semis. Free quotes. Call 07707 564597.",
   heroEyebrow: "Bexleyheath rendering",
   h1: "House Rendering in Bexleyheath",
   heroLead:
@@ -460,9 +460,9 @@ export const bexleyheath: LocationPageContent = {
 export const erith: LocationPageContent = {
   path: "/rendering-erith",
   town: "Erith",
-  title: "Rendering Erith | Silicone & Monocouche Specialists",
+  title: "Rendering Erith | Thames-Side Estate Home Render",
   description:
-    "Rendering in Erith from Kent Render Systems, Whitstable. Silicone and monocouche for Thames-side and estate homes. Free quotes. Call 07707 564597.",
+    "Rendering in Erith by Kent Render Systems. Silicone and monocouche for Thames-side and post-war estate homes. Free quotes. Call 07707 564597.",
   heroEyebrow: "Erith rendering specialists",
   h1: "Rendering in Erith",
   heroLead:
@@ -539,9 +539,9 @@ export const erith: LocationPageContent = {
 export const eltham: LocationPageContent = {
   path: "/rendering-eltham",
   town: "Eltham",
-  title: "Rendering Eltham | Silicone & Monocouche Render",
+  title: "Rendering Eltham | Period & Suburban Home Specialists",
   description:
-    "Rendering in Eltham from Kent Render Systems, Whitstable. Silicone and monocouche for period and suburban homes. Free quotes. Call 07707 564597.",
+    "Rendering in Eltham by Kent Render Systems. Silicone and monocouche for period properties and suburban semis. Free quotes. Call 07707 564597.",
   heroEyebrow: "Eltham rendering",
   h1: "Render in Eltham",
   heroLead:
@@ -618,9 +618,9 @@ export const eltham: LocationPageContent = {
 export const swanley: LocationPageContent = {
   path: "/rendering-swanley",
   town: "Swanley",
-  title: "Rendering Swanley | Silicone & Monocouche Specialists",
+  title: "House Rendering Swanley | Commuter Home Silicone Render",
   description:
-    "Rendering in Swanley by Kent Render Systems, Whitstable. Silicone and monocouche for commuter homes near the M25 and A20. Free quotes. Call 07707 564597.",
+    "Rendering in Swanley by Kent Render Systems. Silicone and monocouche for bungalows and commuter estates. Free quotes. Call 07707 564597.",
   heroEyebrow: "Swanley rendering specialists",
   h1: "Swanley Rendering Specialists",
   heroLead:

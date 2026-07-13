@@ -3,9 +3,9 @@ import type { LocationPageContent } from "../components/LocationPage.astro";
 export const folkestone: LocationPageContent = {
   path: "/rendering-folkestone",
   town: "Folkestone",
-  title: "Rendering Folkestone | Silicone & Monocouche Specialists",
+  title: "Rendering Folkestone | Coastal Victorian Home Specialists",
   description:
-    "Rendering in Folkestone from Kent Render Systems, Whitstable. Silicone and monocouche for coastal Victorian homes. Free quotes. Call 07707 564597.",
+    "Rendering in Folkestone by Kent Render Systems. Silicone and monocouche for coastal Victorian and interwar homes. Free quotes. Call 07707 564597.",
   heroEyebrow: "East Kent coastal rendering",
   h1: "Rendering in Folkestone",
   heroLead:
@@ -78,9 +78,9 @@ export const folkestone: LocationPageContent = {
 export const dover: LocationPageContent = {
   path: "/rendering-dover",
   town: "Dover",
-  title: "Rendering Dover | Silicone & Monocouche Specialists",
+  title: "Render in Dover | Silicone & Monocouche Coastal Specialists",
   description:
-    "Rendering in Dover by Kent Render Systems, Whitstable. Silicone and monocouche for coastal period and post-war homes. Free quotes. Call 07707 564597.",
+    "Rendering in Dover by Kent Render Systems. Silicone and monocouche for period and post-war coastal homes. Free quotes. Call 07707 564597.",
   heroEyebrow: "Dover rendering specialists",
   h1: "House Rendering in Dover",
   heroLead:
@@ -154,9 +154,9 @@ export const dover: LocationPageContent = {
 export const deal: LocationPageContent = {
   path: "/rendering-deal",
   town: "Deal",
-  title: "Rendering Deal | Silicone & Monocouche Specialists",
+  title: "Rendering Deal | Georgian & Victorian Home Render",
   description:
-    "Rendering in Deal from Kent Render Systems, Whitstable. Silicone and monocouche for Georgian and Victorian homes. Free quotes. Call 07707 564597.",
+    "Rendering in Deal by Kent Render Systems. Silicone and monocouche for Georgian seafront and Victorian terraces. Free quotes. Call 07707 564597.",
   heroEyebrow: "Deal coastal rendering",
   h1: "Render in Deal",
   heroLead:
@@ -230,9 +230,9 @@ export const deal: LocationPageContent = {
 export const sandwich: LocationPageContent = {
   path: "/rendering-sandwich",
   town: "Sandwich",
-  title: "Rendering Sandwich | Silicone & Monocouche Specialists",
+  title: "Rendering Sandwich | Cinque Port Period Home Specialists",
   description:
-    "Rendering in Sandwich by Kent Render Systems, Whitstable. Silicone and monocouche for Cinque Port period homes. Free quotes. Call 07707 564597.",
+    "Rendering in Sandwich by Kent Render Systems. Silicone and monocouche for Cinque Port period homes. Free quotes. Call 07707 564597.",
   heroEyebrow: "Sandwich rendering specialists",
   h1: "Rendering in Sandwich",
   heroLead:
@@ -306,9 +306,9 @@ export const sandwich: LocationPageContent = {
 export const margate: LocationPageContent = {
   path: "/rendering-margate",
   town: "Margate",
-  title: "Rendering Margate | Silicone & Monocouche Specialists",
+  title: "House Rendering Margate | Victorian Terrace Specialists",
   description:
-    "Rendering in Margate from Kent Render Systems. Silicone and monocouche for Victorian terraces and Thanet homes. Free quotes. Call 07707 564597.",
+    "Rendering in Margate by Kent Render Systems. Silicone and monocouche for Victorian terraces and bay-front homes. Free quotes. Call 07707 564597.",
   heroEyebrow: "Thanet coast rendering",
   h1: "Margate Rendering Specialists",
   heroLead:
@@ -382,9 +382,9 @@ export const margate: LocationPageContent = {
 export const ramsgate: LocationPageContent = {
   path: "/rendering-ramsgate",
   town: "Ramsgate",
-  title: "Rendering Ramsgate | Silicone & Monocouche Specialists",
+  title: "Rendering Ramsgate | Royal Harbour Period Home Render",
   description:
-    "Rendering in Ramsgate from Kent Render Systems, Whitstable. Silicone and monocouche for royal harbour period homes. Free quotes. Call 07707 564597.",
+    "Rendering in Ramsgate by Kent Render Systems. Silicone and monocouche for royal harbour period homes. Free quotes. Call 07707 564597.",
   heroEyebrow: "Ramsgate harbour town rendering",
   h1: "Rendering in Ramsgate",
   heroLead:
@@ -460,9 +460,9 @@ export const ramsgate: LocationPageContent = {
 export const broadstairs: LocationPageContent = {
   path: "/rendering-broadstairs",
   town: "Broadstairs",
-  title: "Rendering Broadstairs | Silicone & Monocouche Render",
+  title: "Rendering Broadstairs | Victorian Villa Silicone Render",
   description:
-    "Rendering in Broadstairs from Kent Render Systems. Silicone and monocouche for Victorian villas on the Thanet coast. Free quotes. Call 07707 564597.",
+    "Rendering in Broadstairs by Kent Render Systems. Silicone and monocouche for Victorian villas and cliff-top homes. Free quotes. Call 07707 564597.",
   heroEyebrow: "Broadstairs seaside rendering",
   h1: "House Rendering in Broadstairs",
   heroLead:
