@@ -1,7 +1,7 @@
 import type { LocationPageContent } from "../components/LocationPage.astro";
 
 export const maidstone: LocationPageContent = {
-  path: "/rendering-maidstone/",
+  path: "/rendering-maidstone",
   town: "Maidstone",
   title: "Rendering Maidstone | Silicone & Monocouche Specialists",
   description:
@@ -9,7 +9,7 @@ export const maidstone: LocationPageContent = {
   heroEyebrow: "West and mid Kent rendering",
   h1: "Rendering in Maidstone",
   heroLead:
-    'As Kent\'s county town, Maidstone brings together Victorian terraces, suburban semis, riverside properties and newer developments in one busy housing market. <a href="/">Kent Render Systems</a> covers Maidstone as part of our west and mid Kent work from Whitstable, offering specialist <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> for homeowners across the town.',
+    'As Kent\'s county town, Maidstone brings together Victorian terraces, suburban semis, riverside properties and newer developments in one busy housing market. <a href="/">Kent Render Systems</a> covers Maidstone as part of our west and mid Kent work from Whitstable, offering specialist <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> for homeowners across the town.',
   heroImage: "/images/premium-render-extension-kent.jpg",
   heroImageAlt: "Premium rendering on an extension in the Maidstone area, Kent",
   localTitle: "Maidstone housing and specialist exterior finishes",
@@ -27,10 +27,10 @@ export const maidstone: LocationPageContent = {
     "The M20 corridor makes the town a straightforward run for us, which helps with scheduling surveys and fitting projects in without long waits.",
     "Jack surveys every property personally, assesses the walls properly, and quotes clearly before any work begins.",
     "Whether you need a full house re-render on a Victorian terrace, a single elevation refresh on a suburban semi, or garden walls and outbuildings brought in line with a newer build, we match the system to the property.",
-    "<a href=\"/silicone-rendering-kent/\">Silicone rendering</a> suits most residential work here because it is flexible, breathable and low maintenance.",
-    "<a href=\"/monocouche-rendering-kent/\">Monocouche rendering</a> is a strong choice where homeowners want a crisp through-coloured finish without repainting.",
+    "<a href=\"/silicone-rendering-kent\">Silicone rendering</a> suits most residential work here because it is flexible, breathable and low maintenance.",
+    "<a href=\"/monocouche-rendering-kent\">Monocouche rendering</a> is a strong choice where homeowners want a crisp through-coloured finish without repainting.",
     "If you are comparing options for render in Maidstone, we are happy to talk through both systems and recommend the right approach for your walls.",
-    "<a href=\"/contact/\">Contact us</a> for a free, no-obligation quote.",
+    "<a href=\"/contact\">Contact us</a> for a free, no-obligation quote.",
   ],
   localImage: "/images/silicone-render-house-kent.jpg",
   localImageAlt: "Silicone house rendering completed near Maidstone, Kent",
@@ -38,7 +38,7 @@ export const maidstone: LocationPageContent = {
   localImage2Alt: "Terraced house rendering near Maidstone, Kent",
   servicesTitle: "Rendering services for Maidstone homes",
   servicesIntro:
-    'From full property re-renders to extensions and garden features, we cover the finishes Maidstone homeowners ask for most. Learn more about our <a href="/silicone-rendering-kent/">silicone render</a> and <a href="/monocouche-rendering-kent/">monocouche render</a> services across Kent.',
+    'From full property re-renders to extensions and garden features, we cover the finishes Maidstone homeowners ask for most. Learn more about our <a href="/silicone-rendering-kent">silicone render</a> and <a href="/monocouche-rendering-kent">monocouche render</a> services across Kent.',
   services: [
     {
       title: "House rendering",
@@ -46,7 +46,7 @@ export const maidstone: LocationPageContent = {
     },
     {
       title: "Silicone render",
-      body: "Our most popular finish for Maidstone homes. Flexible, breathable and self-cleaning, <a href=\"/silicone-rendering-kent/\">silicone rendering</a> suits older solid-wall properties and newer builds alike, with strong resistance to cracking and weathering. It copes well with the damp conditions found in riverside areas without trapping moisture in the wall.",
+      body: "Our most popular finish for Maidstone homes. Flexible, breathable and self-cleaning, <a href=\"/silicone-rendering-kent\">silicone rendering</a> suits older solid-wall properties and newer builds alike, with strong resistance to cracking and weathering. It copes well with the damp conditions found in riverside areas without trapping moisture in the wall.",
     },
     {
       title: "Monocouche render",
@@ -58,7 +58,7 @@ export const maidstone: LocationPageContent = {
     },
   ],
   servicesFooter:
-    'Unsure which system suits your property? Read about <a href="/silicone-rendering-kent/">silicone rendering in Kent</a> and <a href="/monocouche-rendering-kent/">monocouche rendering in Kent</a>, or <a href="/contact/">get in touch</a> and we will advise you.',
+    'Unsure which system suits your property? Read about <a href="/silicone-rendering-kent">silicone rendering in Kent</a> and <a href="/monocouche-rendering-kent">monocouche rendering in Kent</a>, or <a href="/contact">get in touch</a> and we will advise you.',
   whyTitle: "Why Maidstone homeowners choose Kent Render Systems",
   whyParagraphs: [
     "We are based in Whitstable and cover Maidstone as a regular part of our west and mid Kent work, not as a distant postcode we visit occasionally. That means straightforward scheduling, clear communication and a team that understands the local housing mix from Victorian terraces to modern estates.",
@@ -70,15 +70,15 @@ export const maidstone: LocationPageContent = {
     "Owner-led by Jack on every rendering project",
     "Experience with period terraces and newer developments",
     "Machine-sprayed application for a consistent finish",
-    '<a href="/contact/">Free surveys and quotes</a> with clear, itemised pricing',
+    '<a href="/contact">Free surveys and quotes</a> with clear, itemised pricing',
   ],
   ctaTitle: "Get a free rendering quote in Maidstone",
   ctaLead:
-    'Ready to refresh your home? Call us on 07707 564597 or use our <a href="/contact/">contact form</a> to arrange a free survey. We provide rendering in Maidstone and across west and mid Kent.',
+    'Ready to refresh your home? Call us on 07707 564597 or use our <a href="/contact">contact form</a> to arrange a free survey. We provide rendering in Maidstone and across west and mid Kent.',
 };
 
 export const medway: LocationPageContent = {
-  path: "/rendering-medway/",
+  path: "/rendering-medway",
   town: "Medway",
   title: "Rendering Medway | Silicone & Monocouche Specialists",
   description:
@@ -86,7 +86,7 @@ export const medway: LocationPageContent = {
   heroEyebrow: "Kent-wide rendering coverage",
   h1: "House Rendering Across Medway",
   heroLead:
-    'Medway brings together historic dockyard towns, Victorian terraces and a varied mix of post-war housing across Rochester, Chatham, Gillingham and Strood. <a href="/">Kent Render Systems</a> covers the Medway towns as part of our Kent-wide service, providing <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> for homeowners throughout the area.',
+    'Medway brings together historic dockyard towns, Victorian terraces and a varied mix of post-war housing across Rochester, Chatham, Gillingham and Strood. <a href="/">Kent Render Systems</a> covers the Medway towns as part of our Kent-wide service, providing <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> for homeowners throughout the area.',
   heroImage: "/images/rendering-terraced-house-kent.jpg",
   heroImageAlt: "Terraced house rendering in the Medway towns, Kent",
   localTitle: "Dockyard towns and varied Medway housing",
@@ -99,14 +99,14 @@ export const medway: LocationPageContent = {
     "Rochester and Chatham hold some of the oldest housing in the area, with terraces and older semis that often need a full strip-back and re-render rather than a quick cosmetic fix.",
     "We assess the condition of the existing render, check for hollow areas and moisture problems, and quote honestly for the preparation work needed before any new system is applied.",
     "Gillingham and Strood bring a heavier mix of post-war housing, interwar semis and bungalows where cement render from previous decades has cracked and failed.",
-    "A properly applied <a href=\"/silicone-rendering-kent/\">silicone render</a> solves that with a flexible, breathable finish built to cope with movement in the wall underneath.",
-    "For homeowners who want a through-coloured modern look, <a href=\"/monocouche-rendering-kent/\">monocouche rendering</a> delivers a crisp result without repainting.",
+    "A properly applied <a href=\"/silicone-rendering-kent\">silicone render</a> solves that with a flexible, breathable finish built to cope with movement in the wall underneath.",
+    "For homeowners who want a through-coloured modern look, <a href=\"/monocouche-rendering-kent\">monocouche rendering</a> delivers a crisp result without repainting.",
     "Extensions, garden rooms and boundary walls are common add-on jobs across the Medway towns, particularly where homeowners have upgraded the main house and want the outbuildings to match.",
     "We treat these with the same preparation standards as a full property render, because a garden room or garage finished to a lower standard will always look out of place.",
     "We cover the Medway towns as part of our Kent-wide work from Whitstable.",
     "Jack surveys every property personally, quotes without obligation, and leads each project from preparation through to the final walk-round.",
     "If you need render in Medway, we can usually arrange a survey within a reasonable timeframe.",
-    "<a href=\"/contact/\">Contact us</a> to discuss your property in Rochester, Chatham, Gillingham, Strood or the wider Medway area.",
+    "<a href=\"/contact\">Contact us</a> to discuss your property in Rochester, Chatham, Gillingham, Strood or the wider Medway area.",
   ],
   localImage: "/images/monocouche-render-house-kent.jpg",
   localImageAlt: "Monocouche rendering on a house in the Medway area, Kent",
@@ -118,11 +118,11 @@ export const medway: LocationPageContent = {
   services: [
     {
       title: "Silicone rendering",
-      body: 'Flexible, breathable and self-cleaning. <a href="/silicone-rendering-kent/">Silicone rendering</a> suits most Medway homes where durability and low maintenance are the priority, from dockyard terraces in Rochester to post-war estates in Gillingham. The finish copes well with cracking and weathering on older walls.',
+      body: 'Flexible, breathable and self-cleaning. <a href="/silicone-rendering-kent">Silicone rendering</a> suits most Medway homes where durability and low maintenance are the priority, from dockyard terraces in Rochester to post-war estates in Gillingham. The finish copes well with cracking and weathering on older walls.',
     },
     {
       title: "Monocouche rendering",
-      body: 'Through-coloured and applied in one coat. <a href="/monocouche-rendering-kent/">Monocouche rendering</a> gives a clean, modern look without repainting, popular on extensions, garden rooms and full elevation work across Chatham and Strood.',
+      body: 'Through-coloured and applied in one coat. <a href="/monocouche-rendering-kent">Monocouche rendering</a> gives a clean, modern look without repainting, popular on extensions, garden rooms and full elevation work across Chatham and Strood.',
     },
     {
       title: "Full house rendering",
@@ -144,15 +144,15 @@ export const medway: LocationPageContent = {
     "Jack on site for every rendering project",
     "Experience with Victorian and post-war housing",
     "Manufacturer-approved, machine-sprayed application",
-    'Call 07707 564597 or <a href="/contact/">send a message online</a>',
+    'Call 07707 564597 or <a href="/contact">send a message online</a>',
   ],
   ctaTitle: "Book a free survey in Medway",
   ctaLead:
-    'For rendering in Medway, call 07707 564597 or complete our <a href="/contact/">contact form</a>. We will arrange a free survey and provide a clear quote for your project.',
+    'For rendering in Medway, call 07707 564597 or complete our <a href="/contact">contact form</a>. We will arrange a free survey and provide a clear quote for your project.',
 };
 
 export const tonbridge: LocationPageContent = {
-  path: "/rendering-tonbridge/",
+  path: "/rendering-tonbridge",
   town: "Tonbridge",
   title: "Rendering Tonbridge | Silicone & Monocouche Specialists",
   description:
@@ -160,7 +160,7 @@ export const tonbridge: LocationPageContent = {
   heroEyebrow: "West Kent rendering specialists",
   h1: "Render in Tonbridge",
   heroLead:
-    'Tonbridge is a historic market town with period properties near the castle, established suburban estates and steady development along the A21 corridor. <a href="/">Kent Render Systems</a> covers Tonbridge as part of our west Kent work from Whitstable, offering <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> for homeowners across the town.',
+    'Tonbridge is a historic market town with period properties near the castle, established suburban estates and steady development along the A21 corridor. <a href="/">Kent Render Systems</a> covers Tonbridge as part of our west Kent work from Whitstable, offering <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> for homeowners across the town.',
   heroImage: "/images/rendered-garden-room-kent.jpg",
   heroImageAlt: "Garden room rendering near Tonbridge, Kent",
   localTitle: "Tonbridge properties from the castle quarter to the suburbs",
@@ -175,12 +175,12 @@ export const tonbridge: LocationPageContent = {
     "A well-applied render can transform a tired exterior without the cost and disruption of more invasive work, and the right colour choice makes a noticeable difference to kerb appeal.",
     "We carry colour samples to surveys and help you choose a finish that suits the property and its surroundings.",
     "Extensions and garden rooms are common requests in Tonbridge, particularly where homeowners have added space and want the new work to match the existing property.",
-    "<a href=\"/monocouche-rendering-kent/\">Monocouche rendering</a> works well here because the colour runs through the material and there is no repainting to worry about.",
-    "For general residential work, <a href=\"/silicone-rendering-kent/\">silicone rendering</a> remains our most requested finish because it is flexible, durable and self-cleaning.",
+    "<a href=\"/monocouche-rendering-kent\">Monocouche rendering</a> works well here because the colour runs through the material and there is no repainting to worry about.",
+    "For general residential work, <a href=\"/silicone-rendering-kent\">silicone rendering</a> remains our most requested finish because it is flexible, durable and self-cleaning.",
     "We cover Tonbridge regularly from our Whitstable base as part of our west Kent patch.",
     "The A21 and M20 links make the town an easy run, which helps with fitting surveys and projects into the schedule promptly.",
     "Jack leads every job personally, from the first visit through to the final tidy-up.",
-    "If you need rendering in Tonbridge, <a href=\"/contact/\">contact us</a> to arrange a free, no-obligation survey and quote.",
+    "If you need rendering in Tonbridge, <a href=\"/contact\">contact us</a> to arrange a free, no-obligation survey and quote.",
   ],
   localImage: "/images/rendered-detached-house-brick-kent.jpg",
   localImageAlt: "Rendered detached house in the Tonbridge area, Kent",
@@ -196,11 +196,11 @@ export const tonbridge: LocationPageContent = {
     },
     {
       title: "Monocouche render",
-      body: 'A one-coat, through-coloured finish ideal for extensions and modern additions. See our <a href="/monocouche-rendering-kent/">monocouche rendering</a> page for more detail on colours and application. Popular on new garden rooms and single-storey extensions across the town.',
+      body: 'A one-coat, through-coloured finish ideal for extensions and modern additions. See our <a href="/monocouche-rendering-kent">monocouche rendering</a> page for more detail on colours and application. Popular on new garden rooms and single-storey extensions across the town.',
     },
     {
       title: "Silicone render",
-      body: 'Flexible, breathable and self-cleaning. Our go-to <a href="/silicone-rendering-kent/">silicone render</a> suits most Tonbridge homes where a durable, low-maintenance finish is the priority, from period properties near the castle to suburban estates along the A21.',
+      body: 'Flexible, breathable and self-cleaning. Our go-to <a href="/silicone-rendering-kent">silicone render</a> suits most Tonbridge homes where a durable, low-maintenance finish is the priority, from period properties near the castle to suburban estates along the A21.',
     },
     {
       title: "House rendering",
@@ -208,7 +208,7 @@ export const tonbridge: LocationPageContent = {
     },
   ],
   servicesFooter:
-    'Back to <a href="/">Kent Render Systems</a> for more about our work across west Kent, or <a href="/contact/">request a Tonbridge quote</a> directly.',
+    'Back to <a href="/">Kent Render Systems</a> for more about our work across west Kent, or <a href="/contact">request a Tonbridge quote</a> directly.',
   whyTitle: "West Kent specialists covering Tonbridge",
   whyParagraphs: [
     "We are based in Whitstable and cover Tonbridge as a regular part of our west Kent work. Jack leads every rendering job personally, applying nearly 20 years of trade experience to each project. You get a specialist from the first phone call to the final walk-round, not a middleman.",
@@ -220,15 +220,15 @@ export const tonbridge: LocationPageContent = {
     "Experience with period and suburban properties",
     "Approved Baumit, Weber and EcoRend applicator",
     "Garden rooms and extensions a common speciality",
-    '<a href="/contact/">Free quotes</a> with clear, itemised pricing',
+    '<a href="/contact">Free quotes</a> with clear, itemised pricing',
   ],
   ctaTitle: "Request a rendering quote in Tonbridge",
   ctaLead:
-    'Call 07707 564597 or use our <a href="/contact/">contact form</a> to book a free survey. We provide rendering in Tonbridge and across west Kent.',
+    'Call 07707 564597 or use our <a href="/contact">contact form</a> to book a free survey. We provide rendering in Tonbridge and across west Kent.',
 };
 
 export const tunbridgeWells: LocationPageContent = {
-  path: "/rendering-tunbridge-wells/",
+  path: "/rendering-tunbridge-wells",
   town: "Tunbridge Wells",
   title: "Rendering Tunbridge Wells | Silicone & Monocouche",
   description:
@@ -236,7 +236,7 @@ export const tunbridgeWells: LocationPageContent = {
   heroEyebrow: "Sympathetic finishes for period homes",
   h1: "Rendering in Tunbridge Wells",
   heroLead:
-    'Tunbridge Wells is known for its Victorian villas, conservation character and high standards of property upkeep. <a href="/">Kent Render Systems</a> covers the town as part of our west Kent work from Whitstable, providing <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> where sympathetic, durable finishes matter.',
+    'Tunbridge Wells is known for its Victorian villas, conservation character and high standards of property upkeep. <a href="/">Kent Render Systems</a> covers the town as part of our west Kent work from Whitstable, providing <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> where sympathetic, durable finishes matter.',
   heroImage: "/images/monocouche-render-house-kent.jpg",
   heroImageAlt: "Monocouche rendering on a house near Tunbridge Wells, Kent",
   localTitle: "Sympathetic rendering for Tunbridge Wells homes",
@@ -252,12 +252,12 @@ export const tunbridgeWells: LocationPageContent = {
     "We use manufacturer-approved systems from Baumit, Weber and EcoRend, applied by machine for consistency and finished by hand around details such as window reveals, cills and corners.",
     "These are the areas where a rushed job shows, and we take the time to get them right.",
     "Beyond the period villas, Tunbridge Wells has established suburban streets and newer developments where homeowners want crisp, modern renders on the house, the extension and any garden features.",
-    "<a href=\"/silicone-rendering-kent/\">Silicone rendering</a> suits most residential work because it is flexible, breathable and low maintenance.",
-    "<a href=\"/monocouche-rendering-kent/\">Monocouche rendering</a> is popular on extensions and garden rooms where a through-coloured finish removes the need for repainting.",
+    "<a href=\"/silicone-rendering-kent\">Silicone rendering</a> suits most residential work because it is flexible, breathable and low maintenance.",
+    "<a href=\"/monocouche-rendering-kent\">Monocouche rendering</a> is popular on extensions and garden rooms where a through-coloured finish removes the need for repainting.",
     "Rendering in Tunbridge Wells is a regular part of our west Kent coverage from Whitstable.",
     "Jack surveys every property personally, quotes clearly without obligation, and leads each project from preparation through to completion.",
     "We apply manufacturer-approved systems by machine for consistency and finish by hand to a high standard.",
-    "If you need render in Tunbridge Wells, <a href=\"/contact/\">get in touch</a> to arrange a free survey.",
+    "If you need render in Tunbridge Wells, <a href=\"/contact\">get in touch</a> to arrange a free survey.",
     "We are happy to discuss the right approach for your property and carry colour samples to help you choose.",
   ],
   localImage: "/images/external-rendering-kent.jpg",
@@ -266,7 +266,7 @@ export const tunbridgeWells: LocationPageContent = {
   localImage2Alt: "Monocouche rendering on a detached villa near Tunbridge Wells, Kent",
   servicesTitle: "Rendering services for Tunbridge Wells properties",
   servicesIntro:
-    'From sympathetic finishes on Victorian villas to sharp modern renders on extensions, we cover the work Tunbridge Wells homeowners ask for most. Explore our <a href="/silicone-rendering-kent/">silicone render</a> and <a href="/monocouche-rendering-kent/">monocouche render</a> services for more detail.',
+    'From sympathetic finishes on Victorian villas to sharp modern renders on extensions, we cover the work Tunbridge Wells homeowners ask for most. Explore our <a href="/silicone-rendering-kent">silicone render</a> and <a href="/monocouche-rendering-kent">monocouche render</a> services for more detail.',
   services: [
     {
       title: "Silicone rendering",
@@ -296,9 +296,9 @@ export const tunbridgeWells: LocationPageContent = {
     "Sympathetic advice for period and conservation properties",
     "Nearly 20 years' rendering and plastering experience",
     "Machine-sprayed, manufacturer-approved systems",
-    'Free surveys via our <a href="/contact/">contact page</a> or on 07707 564597',
+    'Free surveys via our <a href="/contact">contact page</a> or on 07707 564597',
   ],
   ctaTitle: "Free rendering quote for Tunbridge Wells",
   ctaLead:
-    'For rendering in Tunbridge Wells, call 07707 564597 or <a href="/contact/">send us a message</a>. We will arrange a free survey and provide a clear, no-obligation quote.',
+    'For rendering in Tunbridge Wells, call 07707 564597 or <a href="/contact">send us a message</a>. We will arrange a free survey and provide a clear, no-obligation quote.',
 };
