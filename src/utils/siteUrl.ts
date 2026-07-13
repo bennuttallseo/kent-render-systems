@@ -1,9 +1,9 @@
 export const SITE_URL = "https://kentrendersystems.co.uk";
 
-/** Normalise a site path to a canonical URL without trailing slash (except root). */
+/** Normalise a site path to a canonical URL with trailing slash (except root). */
 export function canonicalUrl(path: string): string {
   if (path === "/" || path === "") return `${SITE_URL}/`;
-  return `${SITE_URL}${path.replace(/\/$/, "")}`;
+  return `${SITE_URL}${path.replace(/\/?$/, "/")}`;
 }
 
 /** Absolute URL for a public asset (e.g. OG image). */

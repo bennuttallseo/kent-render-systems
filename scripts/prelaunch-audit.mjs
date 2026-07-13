@@ -37,7 +37,7 @@ const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1
 if (sitemapUrls.length !== 32) add("important", `Sitemap has ${sitemapUrls.length} URLs (expected 32)`);
 for (const url of sitemapUrls) {
   const slug = url.replace(SITE, "") || "/";
-  if (slug !== "/" && slug.endsWith("/")) add("blocker", `Sitemap trailing slash: ${slug}`);
+  if (slug !== "/" && !slug.endsWith("/")) add("blocker", `Sitemap missing trailing slash: ${slug}`);
   if (!slugs.has(slug)) add("blocker", `Sitemap URL not built: ${slug}`);
 }
 if (sitemapUrls.some((u) => u.includes("locations") || u.includes("maidenstone"))) {
@@ -66,7 +66,7 @@ for (const { slug, file } of livePages) {
 
   for (const m of html.matchAll(/href="(\/(?:about|contact|areas-we-cover|silicone-rendering-kent|monocouche-rendering-kent|rendering-[^"#?]*))"/g)) {
     const href = m[1];
-    if (href.endsWith("/")) add("blocker", `${slug}: trailing slash link ${href}`);
+    if (!href.endsWith("/")) add("blocker", `${slug}: link missing trailing slash ${href}`);
     if (!slugs.has(href)) add("blocker", `${slug}: broken link ${href}`);
   }
 

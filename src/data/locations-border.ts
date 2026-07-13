@@ -1,7 +1,7 @@
 import type { LocationPageContent } from "../components/LocationPage.astro";
 
 export const bromley: LocationPageContent = {
-  path: "/rendering-bromley",
+  path: "/rendering-bromley/",
   town: "Bromley",
   title: "Rendering Bromley | Silicone & Monocouche Specialists",
   description:
@@ -9,7 +9,7 @@ export const bromley: LocationPageContent = {
   heroEyebrow: "Bromley rendering specialists",
   h1: "Rendering in Bromley",
   heroLead:
-    'Bromley is one of London\'s largest boroughs, and the housing stock reflects that scale. <a href="/">Kent Render Systems</a> covers Bromley from our Whitstable base, providing <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> for Victorian villas, 1930s semis and modern developments across the area.',
+    'Bromley is one of London\'s largest boroughs, and the housing stock reflects that scale. <a href="/">Kent Render Systems</a> covers Bromley from our Whitstable base, providing <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> for Victorian villas, 1930s semis and modern developments across the area.',
   heroImage: "/images/rendering-kent-hero.jpg",
   heroImageAlt: "House rendering completed in the Bromley area, Kent",
   localTitle: "Bromley housing from Victorian terraces to new builds",
@@ -21,8 +21,8 @@ export const bromley: LocationPageContent = {
     "Rendering in Bromley is about matching the system to the building.",
     "Older solid-wall properties need careful preparation and a finish that allows the wall to breathe.",
     "Pebble-dash and tired cement render are common on 1930s semis across Bromley South and Sundridge, and a full strip-back and re-render can transform how a property looks from the street.",
-    "For modern extensions and loft conversions, <a href=\"/monocouche-rendering-kent\">monocouche rendering</a> gives a clean, even colour without repainting, which suits busy households who want a smart exterior with minimal upkeep.",
-    "<a href=\"/silicone-rendering-kent\">Silicone rendering</a> remains our most requested finish across Bromley.",
+    "For modern extensions and loft conversions, <a href=\"/monocouche-rendering-kent/\">monocouche rendering</a> gives a clean, even colour without repainting, which suits busy households who want a smart exterior with minimal upkeep.",
+    "<a href=\"/silicone-rendering-kent/\">Silicone rendering</a> remains our most requested finish across Bromley.",
     "It is flexible enough to cope with minor substrate movement, water-repellent, and the self-cleaning surface stays fresher for longer than traditional sand and cement.",
     "That matters on exposed elevations and on properties where trees, pollution and general London weather take their toll.",
     "We machine spray our renders for consistency and finish by hand to a high standard.",
@@ -31,7 +31,7 @@ export const bromley: LocationPageContent = {
     "Jack surveys every property personally, assesses the condition of your walls, and provides a clear, itemised quote before any work begins.",
     "Whether you need a full house re-render on a Victorian property, a front elevation refresh on a 1930s semi, or garden walls and outbuildings finished to match a recent extension, Bromley rendering is work we handle regularly.",
     "If you are comparing options for render in Bromley, we are happy to talk through silicone and monocouche systems and recommend the right approach for your walls.",
-    "<a href=\"/contact\">Contact us</a> on 07707 564597 to arrange a free survey.",
+    "<a href=\"/contact/\">Contact us</a> on 07707 564597 to arrange a free survey.",
   ],
   localImage: "/images/rendering-kent.jpg",
   localImageAlt: "House rendering completed on a Bromley area property, Kent",
@@ -43,11 +43,11 @@ export const bromley: LocationPageContent = {
   services: [
     {
       title: "Silicone rendering",
-      body: 'Flexible, breathable and self-cleaning. Our go-to <a href="/silicone-rendering-kent">silicone render</a> suits most Bromley homes where durability and a modern finish are the priority, from Victorian brick to 1930s pebble-dash.',
+      body: 'Flexible, breathable and self-cleaning. Our go-to <a href="/silicone-rendering-kent/">silicone render</a> suits most Bromley homes where durability and a modern finish are the priority, from Victorian brick to 1930s pebble-dash.',
     },
     {
       title: "Monocouche rendering",
-      body: 'Through-coloured and applied in one coat. Popular on extensions, loft conversions and newer Bromley builds where homeowners want a crisp finish without repainting. See our <a href="/monocouche-rendering-kent">monocouche rendering</a> page for colour options.',
+      body: 'Through-coloured and applied in one coat. Popular on extensions, loft conversions and newer Bromley builds where homeowners want a crisp finish without repainting. See our <a href="/monocouche-rendering-kent/">monocouche rendering</a> page for colour options.',
     },
     {
       title: "Full house rendering",
@@ -59,7 +59,7 @@ export const bromley: LocationPageContent = {
     },
   ],
   servicesFooter:
-    'Unsure which system suits your Bromley property? Read about <a href="/silicone-rendering-kent">silicone rendering in Kent</a> and <a href="/monocouche-rendering-kent">monocouche rendering in Kent</a>, or <a href="/contact">get in touch</a> for advice.',
+    'Unsure which system suits your Bromley property? Read about <a href="/silicone-rendering-kent/">silicone rendering in Kent</a> and <a href="/monocouche-rendering-kent/">monocouche rendering in Kent</a>, or <a href="/contact/">get in touch</a> for advice.',
   whyTitle: "Why Bromley homeowners choose Kent Render Systems",
   whyParagraphs: [
     "We are based in Whitstable and cover Bromley as part of our regular working area across Kent and the south east London border. Jack, the owner, has nearly 20 years in the rendering and plastering trade and leads every project from first survey to final walk-round. You deal with a specialist throughout, not a sales team or subcontractor chain.",
@@ -70,15 +70,15 @@ export const bromley: LocationPageContent = {
     "Experience with Victorian, 1930s and modern housing",
     "Owner-led by Jack on every rendering job",
     "Manufacturer-approved materials and guarantees",
-    '<a href="/contact">Free surveys and quotes</a> on 07707 564597',
+    '<a href="/contact/">Free surveys and quotes</a> on 07707 564597',
   ],
   ctaTitle: "Get a free rendering quote in Bromley",
   ctaLead:
-    'For rendering in Bromley, call 07707 564597 or use our <a href="/contact">contact form</a> to arrange a free survey. We cover Bromley, Orpington, Chislehurst and across Kent.',
+    'For rendering in Bromley, call 07707 564597 or use our <a href="/contact/">contact form</a> to arrange a free survey. We cover Bromley, Orpington, Chislehurst and across Kent.',
 };
 
 export const sidcup: LocationPageContent = {
-  path: "/rendering-sidcup",
+  path: "/rendering-sidcup/",
   town: "Sidcup",
   title: "Rendering Sidcup | Silicone & Monocouche Render",
   description:
@@ -86,7 +86,7 @@ export const sidcup: LocationPageContent = {
   heroEyebrow: "Sidcup rendering",
   h1: "House Rendering in Sidcup",
   heroLead:
-    'Sidcup is a classic south east London suburb where 1930s to 1950s housing often needs an exterior refresh. <a href="/">Kent Render Systems</a> provides <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> across Sidcup, covering the town from our Whitstable base as part of our Kent border work.',
+    'Sidcup is a classic south east London suburb where 1930s to 1950s housing often needs an exterior refresh. <a href="/">Kent Render Systems</a> provides <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> across Sidcup, covering the town from our Whitstable base as part of our Kent border work.',
   heroImage: "/images/silicone-render-house-kent.jpg",
   heroImageAlt: "Silicone house rendering in the Sidcup area, Kent",
   localTitle: "Sidcup semis and the case for a fresh render",
@@ -97,14 +97,14 @@ export const sidcup: LocationPageContent = {
     "Rendering in Sidcup is often about giving a well-built suburban house a modern exterior that protects the walls and lifts kerb appeal in one project.",
     "Homeowners on streets near Sidcup High Street and across the Longlands and Foots Cray areas frequently ask us to strip back failing render, repair cracks and damp damage at substrate level, and apply a fresh finish that will last.",
     "Getting the preparation right is what separates a render that lasts from one that fails within a few years.",
-    "For most Sidcup properties, <a href=\"/silicone-rendering-kent\">silicone rendering</a> is the finish we recommend.",
+    "For most Sidcup properties, <a href=\"/silicone-rendering-kent/\">silicone rendering</a> is the finish we recommend.",
     "It flexes with minor movement in older substrates, repels water, and the self-cleaning surface reduces the algae and staining that builds up on north-facing elevations.",
-    "Where homeowners have added extensions or converted garages, <a href=\"/monocouche-rendering-kent\">monocouche rendering</a> helps match new and old elevations with a through-coloured finish that does not need repainting.",
+    "Where homeowners have added extensions or converted garages, <a href=\"/monocouche-rendering-kent/\">monocouche rendering</a> helps match new and old elevations with a through-coloured finish that does not need repainting.",
     "We also render garden walls, garages and outbuildings, which is a common request in Sidcup where rear gardens are a real feature of the property.",
     "Matching a rendered garden room or boundary wall to a freshly finished house makes a noticeable difference to how the whole plot looks from the drive or patio.",
     "Sidcup sits within easy reach of our Whitstable base via the A2, and we cover the town alongside neighbouring Bexley, Eltham and Bromley.",
     "Jack surveys every property and quotes clearly with no obligation.",
-    "If you need render in Sidcup, <a href=\"/contact\">contact us</a> to book a visit.",
+    "If you need render in Sidcup, <a href=\"/contact/\">contact us</a> to book a visit.",
     "Many Sidcup homeowners come to us after getting patch quotes that only cover applying render over failing material.",
     "We explain what is underneath, what needs stripping or repairing, and what the finished job will involve before we price it.",
     "That honest approach helps you compare render in Sidcup properly and avoid paying twice for work that was never prepared correctly the first time.",
@@ -123,11 +123,11 @@ export const sidcup: LocationPageContent = {
     },
     {
       title: "Silicone rendering",
-      body: 'Flexible, low maintenance and ideal for Sidcup\'s older suburban housing. <a href="/silicone-rendering-kent">Learn about silicone rendering</a> and why it suits properties that need a durable, modern finish.',
+      body: 'Flexible, low maintenance and ideal for Sidcup\'s older suburban housing. <a href="/silicone-rendering-kent/">Learn about silicone rendering</a> and why it suits properties that need a durable, modern finish.',
     },
     {
       title: "Monocouche rendering",
-      body: 'Through-coloured finish for extensions and new elevations. <a href="/monocouche-rendering-kent">Monocouche rendering</a> gives a crisp, even colour without the need to repaint every few years.',
+      body: 'Through-coloured finish for extensions and new elevations. <a href="/monocouche-rendering-kent/">Monocouche rendering</a> gives a crisp, even colour without the need to repaint every few years.',
     },
     {
       title: "Garden walls and garages",
@@ -144,15 +144,15 @@ export const sidcup: LocationPageContent = {
     "Strong experience with 1930s to 1950s housing",
     "Proper strip-back and substrate preparation",
     "Free, no-obligation surveys and quotes",
-    'Call 07707 564597 or <a href="/contact">send a message online</a>',
+    'Call 07707 564597 or <a href="/contact/">send a message online</a>',
   ],
   ctaTitle: "Book a free survey in Sidcup",
   ctaLead:
-    'For rendering in Sidcup, call 07707 564597 or complete our <a href="/contact">contact form</a>. We will arrange a free survey and provide a clear quote for your project.',
+    'For rendering in Sidcup, call 07707 564597 or complete our <a href="/contact/">contact form</a>. We will arrange a free survey and provide a clear quote for your project.',
 };
 
 export const chislehurst: LocationPageContent = {
-  path: "/rendering-chislehurst",
+  path: "/rendering-chislehurst/",
   town: "Chislehurst",
   title: "Rendering Chislehurst | Silicone & Monocouche",
   description:
@@ -160,7 +160,7 @@ export const chislehurst: LocationPageContent = {
   heroEyebrow: "Chislehurst rendering",
   h1: "Render in Chislehurst",
   heroLead:
-    'Chislehurst is known for larger detached homes and a strong conservation character. <a href="/">Kent Render Systems</a> provides specialist <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> for Chislehurst properties, working carefully on elevations where finish quality and attention to detail matter.',
+    'Chislehurst is known for larger detached homes and a strong conservation character. <a href="/">Kent Render Systems</a> provides specialist <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> for Chislehurst properties, working carefully on elevations where finish quality and attention to detail matter.',
   heroImage: "/images/monocouche-render-house-kent.jpg",
   heroImageAlt: "Monocouche rendering on a detached home in Chislehurst, Kent",
   localTitle: "Chislehurst detached homes and quality finishes",
@@ -172,15 +172,15 @@ export const chislehurst: LocationPageContent = {
     "Sometimes it is a single elevation, a rear extension or a garden wing that needs to blend with the existing property.",
     "Other times, a full re-render transforms a tired pebble-dash front into something crisp and contemporary without changing the fundamental character of the house.",
     "We survey every property, discuss what you want to achieve, and recommend the right system for your walls.",
-    "On larger Chislehurst properties, <a href=\"/silicone-rendering-kent\">silicone rendering</a> is popular because it delivers a high-quality finish with low ongoing maintenance.",
+    "On larger Chislehurst properties, <a href=\"/silicone-rendering-kent/\">silicone rendering</a> is popular because it delivers a high-quality finish with low ongoing maintenance.",
     "The flexible, water-repellent coating copes well with the mature trees and shaded elevations common in the area, where algae and staining can be a problem on older render types.",
-    "For new extensions, orangeries and garden rooms, <a href=\"/monocouche-rendering-kent\">monocouche rendering</a> provides a through-coloured finish that matches or complements existing elevations cleanly.",
+    "For new extensions, orangeries and garden rooms, <a href=\"/monocouche-rendering-kent/\">monocouche rendering</a> provides a through-coloured finish that matches or complements existing elevations cleanly.",
     "Conservation areas and locally listed buildings require extra thought.",
     "We always advise checking with the local planning team before work begins on properties where restrictions may apply.",
     "Where a breathable render system is appropriate, we specify and apply it correctly rather than cutting corners with products that trap moisture in older solid walls.",
     "We cover Chislehurst from our Whitstable base alongside Bromley, Orpington and Sidcup.",
     "Jack leads every project personally, from the first survey through to the final walk-round.",
-    "<a href=\"/contact\">Contact us</a> for a free, no-obligation quote on rendering in Chislehurst.",
+    "<a href=\"/contact/\">Contact us</a> for a free, no-obligation quote on rendering in Chislehurst.",
     "Chislehurst homeowners often ask about colour and texture before committing to a full re-render, and that is a sensible conversation to have early.",
     "We bring sample boards and discuss how a chosen finish will look on your elevation, in your light, next to neighbouring properties.",
     "Good rendering in Chislehurst is as much about getting those details right as it is about the technical application on the wall.",
@@ -195,11 +195,11 @@ export const chislehurst: LocationPageContent = {
   services: [
     {
       title: "Silicone rendering",
-      body: 'High-quality, self-cleaning finish for detached and semi-detached Chislehurst homes. <a href="/silicone-rendering-kent">Silicone rendering</a> suits properties where appearance and low maintenance both matter.',
+      body: 'High-quality, self-cleaning finish for detached and semi-detached Chislehurst homes. <a href="/silicone-rendering-kent/">Silicone rendering</a> suits properties where appearance and low maintenance both matter.',
     },
     {
       title: "Monocouche rendering",
-      body: 'Through-coloured finish for extensions, orangeries and new build elements. <a href="/monocouche-rendering-kent">Monocouche rendering</a> delivers a crisp, even colour without repainting.',
+      body: 'Through-coloured finish for extensions, orangeries and new build elements. <a href="/monocouche-rendering-kent/">Monocouche rendering</a> delivers a crisp, even colour without repainting.',
     },
     {
       title: "Single elevation and feature work",
@@ -211,7 +211,7 @@ export const chislehurst: LocationPageContent = {
     },
   ],
   servicesFooter:
-    'Back to <a href="/">Kent Render Systems</a> for more about our work across Kent, or <a href="/contact">request a Chislehurst quote</a> directly.',
+    'Back to <a href="/">Kent Render Systems</a> for more about our work across Kent, or <a href="/contact/">request a Chislehurst quote</a> directly.',
   whyTitle: "Why Chislehurst clients use Kent Render Systems",
   whyParagraphs: [
     "We are based in Whitstable and cover Chislehurst as part of our regular south east London and Kent border work. Jack has nearly 20 years in the trade and leads every rendering job himself, so you get a specialist on site from start to finish.",
@@ -222,15 +222,15 @@ export const chislehurst: LocationPageContent = {
     "Conservation-aware advice where restrictions apply",
     "Approved Baumit, Weber and EcoRend applicator",
     "Owner-led service from Jack on every job",
-    '<a href="/contact">Free quotes</a> with clear, itemised pricing',
+    '<a href="/contact/">Free quotes</a> with clear, itemised pricing',
   ],
   ctaTitle: "Request a rendering quote in Chislehurst",
   ctaLead:
-    'Call 07707 564597 or use our <a href="/contact">contact form</a> to book a free survey. We provide rendering in Chislehurst and across Kent.',
+    'Call 07707 564597 or use our <a href="/contact/">contact form</a> to book a free survey. We provide rendering in Chislehurst and across Kent.',
 };
 
 export const orpington: LocationPageContent = {
-  path: "/rendering-orpington",
+  path: "/rendering-orpington/",
   town: "Orpington",
   title: "Rendering Orpington | Silicone & Monocouche Render",
   description:
@@ -238,7 +238,7 @@ export const orpington: LocationPageContent = {
   heroEyebrow: "Orpington rendering specialists",
   h1: "Orpington Rendering Specialists",
   heroLead:
-    'Orpington is a busy commuter town where extensions, loft conversions and garden rooms are commonplace. <a href="/">Kent Render Systems</a> provides <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> across Orpington, helping homeowners tie new work in with the existing property.',
+    'Orpington is a busy commuter town where extensions, loft conversions and garden rooms are commonplace. <a href="/">Kent Render Systems</a> provides <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> across Orpington, helping homeowners tie new work in with the existing property.',
   heroImage: "/images/new-build-house-rendering-kent.jpg",
   heroImageAlt: "Rendering on a modern extension in Orpington, Kent",
   localTitle: "Orpington extensions, garden rooms and full re-renders",
@@ -250,15 +250,15 @@ export const orpington: LocationPageContent = {
     "We also take on full property re-renders where decades of pebble-dash or sand and cement have reached the end of their life.",
     "On both types of job, preparation is critical.",
     "We repair substrate damage, treat damp issues at source where they exist, and apply render only when the wall is ready to receive it.",
-    "<a href=\"/monocouche-rendering-kent\">Monocouche rendering</a> is particularly popular in Orpington for extension work because the colour runs through the material and there is no repainting to schedule.",
+    "<a href=\"/monocouche-rendering-kent/\">Monocouche rendering</a> is particularly popular in Orpington for extension work because the colour runs through the material and there is no repainting to schedule.",
     "Homeowners choose from a range of shades to complement existing brick or render, and the finished elevation looks sharp from day one.",
-    "For full house projects and properties where flexibility matters, <a href=\"/silicone-rendering-kent\">silicone rendering</a> offers a durable, self-cleaning finish that keeps maintenance low.",
+    "For full house projects and properties where flexibility matters, <a href=\"/silicone-rendering-kent/\">silicone rendering</a> offers a durable, self-cleaning finish that keeps maintenance low.",
     "Garden walls, garages and boundary features are another common Orpington request.",
     "A rendered garden room or garage door surround that matches the house transforms how the property looks from the rear, and it is often more affordable than people expect when scoped properly.",
     "We cover Orpington from Whitstable alongside Bromley, Swanley and the wider north Kent area.",
     "The A20 and M25 make access straightforward, and we fit Orpington rendering jobs into our schedule regularly.",
     "Jack surveys every property and provides a clear quote with no obligation.",
-    "<a href=\"/contact\">Get in touch</a> to discuss your project.",
+    "<a href=\"/contact/\">Get in touch</a> to discuss your project.",
     "If you are planning an extension or garden room in Orpington, involving a renderer at the planning stage often saves money later.",
     "We can advise on substrate build-up, bead details and the best system to match your existing house before the builder closes up the walls.",
     "That forward planning is why many Orpington rendering jobs we quote are for new work rather than remedial patch repairs.",
@@ -277,11 +277,11 @@ export const orpington: LocationPageContent = {
     },
     {
       title: "Monocouche rendering",
-      body: 'Through-coloured, one-coat finish ideal for new build elements. <a href="/monocouche-rendering-kent">View our monocouche service</a> for details on colours and application.',
+      body: 'Through-coloured, one-coat finish ideal for new build elements. <a href="/monocouche-rendering-kent/">View our monocouche service</a> for details on colours and application.',
     },
     {
       title: "Silicone rendering",
-      body: 'Flexible and self-cleaning, suited to full house re-renders on Orpington\'s older suburban stock. <a href="/silicone-rendering-kent">View our silicone service</a>.',
+      body: 'Flexible and self-cleaning, suited to full house re-renders on Orpington\'s older suburban stock. <a href="/silicone-rendering-kent/">View our silicone service</a>.',
     },
     {
       title: "Full house rendering",
@@ -298,15 +298,15 @@ export const orpington: LocationPageContent = {
     "Strong experience with extensions and garden rooms",
     "Machine-sprayed renders for a consistent finish",
     "Manufacturer-backed guarantees on every job",
-    '<a href="/contact">Free, no-obligation quotes</a>',
+    '<a href="/contact/">Free, no-obligation quotes</a>',
   ],
   ctaTitle: "Get an Orpington rendering quote",
   ctaLead:
-    'Call 07707 564597 or use our <a href="/contact">contact form</a> to arrange a free survey for rendering in Orpington.',
+    'Call 07707 564597 or use our <a href="/contact/">contact form</a> to arrange a free survey for rendering in Orpington.',
 };
 
 export const bexley: LocationPageContent = {
-  path: "/rendering-bexley",
+  path: "/rendering-bexley/",
   town: "Bexley",
   title: "Rendering Bexley | Silicone & Monocouche Specialists",
   description:
@@ -314,7 +314,7 @@ export const bexley: LocationPageContent = {
   heroEyebrow: "Bexley borough rendering",
   h1: "Rendering in Bexley",
   heroLead:
-    'The London Borough of Bexley covers a wide area with a mixed housing stock, from older properties near Bexley village to post-war estates and modern infill. <a href="/">Kent Render Systems</a> provides <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> across Bexley from our Whitstable base.',
+    'The London Borough of Bexley covers a wide area with a mixed housing stock, from older properties near Bexley village to post-war estates and modern infill. <a href="/">Kent Render Systems</a> provides <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> across Bexley from our Whitstable base.',
   heroImage: "/images/rendering-terraced-house-kent.jpg",
   heroImageAlt: "Rendering on a terraced property in the Bexley area, Kent",
   localTitle: "Bexley borough and its varied housing stock",
@@ -325,15 +325,15 @@ export const bexley: LocationPageContent = {
     "Rendering in Bexley means adapting to the building in front of us.",
     "On older solid-wall properties, we assess whether a breathable system is needed and prepare the substrate thoroughly before application.",
     "On mid-century estates where pebble-dash dominates, a full re-render can modernise the exterior dramatically.",
-    "On newer extensions and infill properties, <a href=\"/monocouche-rendering-kent\">monocouche rendering</a> gives a through-coloured finish that looks clean and consistent without repainting.",
-    "<a href=\"/silicone-rendering-kent\">Silicone rendering</a> works well across most Bexley residential properties.",
+    "On newer extensions and infill properties, <a href=\"/monocouche-rendering-kent/\">monocouche rendering</a> gives a through-coloured finish that looks clean and consistent without repainting.",
+    "<a href=\"/silicone-rendering-kent/\">Silicone rendering</a> works well across most Bexley residential properties.",
     "It is flexible, water-repellent and low maintenance, which suits busy households across the borough.",
     "The self-cleaning properties help on shaded elevations and on properties near mature tree cover, which is common in established Bexley neighbourhoods.",
     "We also render garages, garden walls and outbuildings throughout the borough.",
     "Matching ancillary buildings to a freshly rendered house is a practical way to improve kerb appeal, especially on properties where the drive and frontage are the first thing visitors see.",
     "Bexley sits within our south east London and Kent border coverage area.",
     "We work across the borough alongside Bexleyheath, Sidcup, Erith and Welling, scheduling surveys and projects from our Whitstable base.",
-    "If you need render in Bexley, <a href=\"/contact\">contact us</a> on 07707 564597 to arrange a free visit.",
+    "If you need render in Bexley, <a href=\"/contact/\">contact us</a> on 07707 564597 to arrange a free visit.",
     "Across the Bexley borough, rendering projects range from a single front elevation on a semi in Welling to full property re-renders on larger detached homes near Bexley village.",
     "We treat each job on its merits, quote clearly, and keep you informed throughout.",
     "There is no one-size-fits-all approach when the housing stock varies this much within a single borough.",
@@ -350,11 +350,11 @@ export const bexley: LocationPageContent = {
   services: [
     {
       title: "Silicone rendering",
-      body: 'Flexible, durable and self-cleaning. Our most popular <a href="/silicone-rendering-kent">silicone render</a> finish for Bexley homes where long-term protection and appearance both matter.',
+      body: 'Flexible, durable and self-cleaning. Our most popular <a href="/silicone-rendering-kent/">silicone render</a> finish for Bexley homes where long-term protection and appearance both matter.',
     },
     {
       title: "Monocouche rendering",
-      body: 'One-coat, through-coloured finish for extensions and modern elements. <a href="/monocouche-rendering-kent">Monocouche rendering</a> suits Bexley homeowners who want a crisp look without repainting.',
+      body: 'One-coat, through-coloured finish for extensions and modern elements. <a href="/monocouche-rendering-kent/">Monocouche rendering</a> suits Bexley homeowners who want a crisp look without repainting.',
     },
     {
       title: "Pebble-dash replacement",
@@ -375,15 +375,15 @@ export const bexley: LocationPageContent = {
     "Experience with period, post-war and modern housing",
     "Proper preparation and substrate repair",
     "Free surveys and clear, itemised quotes",
-    'Call 07707 564597 or <a href="/contact">request a quote online</a>',
+    'Call 07707 564597 or <a href="/contact/">request a quote online</a>',
   ],
   ctaTitle: "Free rendering quote for Bexley",
   ctaLead:
-    'For rendering in Bexley, call 07707 564597 or <a href="/contact">send us a message</a>. We will arrange a free survey and provide a clear, no-obligation quote.',
+    'For rendering in Bexley, call 07707 564597 or <a href="/contact/">send us a message</a>. We will arrange a free survey and provide a clear, no-obligation quote.',
 };
 
 export const bexleyheath: LocationPageContent = {
-  path: "/rendering-bexleyheath",
+  path: "/rendering-bexleyheath/",
   town: "Bexleyheath",
   title: "Rendering Bexleyheath | Silicone & Monocouche",
   description:
@@ -391,7 +391,7 @@ export const bexleyheath: LocationPageContent = {
   heroEyebrow: "Bexleyheath rendering",
   h1: "House Rendering in Bexleyheath",
   heroLead:
-    'Bexleyheath is a busy town centre surrounded by residential estates and older housing. <a href="/">Kent Render Systems</a> provides <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> across Bexleyheath, covering the area from our Whitstable base as part of our Bexley borough work.',
+    'Bexleyheath is a busy town centre surrounded by residential estates and older housing. <a href="/">Kent Render Systems</a> provides <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> across Bexleyheath, covering the area from our Whitstable base as part of our Bexley borough work.',
   heroImage: "/images/rendered-detached-house-brick-kent.jpg",
   heroImageAlt: "Rendered detached house in the Bexleyheath area, Kent",
   localTitle: "Bexleyheath town centre, estates and older homes",
@@ -403,12 +403,12 @@ export const bexleyheath: LocationPageContent = {
     "We strip back to a sound base where necessary, repair substrate issues properly, and apply a modern finish designed to last.",
     "Skipping the preparation stage is what causes render to fail early, and we do not cut corners on that part of the job.",
     "On estates around Bexleyheath where properties share a similar look, a well-executed re-render can set your home apart without looking out of place.",
-    "<a href=\"/silicone-rendering-kent\">Silicone rendering</a> is our most requested finish: flexible, water-repellent, and self-cleaning enough to stay looking fresh on elevations that catch weather and pollution from the busy town centre nearby.",
-    "Extensions and loft conversions are common in Bexleyheath, and <a href=\"/monocouche-rendering-kent\">monocouche rendering</a> helps new work blend with the original building.",
+    "<a href=\"/silicone-rendering-kent/\">Silicone rendering</a> is our most requested finish: flexible, water-repellent, and self-cleaning enough to stay looking fresh on elevations that catch weather and pollution from the busy town centre nearby.",
+    "Extensions and loft conversions are common in Bexleyheath, and <a href=\"/monocouche-rendering-kent/\">monocouche rendering</a> helps new work blend with the original building.",
     "The through-coloured finish means no repainting, and colour matching between old and new elevations is straightforward when the job is planned properly.",
     "We cover Bexleyheath alongside the wider Bexley borough, Sidcup, Erith and Welling from our Whitstable base.",
     "Jack surveys every property personally and provides a clear, itemised quote.",
-    "<a href=\"/contact\">Contact us</a> to book a free survey for rendering in Bexleyheath.",
+    "<a href=\"/contact/\">Contact us</a> to book a free survey for rendering in Bexleyheath.",
     "Bexleyheath homeowners often ask how long a re-render lasts and what maintenance is involved afterwards.",
     "With silicone and monocouche systems applied correctly, you should expect many years of service without repainting, though occasional cleaning may help on shaded elevations.",
     "We explain that during the survey so you know exactly what you are getting from a Bexleyheath rendering project before work starts.",
@@ -429,11 +429,11 @@ export const bexleyheath: LocationPageContent = {
     },
     {
       title: "Silicone rendering",
-      body: 'Low maintenance and durable. <a href="/silicone-rendering-kent">Silicone rendering</a> suits Bexleyheath properties where a modern, long-lasting finish is the goal.',
+      body: 'Low maintenance and durable. <a href="/silicone-rendering-kent/">Silicone rendering</a> suits Bexleyheath properties where a modern, long-lasting finish is the goal.',
     },
     {
       title: "Monocouche rendering",
-      body: 'Through-coloured finish for extensions and new elevations. <a href="/monocouche-rendering-kent">Monocouche rendering</a> is popular where homeowners want a crisp look without repainting.',
+      body: 'Through-coloured finish for extensions and new elevations. <a href="/monocouche-rendering-kent/">Monocouche rendering</a> is popular where homeowners want a crisp look without repainting.',
     },
     {
       title: "Front elevation refreshes",
@@ -450,15 +450,15 @@ export const bexleyheath: LocationPageContent = {
     "Experience with estates and older town centre housing",
     "Owner-led service on every rendering job",
     "Manufacturer-approved, machine-sprayed application",
-    '<a href="/contact">Free surveys</a> via our contact page or on 07707 564597',
+    '<a href="/contact/">Free surveys</a> via our contact page or on 07707 564597',
   ],
   ctaTitle: "Arrange a rendering survey in Bexleyheath",
   ctaLead:
-    'For rendering in Bexleyheath, call 07707 564597 or complete our <a href="/contact">contact form</a>. We provide free, no-obligation surveys across the Bexley area.',
+    'For rendering in Bexleyheath, call 07707 564597 or complete our <a href="/contact/">contact form</a>. We provide free, no-obligation surveys across the Bexley area.',
 };
 
 export const erith: LocationPageContent = {
-  path: "/rendering-erith",
+  path: "/rendering-erith/",
   town: "Erith",
   title: "Rendering Erith | Silicone & Monocouche Specialists",
   description:
@@ -466,7 +466,7 @@ export const erith: LocationPageContent = {
   heroEyebrow: "Erith rendering specialists",
   h1: "Rendering in Erith",
   heroLead:
-    'Erith sits on the Thames with a varied housing stock that ranges from riverside properties to post-war estates and newer developments. <a href="/">Kent Render Systems</a> provides <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> across Erith from our Whitstable base.',
+    'Erith sits on the Thames with a varied housing stock that ranges from riverside properties to post-war estates and newer developments. <a href="/">Kent Render Systems</a> provides <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> across Erith from our Whitstable base.',
   heroImage: "/images/external-wall-insulation-render-kent.jpg",
   heroImageAlt: "External wall rendering on a property in Erith, Kent",
   localTitle: "Erith Thames-side properties and varied housing",
@@ -478,14 +478,14 @@ export const erith: LocationPageContent = {
     "Failed pebble-dash, blown sand and cement, damp staining and cracked render are common on estates built in the 1950s and 1960s, where the original finish has simply reached the end of its useful life.",
     "A properly prepared re-render protects the wall beneath, improves insulation at the surface level, and gives the property a fresh, modern appearance that can make a significant difference to kerb appeal.",
     "Riverside and exposed elevations face additional weather pressure from wind and moisture coming off the Thames.",
-    "Here, <a href=\"/silicone-rendering-kent\">silicone rendering</a> earns its place: the flexible, water-repellent coating handles weather exposure well, and the self-cleaning surface reduces the build-up of staining and algae that affects north-facing and sheltered walls.",
-    "For extensions and new build elements on regenerated sites, <a href=\"/monocouche-rendering-kent\">monocouche rendering</a> delivers a through-coloured finish without repainting.",
+    "Here, <a href=\"/silicone-rendering-kent/\">silicone rendering</a> earns its place: the flexible, water-repellent coating handles weather exposure well, and the self-cleaning surface reduces the build-up of staining and algae that affects north-facing and sheltered walls.",
+    "For extensions and new build elements on regenerated sites, <a href=\"/monocouche-rendering-kent/\">monocouche rendering</a> delivers a through-coloured finish without repainting.",
     "We render garages, garden walls and outbuildings across Erith with the same standards we apply to full house projects.",
     "On estates where the front drive and boundary wall are prominent, matching these elements to a freshly rendered house creates a cohesive look.",
     "Erith is within our regular south east London and Bexley borough coverage from Whitstable.",
     "We work across the town alongside Bexleyheath, Welling and Dartford.",
     "Jack surveys every property and quotes without obligation.",
-    "<a href=\"/contact\">Get in touch</a> to discuss rendering in Erith.",
+    "<a href=\"/contact/\">Get in touch</a> to discuss rendering in Erith.",
     "Regeneration around Erith has brought new housing alongside established estates, and both need the same standard of preparation before render goes on the wall.",
     "Whether you own a riverside flat conversion or a semi on a 1960s estate, we assess the substrate, explain the options, and quote honestly.",
     "Rendering in Erith should solve problems, not cover them up temporarily.",
@@ -506,11 +506,11 @@ export const erith: LocationPageContent = {
     },
     {
       title: "Silicone rendering",
-      body: 'Weather-resistant and self-cleaning. <a href="/silicone-rendering-kent">Silicone rendering</a> suits Erith properties on exposed or riverside elevations where durability matters.',
+      body: 'Weather-resistant and self-cleaning. <a href="/silicone-rendering-kent/">Silicone rendering</a> suits Erith properties on exposed or riverside elevations where durability matters.',
     },
     {
       title: "Monocouche rendering",
-      body: 'Through-coloured finish for extensions and newer properties. <a href="/monocouche-rendering-kent">Monocouche rendering</a> gives a clean, modern look without repainting.',
+      body: 'Through-coloured finish for extensions and newer properties. <a href="/monocouche-rendering-kent/">Monocouche rendering</a> gives a clean, modern look without repainting.',
     },
     {
       title: "Garden walls and outbuildings",
@@ -518,7 +518,7 @@ export const erith: LocationPageContent = {
     },
   ],
   servicesFooter:
-    'Visit our <a href="/">homepage</a> for more about Kent Render Systems, or <a href="/contact">contact us</a> for an Erith rendering quote.',
+    'Visit our <a href="/">homepage</a> for more about Kent Render Systems, or <a href="/contact/">contact us</a> for an Erith rendering quote.',
   whyTitle: "Kent Render Systems covering Erith",
   whyParagraphs: [
     "We are based in Whitstable and cover Erith as part of our Bexley borough and north Kent work. Jack, the owner, leads every rendering project with nearly 20 years of trade experience. You work with a specialist from the first phone call to the final tidy-up.",
@@ -529,15 +529,15 @@ export const erith: LocationPageContent = {
     "Experience with estate and riverside properties",
     "Approved Baumit, Weber and EcoRend applicator",
     "Free, no-obligation surveys and quotes",
-    'Call 07707 564597 or <a href="/contact">request a quote online</a>',
+    'Call 07707 564597 or <a href="/contact/">request a quote online</a>',
   ],
   ctaTitle: "Get a free rendering quote in Erith",
   ctaLead:
-    'For rendering in Erith, call 07707 564597 or use our <a href="/contact">contact form</a> to arrange a free survey across the Bexley borough.',
+    'For rendering in Erith, call 07707 564597 or use our <a href="/contact/">contact form</a> to arrange a free survey across the Bexley borough.',
 };
 
 export const eltham: LocationPageContent = {
-  path: "/rendering-eltham",
+  path: "/rendering-eltham/",
   town: "Eltham",
   title: "Rendering Eltham | Silicone & Monocouche Render",
   description:
@@ -545,7 +545,7 @@ export const eltham: LocationPageContent = {
   heroEyebrow: "Eltham rendering",
   h1: "Render in Eltham",
   heroLead:
-    'Eltham straddles the south east London and Kent border, with a mix of period properties and suburban housing that keeps rendering demand steady. <a href="/">Kent Render Systems</a> provides <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> across Eltham from our Whitstable base.',
+    'Eltham straddles the south east London and Kent border, with a mix of period properties and suburban housing that keeps rendering demand steady. <a href="/">Kent Render Systems</a> provides <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> across Eltham from our Whitstable base.',
   heroImage: "/images/silicone-render-detached-house-kent.jpg",
   heroImageAlt: "Silicone rendering on a detached house in Eltham, Kent",
   localTitle: "Eltham period properties and suburban streets",
@@ -557,19 +557,19 @@ export const eltham: LocationPageContent = {
     "On older solid-wall properties, we assess the substrate, discuss breathability where it matters, and prepare walls thoroughly before any render is applied.",
     "On suburban semis and detached homes, a full re-render replaces failing pebble-dash with a modern finish that protects the building and sharpens its appearance.",
     "The difference a well-executed render makes on a tired Eltham semi can be striking.",
-    "<a href=\"/silicone-rendering-kent\">Silicone rendering</a> is our most popular choice across Eltham.",
+    "<a href=\"/silicone-rendering-kent/\">Silicone rendering</a> is our most popular choice across Eltham.",
     "It handles the minor movement common in older substrates, repels water effectively, and the self-cleaning finish stays looking fresh with minimal upkeep.",
-    "For homeowners who have added extensions, conservatories or garden rooms, <a href=\"/monocouche-rendering-kent\">monocouche rendering</a> ties new work to the existing property with a through-coloured finish that does not need repainting.",
+    "For homeowners who have added extensions, conservatories or garden rooms, <a href=\"/monocouche-rendering-kent/\">monocouche rendering</a> ties new work to the existing property with a through-coloured finish that does not need repainting.",
     "Eltham's proximity to Avery Hill, the parkland and established tree cover means many properties have shaded elevations where algae and staining build up on older render types.",
     "A modern silicone finish addresses that practically, not just cosmetically.",
     "We cover Eltham from Whitstable alongside Sidcup, Bexley and the wider south east London border area.",
     "Jack surveys every property personally and provides a clear quote with no obligation.",
-    "<a href=\"/contact\">Contact us</a> on 07707 564597 to arrange a free visit.",
+    "<a href=\"/contact/\">Contact us</a> on 07707 564597 to arrange a free visit.",
     "Eltham sits between busy suburban roads and quieter residential streets, and the rendering needs reflect that mix.",
     "Some properties need a full external refresh to sell or remortgage, others need a single elevation finished after building work.",
     "We scope each Eltham rendering job properly so the quote matches the work required, with no surprises once scaffolding goes up.",
     "Render in Eltham is work we schedule alongside neighbouring Sidcup and Bexley, which keeps lead times reasonable for surveys and project starts.",
-    "Call 07707 564597 or use our <a href=\"/contact\">contact form</a> to discuss your property and arrange a free visit at a time that suits you.",
+    "Call 07707 564597 or use our <a href=\"/contact/\">contact form</a> to discuss your property and arrange a free visit at a time that suits you.",
     "Older Eltham properties with solid walls often benefit from a breathable render system rather than a dense cement coat.",
     "We talk through those options during the survey and specify materials that suit the building, not just whatever is quickest to apply.",
   ],
@@ -583,11 +583,11 @@ export const eltham: LocationPageContent = {
   services: [
     {
       title: "Silicone rendering",
-      body: 'Flexible, breathable and self-cleaning. Our go-to <a href="/silicone-rendering-kent">silicone render</a> for Eltham homes where durability and appearance both count.',
+      body: 'Flexible, breathable and self-cleaning. Our go-to <a href="/silicone-rendering-kent/">silicone render</a> for Eltham homes where durability and appearance both count.',
     },
     {
       title: "Monocouche rendering",
-      body: 'Through-coloured finish for extensions and garden rooms. <a href="/monocouche-rendering-kent">Monocouche rendering</a> suits Eltham homeowners adding space to their property.',
+      body: 'Through-coloured finish for extensions and garden rooms. <a href="/monocouche-rendering-kent/">Monocouche rendering</a> suits Eltham homeowners adding space to their property.',
     },
     {
       title: "Period property rendering",
@@ -608,15 +608,15 @@ export const eltham: LocationPageContent = {
     "Experience with period and suburban housing",
     "Owner-led by Jack on every project",
     "Machine-sprayed, manufacturer-approved systems",
-    '<a href="/contact">Free, no-obligation quotes</a>',
+    '<a href="/contact/">Free, no-obligation quotes</a>',
   ],
   ctaTitle: "Book a free survey in Eltham",
   ctaLead:
-    'For rendering in Eltham, call 07707 564597 or complete our <a href="/contact">contact form</a>. We cover Eltham, Sidcup, Bexley and across Kent.',
+    'For rendering in Eltham, call 07707 564597 or complete our <a href="/contact/">contact form</a>. We cover Eltham, Sidcup, Bexley and across Kent.',
 };
 
 export const swanley: LocationPageContent = {
-  path: "/rendering-swanley",
+  path: "/rendering-swanley/",
   town: "Swanley",
   title: "Rendering Swanley | Silicone & Monocouche Specialists",
   description:
@@ -624,7 +624,7 @@ export const swanley: LocationPageContent = {
   heroEyebrow: "Swanley rendering specialists",
   h1: "Swanley Rendering Specialists",
   heroLead:
-    'Swanley is a north Kent commuter town at the junction of the M25 and A20, with mixed estates and established residential streets. <a href="/">Kent Render Systems</a> provides <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> across Swanley from our Whitstable base.',
+    'Swanley is a north Kent commuter town at the junction of the M25 and A20, with mixed estates and established residential streets. <a href="/">Kent Render Systems</a> provides <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> across Swanley from our Whitstable base.',
   heroImage: "/images/silicone-render-bungalow-kent.png",
   heroImageAlt: "Silicone rendering on a bungalow in the Swanley area, Kent",
   localTitle: "Swanley commuter town housing and rendering",
@@ -634,15 +634,15 @@ export const swanley: LocationPageContent = {
     "Rendering demand in Swanley is steady because many of these properties still carry original pebble-dash or sand and cement finishes that have aged badly.",
     "Rendering in Swanley is often about bringing a well-located home up to date externally.",
     "Homeowners who commute daily want a property that looks smart when they pull onto the drive, but they also need a finish that does not demand constant attention.",
-    "<a href=\"/silicone-rendering-kent\">Silicone rendering</a> fits that brief well: flexible, water-repellent, and self-cleaning enough to cope with the weather and pollution exposure that comes with living near major road networks.",
+    "<a href=\"/silicone-rendering-kent/\">Silicone rendering</a> fits that brief well: flexible, water-repellent, and self-cleaning enough to cope with the weather and pollution exposure that comes with living near major road networks.",
     "Extensions, garage conversions and garden rooms are popular in Swanley, where plot sizes often allow for rear improvements.",
-    "<a href=\"/monocouche-rendering-kent\">Monocouche rendering</a> is the finish we specify most often on new build elements because the through-coloured coat looks sharp from day one and never needs repainting.",
+    "<a href=\"/monocouche-rendering-kent/\">Monocouche rendering</a> is the finish we specify most often on new build elements because the through-coloured coat looks sharp from day one and never needs repainting.",
     "Matching a new extension to an existing pebble-dash house requires careful colour and texture planning, which we handle during the survey stage.",
     "Bungalows are a notable part of Swanley's housing stock, and a full re-render can transform a dated bungalow into a modern-looking home at a fraction of the cost of moving.",
     "We take on bungalow rendering regularly, with proper scaffolding and preparation throughout.",
     "Swanley is a straightforward run from our Whitstable base via the A299, M2 and M25, and we cover the town alongside Orpington, Dartford and the wider north Kent area.",
     "Jack surveys every property and quotes clearly before work begins.",
-    "<a href=\"/contact\">Get in touch</a> for a free rendering quote in Swanley.",
+    "<a href=\"/contact/\">Get in touch</a> for a free rendering quote in Swanley.",
     "Commuter towns like Swanley see steady demand for rendering because homeowners improve rather than relocate.",
     "A fresh render before sale, or after buying a tired property, is one of the most cost-effective ways to change how a house presents from the kerb.",
     "We help Swanley clients plan that work properly, with realistic timelines and clear pricing from the first survey.",
@@ -661,11 +661,11 @@ export const swanley: LocationPageContent = {
     },
     {
       title: "Silicone rendering",
-      body: 'Low maintenance and durable. <a href="/silicone-rendering-kent">Silicone rendering</a> suits Swanley homes where homeowners want a smart finish without ongoing upkeep.',
+      body: 'Low maintenance and durable. <a href="/silicone-rendering-kent/">Silicone rendering</a> suits Swanley homes where homeowners want a smart finish without ongoing upkeep.',
     },
     {
       title: "Monocouche rendering",
-      body: 'Through-coloured finish for extensions and new elements. <a href="/monocouche-rendering-kent">Monocouche rendering</a> is popular on Swanley garage conversions and garden rooms.',
+      body: 'Through-coloured finish for extensions and new elements. <a href="/monocouche-rendering-kent/">Monocouche rendering</a> is popular on Swanley garage conversions and garden rooms.',
     },
     {
       title: "Estate property re-rendering",
@@ -673,7 +673,7 @@ export const swanley: LocationPageContent = {
     },
   ],
   servicesFooter:
-    'We cover north Kent from Whitstable. Visit our <a href="/">homepage</a> or <a href="/contact">contact us</a> for a Swanley rendering quote.',
+    'We cover north Kent from Whitstable. Visit our <a href="/">homepage</a> or <a href="/contact/">contact us</a> for a Swanley rendering quote.',
   whyTitle: "North Kent coverage including Swanley",
   whyParagraphs: [
     "Kent Render Systems is based in Whitstable and covers Swanley as part of our north Kent work alongside Orpington and Dartford. Jack, the owner, has nearly 20 years in the rendering trade and leads every project from first survey to final walk-round.",
@@ -684,9 +684,9 @@ export const swanley: LocationPageContent = {
     "Experience with bungalows, estates and extensions",
     "Owner-led service from Jack on every job",
     "Manufacturer-approved, machine-sprayed application",
-    'Call 07707 564597 or <a href="/contact">request a quote online</a>',
+    'Call 07707 564597 or <a href="/contact/">request a quote online</a>',
   ],
   ctaTitle: "Arrange a rendering survey in Swanley",
   ctaLead:
-    'For rendering in Swanley, call 07707 564597 or complete our <a href="/contact">contact form</a>. We provide free, no-obligation surveys across north Kent.',
+    'For rendering in Swanley, call 07707 564597 or complete our <a href="/contact/">contact form</a>. We provide free, no-obligation surveys across north Kent.',
 };

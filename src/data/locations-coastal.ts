@@ -1,7 +1,7 @@
 import type { LocationPageContent } from "../components/LocationPage.astro";
 
 export const folkestone: LocationPageContent = {
-  path: "/rendering-folkestone",
+  path: "/rendering-folkestone/",
   town: "Folkestone",
   title: "Rendering Folkestone | Silicone & Monocouche Specialists",
   description:
@@ -9,7 +9,7 @@ export const folkestone: LocationPageContent = {
   heroEyebrow: "East Kent coastal rendering",
   h1: "Rendering in Folkestone",
   heroLead:
-    'Folkestone sits on the east Kent coast between the White Cliffs and Romney Marsh, and its housing stock tells that story clearly. <a href="/">Kent Render Systems</a> covers Folkestone as part of our east Kent patch from Whitstable, providing <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> for seafront properties, cliff-top homes and Victorian terraces inland.',
+    'Folkestone sits on the east Kent coast between the White Cliffs and Romney Marsh, and its housing stock tells that story clearly. <a href="/">Kent Render Systems</a> covers Folkestone as part of our east Kent patch from Whitstable, providing <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> for seafront properties, cliff-top homes and Victorian terraces inland.',
   heroImage: "/images/rendering-kent-hero.jpg",
   heroImageAlt: "House rendering on an east Kent coastal property near Folkestone",
   localTitle: "Folkestone walls, salt air and period properties",
@@ -21,15 +21,15 @@ export const folkestone: LocationPageContent = {
     "Rendering in Folkestone is not only about kerb appeal, though a fresh exterior makes a visible difference on streets where period detail still matters.",
     "A properly prepared modern render protects the substrate, reduces ongoing maintenance and gives homeowners a finish that copes better with coastal conditions than ageing sand and cement.",
     "For many properties along the front and on elevated sites, that protection is the practical reason to re-render rather than patch and paint year after year.",
-    "<a href=\"/silicone-rendering-kent\">Silicone rendering</a> is often the right choice for Folkestone homes exposed to salt air.",
+    "<a href=\"/silicone-rendering-kent/\">Silicone rendering</a> is often the right choice for Folkestone homes exposed to salt air.",
     "It is flexible, water-repellent and self-cleaning, which helps walls stay fresher for longer near the sea.",
-    "On extensions, newer infill properties and elevations where homeowners want a crisp through-coloured finish without repainting, <a href=\"/monocouche-rendering-kent\">monocouche rendering</a> is a strong alternative.",
+    "On extensions, newer infill properties and elevations where homeowners want a crisp through-coloured finish without repainting, <a href=\"/monocouche-rendering-kent/\">monocouche rendering</a> is a strong alternative.",
     "We survey every property, assess the condition of the walls and recommend the system that suits the building.",
     "We cover Folkestone as part of our regular east Kent work from our Whitstable base, alongside towns such as Dover, Deal and the Thanet coast.",
     "That means we can schedule surveys and projects without treating Folkestone as a distant one-off visit.",
     "Jack leads every rendering job personally, from the first walk-round through to the final tidy-up.",
     "Whether you need a full house re-render on a Victorian terrace, a front elevation refresh on a cliff-top property or garden walls and outbuildings brought in line with the main house, render in Folkestone is work we handle as part of our coastal coverage.",
-    "See our full <a href=\"/areas-we-cover\">areas we cover</a> across Kent, or <a href=\"/contact\">contact us</a> on 07707 564597 to arrange a free, no-obligation quote.",
+    "See our full <a href=\"/areas-we-cover/\">areas we cover</a> across Kent, or <a href=\"/contact/\">contact us</a> on 07707 564597 to arrange a free, no-obligation quote.",
   ],
   localImage: "/images/external-rendering-kent.jpg",
   localImageAlt: "External rendering completed on a property on the east Kent coast",
@@ -41,11 +41,11 @@ export const folkestone: LocationPageContent = {
   services: [
     {
       title: "Silicone rendering",
-      body: 'Flexible, breathable and water-repellent. Our <a href="/silicone-rendering-kent">silicone render</a> suits coastal exposure well, with a self-cleaning surface that copes better with salt air and rain than traditional cement finishes.',
+      body: 'Flexible, breathable and water-repellent. Our <a href="/silicone-rendering-kent/">silicone render</a> suits coastal exposure well, with a self-cleaning surface that copes better with salt air and rain than traditional cement finishes.',
     },
     {
       title: "Monocouche rendering",
-      body: 'Through-coloured and applied in one coat. <a href="/monocouche-rendering-kent">Monocouche rendering</a> gives a clean, modern finish on extensions and full elevations without the need to repaint.',
+      body: 'Through-coloured and applied in one coat. <a href="/monocouche-rendering-kent/">Monocouche rendering</a> gives a clean, modern finish on extensions and full elevations without the need to repaint.',
     },
     {
       title: "Full house rendering",
@@ -57,7 +57,7 @@ export const folkestone: LocationPageContent = {
     },
   ],
   servicesFooter:
-    'Unsure which finish suits your Folkestone property? Read about <a href="/silicone-rendering-kent">silicone rendering in Kent</a> and <a href="/monocouche-rendering-kent">monocouche rendering in Kent</a>, or <a href="/contact">get in touch</a> for advice.',
+    'Unsure which finish suits your Folkestone property? Read about <a href="/silicone-rendering-kent/">silicone rendering in Kent</a> and <a href="/monocouche-rendering-kent/">monocouche rendering in Kent</a>, or <a href="/contact/">get in touch</a> for advice.',
   whyTitle: "East Kent coverage for Folkestone homeowners",
   whyParagraphs: [
     "Kent Render Systems is based in Whitstable and covers Folkestone as part of our east Kent coastal patch. Jack, the owner, has nearly 20 years in the rendering and plastering trade and leads every project from survey to completion. You deal with a specialist throughout, not a sales team.",
@@ -68,15 +68,15 @@ export const folkestone: LocationPageContent = {
     "Experience with Victorian and Edwardian properties",
     "Coastal-grade silicone systems available",
     "Owner-led by Jack on every rendering job",
-    '<a href="/contact">Free surveys and quotes</a> on 07707 564597',
+    '<a href="/contact/">Free surveys and quotes</a> on 07707 564597',
   ],
   ctaTitle: "Get a free rendering quote in Folkestone",
   ctaLead:
-    'For rendering in Folkestone, call 07707 564597 or use our <a href="/contact">contact form</a> to arrange a free survey. We cover Folkestone and the east Kent coast.',
+    'For rendering in Folkestone, call 07707 564597 or use our <a href="/contact/">contact form</a> to arrange a free survey. We cover Folkestone and the east Kent coast.',
 };
 
 export const dover: LocationPageContent = {
-  path: "/rendering-dover",
+  path: "/rendering-dover/",
   town: "Dover",
   title: "Rendering Dover | Silicone & Monocouche Specialists",
   description:
@@ -84,7 +84,7 @@ export const dover: LocationPageContent = {
   heroEyebrow: "Dover rendering specialists",
   h1: "House Rendering in Dover",
   heroLead:
-    'Dover is the White Cliffs town, and its housing reflects centuries of coastal life alongside more recent post-war development. <a href="/">Kent Render Systems</a> provides <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> across Dover as part of our east Kent coverage from Whitstable.',
+    'Dover is the White Cliffs town, and its housing reflects centuries of coastal life alongside more recent post-war development. <a href="/">Kent Render Systems</a> provides <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> across Dover as part of our east Kent coverage from Whitstable.',
   heroImage: "/images/silicone-render-detached-house-kent.jpg",
   heroImageAlt: "Silicone rendering on a detached house in the Dover area, Kent",
   localTitle: "Dover properties and strong coastal weathering",
@@ -97,15 +97,15 @@ export const dover: LocationPageContent = {
     "Failing cement render, cracked pebble-dash and porous brickwork let moisture in and make a property harder to maintain.",
     "A full strip-back, proper preparation and a modern render system addresses those problems at the wall level.",
     "For homeowners on exposed elevations towards the seafront or on elevated sites with open views, choosing a finish that copes with wind, rain and salt air matters.",
-    "<a href=\"/silicone-rendering-kent\">Silicone rendering</a> is our most requested finish for Dover homes where coastal exposure is a factor.",
+    "<a href=\"/silicone-rendering-kent/\">Silicone rendering</a> is our most requested finish for Dover homes where coastal exposure is a factor.",
     "It is flexible, breathable and water-repellent, with a self-cleaning surface that stays fresher for longer than sand and cement.",
-    "On extensions, newer builds and projects where a sharp through-coloured finish is the priority, <a href=\"/monocouche-rendering-kent\">monocouche rendering</a> delivers a clean result without repainting.",
+    "On extensions, newer builds and projects where a sharp through-coloured finish is the priority, <a href=\"/monocouche-rendering-kent/\">monocouche rendering</a> delivers a clean result without repainting.",
     "We cover Dover as part of our east Kent patch from Whitstable, alongside Folkestone, Deal and the coastal towns further north.",
     "Jack surveys every property personally, assesses the walls and provides a clear, itemised quote before any work begins.",
     "There is no obligation and no pressure to proceed.",
     "Whether you need render in Dover on a period terrace, a post-war semi or a detached home on the edge of town, we tailor the system to the building in front of us.",
     "Garden rooms, garages and boundary walls are also part of our Dover work, especially where homeowners want every elevation finished to the same standard as the main house.",
-    "View our <a href=\"/areas-we-cover\">areas we cover</a> across Kent or <a href=\"/contact\">contact us</a> on 07707 564597 to book a free survey for Dover rendering.",
+    "View our <a href=\"/areas-we-cover/\">areas we cover</a> across Kent or <a href=\"/contact/\">contact us</a> on 07707 564597 to book a free survey for Dover rendering.",
   ],
   localImage: "/images/rendered-detached-house-brick-kent.jpg",
   localImageAlt: "Rendered detached house with brick details in the Dover area, Kent",
@@ -117,11 +117,11 @@ export const dover: LocationPageContent = {
   services: [
     {
       title: "Silicone rendering",
-      body: 'Our go-to finish for coastal homes. <a href="/silicone-rendering-kent">Silicone rendering</a> is flexible, durable and self-cleaning, which suits Dover properties exposed to strong Channel weather.',
+      body: 'Our go-to finish for coastal homes. <a href="/silicone-rendering-kent/">Silicone rendering</a> is flexible, durable and self-cleaning, which suits Dover properties exposed to strong Channel weather.',
     },
     {
       title: "Monocouche rendering",
-      body: 'Through-coloured, one-coat finish with no repainting required. Popular on extensions and full house projects where homeowners want a crisp, even colour. See our <a href="/monocouche-rendering-kent">monocouche rendering</a> page for more detail.',
+      body: 'Through-coloured, one-coat finish with no repainting required. Popular on extensions and full house projects where homeowners want a crisp, even colour. See our <a href="/monocouche-rendering-kent/">monocouche rendering</a> page for more detail.',
     },
     {
       title: "Full house rendering",
@@ -133,7 +133,7 @@ export const dover: LocationPageContent = {
     },
   ],
   servicesFooter:
-    'Compare our <a href="/silicone-rendering-kent">silicone</a> and <a href="/monocouche-rendering-kent">monocouche</a> services, or <a href="/contact">request a Dover quote</a> directly.',
+    'Compare our <a href="/silicone-rendering-kent/">silicone</a> and <a href="/monocouche-rendering-kent/">monocouche</a> services, or <a href="/contact/">request a Dover quote</a> directly.',
   whyTitle: "Why Dover homeowners choose Kent Render Systems",
   whyParagraphs: [
     "We are based in Whitstable and cover Dover as part of our east Kent work. Jack leads every rendering project personally, applying nearly 20 years of trade experience from first survey to final walk-round.",
@@ -144,15 +144,15 @@ export const dover: LocationPageContent = {
     "Experience with period and post-war housing",
     "Coastal-grade render systems available",
     "Machine-sprayed, manufacturer-approved application",
-    'Call 07707 564597 or <a href="/contact">send a message online</a>',
+    'Call 07707 564597 or <a href="/contact/">send a message online</a>',
   ],
   ctaTitle: "Book a free survey in Dover",
   ctaLead:
-    'For rendering in Dover, call 07707 564597 or complete our <a href="/contact">contact form</a>. We provide free, no-obligation surveys across east Kent.',
+    'For rendering in Dover, call 07707 564597 or complete our <a href="/contact/">contact form</a>. We provide free, no-obligation surveys across east Kent.',
 };
 
 export const deal: LocationPageContent = {
-  path: "/rendering-deal",
+  path: "/rendering-deal/",
   town: "Deal",
   title: "Rendering Deal | Silicone & Monocouche Specialists",
   description:
@@ -160,7 +160,7 @@ export const deal: LocationPageContent = {
   heroEyebrow: "Deal coastal rendering",
   h1: "Render in Deal",
   heroLead:
-    'Deal is one of Kent\'s most characterful coastal towns, with Georgian seafront architecture, Victorian terraces and fishermen\'s cottages that face the sea every day. <a href="/">Kent Render Systems</a> covers Deal as a regular part of our east Kent patch, offering <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> for homes across the town.',
+    'Deal is one of Kent\'s most characterful coastal towns, with Georgian seafront architecture, Victorian terraces and fishermen\'s cottages that face the sea every day. <a href="/">Kent Render Systems</a> covers Deal as a regular part of our east Kent patch, offering <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> for homes across the town.',
   heroImage: "/images/monocouche-render-house-kent.jpg",
   heroImageAlt: "Monocouche house rendering in the Deal area, Kent",
   localTitle: "Deal seafront properties and salt exposure",
@@ -173,15 +173,15 @@ export const deal: LocationPageContent = {
     "A sympathetic finish on a period home is not about applying whatever is cheapest.",
     "It is about choosing the right system, preparing the walls properly and applying the render to a standard that lasts.",
     "For many Deal homeowners, that means moving away from failing sand and cement toward a modern silicone or monocouche system that copes better with coastal conditions.",
-    "<a href=\"/silicone-rendering-kent\">Silicone rendering</a> suits Deal properties where salt exposure and moisture are ongoing concerns.",
+    "<a href=\"/silicone-rendering-kent/\">Silicone rendering</a> suits Deal properties where salt exposure and moisture are ongoing concerns.",
     "It is flexible, water-repellent and self-cleaning, which helps walls near the sea stay in better condition for longer.",
-    "Where homeowners want a through-coloured finish on an extension, a full elevation or a newer property inland, <a href=\"/monocouche-rendering-kent\">monocouche rendering</a> gives a clean, even result without repainting.",
+    "Where homeowners want a through-coloured finish on an extension, a full elevation or a newer property inland, <a href=\"/monocouche-rendering-kent/\">monocouche rendering</a> gives a clean, even result without repainting.",
     "Deal is a regular part of our east Kent working week from Whitstable, not a distant postcode we visit occasionally.",
     "That keeps scheduling straightforward when you want a survey booked in promptly.",
     "Jack leads every project personally, from assessing your walls to the final tidy-up on site.",
     "Whether you own a seafront property, a Victorian terrace or a cottage on a quiet back street, Deal rendering is work we know well.",
     "Full house re-renders, single elevation refreshes and outbuilding projects all follow the same preparation standards, with scaffolding, repairs and machine-sprayed application handled properly from start to finish.",
-    "See where else we work on our <a href=\"/areas-we-cover\">areas we cover</a> page, or <a href=\"/contact\">contact us</a> on 07707 564597 for a free quote on render in Deal.",
+    "See where else we work on our <a href=\"/areas-we-cover/\">areas we cover</a> page, or <a href=\"/contact/\">contact us</a> on 07707 564597 for a free quote on render in Deal.",
   ],
   localImage: "/images/rendering-kent.jpg",
   localImageAlt: "House rendering completed near Deal on the Kent coast",
@@ -193,11 +193,11 @@ export const deal: LocationPageContent = {
   services: [
     {
       title: "Silicone rendering",
-      body: 'Flexible and water-repellent, with a self-cleaning surface that copes well with salt air. Our <a href="/silicone-rendering-kent">silicone render</a> is a strong choice for Deal properties near the sea.',
+      body: 'Flexible and water-repellent, with a self-cleaning surface that copes well with salt air. Our <a href="/silicone-rendering-kent/">silicone render</a> is a strong choice for Deal properties near the sea.',
     },
     {
       title: "Monocouche rendering",
-      body: 'Through-coloured, one-coat finish. No repainting needed. <a href="/monocouche-rendering-kent">Monocouche rendering</a> works well on extensions and full elevations where a crisp modern colour is the goal.',
+      body: 'Through-coloured, one-coat finish. No repainting needed. <a href="/monocouche-rendering-kent/">Monocouche rendering</a> works well on extensions and full elevations where a crisp modern colour is the goal.',
     },
     {
       title: "Full house rendering",
@@ -209,7 +209,7 @@ export const deal: LocationPageContent = {
     },
   ],
   servicesFooter:
-    'Back to <a href="/">Kent Render Systems</a> for more about our work, or <a href="/contact">request a Deal quote</a> directly.',
+    'Back to <a href="/">Kent Render Systems</a> for more about our work, or <a href="/contact/">request a Deal quote</a> directly.',
   whyTitle: "A regular east Kent team covering Deal",
   whyParagraphs: [
     "Kent Render Systems is based in Whitstable and covers Deal as part of our east Kent coastal patch. Jack, the owner, has nearly 20 years in the rendering trade and leads every job from survey to completion. We are happy to talk through preparation, colour choice and the differences between silicone and monocouche before you commit to any Deal rendering work.",
@@ -220,15 +220,15 @@ export const deal: LocationPageContent = {
     "Experience with Georgian and Victorian properties",
     "Sympathetic advice on finish and preparation",
     "Manufacturer-approved, machine-sprayed systems",
-    '<a href="/contact">Free, no-obligation quotes</a>',
+    '<a href="/contact/">Free, no-obligation quotes</a>',
   ],
   ctaTitle: "Free rendering quote for Deal",
   ctaLead:
-    'For render in Deal, call 07707 564597 or <a href="/contact">send us a message</a>. We will arrange a free survey and provide a clear quote.',
+    'For render in Deal, call 07707 564597 or <a href="/contact/">send us a message</a>. We will arrange a free survey and provide a clear quote.',
 };
 
 export const sandwich: LocationPageContent = {
-  path: "/rendering-sandwich",
+  path: "/rendering-sandwich/",
   town: "Sandwich",
   title: "Rendering Sandwich | Silicone & Monocouche Specialists",
   description:
@@ -236,7 +236,7 @@ export const sandwich: LocationPageContent = {
   heroEyebrow: "Sandwich rendering specialists",
   h1: "Rendering in Sandwich",
   heroLead:
-    'Sandwich is a medieval Cinque Port with period properties, conservation character and streets that reward a careful approach to exterior work. <a href="/">Kent Render Systems</a> covers Sandwich from our Whitstable base as part of our east Kent service, providing <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> for homes across the town.',
+    'Sandwich is a medieval Cinque Port with period properties, conservation character and streets that reward a careful approach to exterior work. <a href="/">Kent Render Systems</a> covers Sandwich from our Whitstable base as part of our east Kent service, providing <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> for homes across the town.',
   heroImage: "/images/rendering-terraced-house-kent.jpg",
   heroImageAlt: "Rendering on a period terraced property in the Sandwich area, Kent",
   localTitle: "Sandwich period properties and sympathetic finishes",
@@ -249,15 +249,15 @@ export const sandwich: LocationPageContent = {
     "Breathability matters on solid-wall buildings, and listed or conservation-area homes may need a conversation with the local authority before work begins.",
     "Where a modern render system is appropriate, we specify and apply the right approach after surveying the walls.",
     "The goal is a finish that protects the building and suits its character rather than fighting against it.",
-    "On residential properties where a durable, low-maintenance exterior is the priority, <a href=\"/silicone-rendering-kent\">silicone rendering</a> is our most requested finish.",
+    "On residential properties where a durable, low-maintenance exterior is the priority, <a href=\"/silicone-rendering-kent/\">silicone rendering</a> is our most requested finish.",
     "It is flexible, breathable and self-cleaning, which suits busy households who want a smart exterior without constant upkeep.",
-    "For extensions, newer homes and projects where a through-coloured finish is preferred, <a href=\"/monocouche-rendering-kent\">monocouche rendering</a> delivers a clean, even colour without repainting.",
+    "For extensions, newer homes and projects where a through-coloured finish is preferred, <a href=\"/monocouche-rendering-kent/\">monocouche rendering</a> delivers a clean, even colour without repainting.",
     "We reach Sandwich from our Whitstable base as part of our east Kent coverage, alongside Deal, Dover and the Thanet coast.",
     "Jack surveys every property personally and quotes without obligation.",
     "If your walls need repairs, failing render stripped back or a full re-render, we assess the condition on site and explain the work clearly before any project is booked.",
     "Whether you need render in Sandwich on a period property, a terrace on the edge of the historic centre or a detached home in a newer residential area, we tailor the system to the building.",
     "Failing pebble-dash, cracked cement render and tired colour finishes are among the most common reasons Sandwich homeowners contact us, and we always assess the walls on site before recommending a course of action.",
-    "View our <a href=\"/areas-we-cover\">areas we cover</a> or <a href=\"/contact\">contact us</a> on 07707 564597 to arrange a free survey for Sandwich rendering.",
+    "View our <a href=\"/areas-we-cover/\">areas we cover</a> or <a href=\"/contact/\">contact us</a> on 07707 564597 to arrange a free survey for Sandwich rendering.",
   ],
   localImage: "/images/premium-render-extension-kent.jpg",
   localImageAlt: "Premium rendering on an extension near Sandwich, Kent",
@@ -269,11 +269,11 @@ export const sandwich: LocationPageContent = {
   services: [
     {
       title: "Silicone render",
-      body: 'Flexible, breathable and self-cleaning. Our <a href="/silicone-rendering-kent">silicone render</a> suits most Sandwich homes where durability and a clean finish are the priority.',
+      body: 'Flexible, breathable and self-cleaning. Our <a href="/silicone-rendering-kent/">silicone render</a> suits most Sandwich homes where durability and a clean finish are the priority.',
     },
     {
       title: "Monocouche render",
-      body: 'A one-coat, through-coloured finish ideal for extensions and newer properties. See our <a href="/monocouche-rendering-kent">monocouche rendering</a> page for colours and application detail.',
+      body: 'A one-coat, through-coloured finish ideal for extensions and newer properties. See our <a href="/monocouche-rendering-kent/">monocouche rendering</a> page for colours and application detail.',
     },
     {
       title: "House rendering",
@@ -285,7 +285,7 @@ export const sandwich: LocationPageContent = {
     },
   ],
   servicesFooter:
-    'Unsure which system suits your Sandwich property? <a href="/contact">Get in touch</a> and we will advise you after a survey.',
+    'Unsure which system suits your Sandwich property? <a href="/contact/">Get in touch</a> and we will advise you after a survey.',
   whyTitle: "Why Sandwich homeowners use Kent Render Systems",
   whyParagraphs: [
     "We are based in Whitstable and cover Sandwich as part of our east Kent patch. Jack leads every rendering job personally, so you are not passed to a subcontractor or general labourer.",
@@ -296,15 +296,15 @@ export const sandwich: LocationPageContent = {
     "Sympathetic advice for period properties",
     "Approved Baumit, Weber and EcoRend applicator",
     "Breathable systems discussed where appropriate",
-    '<a href="/contact">Free quotes</a> with clear, itemised pricing',
+    '<a href="/contact/">Free quotes</a> with clear, itemised pricing',
   ],
   ctaTitle: "Request a rendering quote in Sandwich",
   ctaLead:
-    'Call 07707 564597 or use our <a href="/contact">contact form</a> to book a free survey. We provide rendering in Sandwich and across east Kent.',
+    'Call 07707 564597 or use our <a href="/contact/">contact form</a> to book a free survey. We provide rendering in Sandwich and across east Kent.',
 };
 
 export const margate: LocationPageContent = {
-  path: "/rendering-margate",
+  path: "/rendering-margate/",
   town: "Margate",
   title: "Rendering Margate | Silicone & Monocouche Specialists",
   description:
@@ -312,7 +312,7 @@ export const margate: LocationPageContent = {
   heroEyebrow: "Thanet coast rendering",
   h1: "Margate Rendering Specialists",
   heroLead:
-    'Margate is a seaside town in the middle of regeneration, with Victorian terraces sitting alongside newer developments and refreshed seafront architecture. <a href="/">Kent Render Systems</a> covers Margate as part of our Thanet coast service from Whitstable, offering <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> for homes across the town.',
+    'Margate is a seaside town in the middle of regeneration, with Victorian terraces sitting alongside newer developments and refreshed seafront architecture. <a href="/">Kent Render Systems</a> covers Margate as part of our Thanet coast service from Whitstable, offering <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> for homes across the town.',
   heroImage: "/images/silicone-render-house-kent.jpg",
   heroImageAlt: "Silicone house rendering in Margate on the Thanet coast, Kent",
   localTitle: "Margate housing, regeneration and coastal exposure",
@@ -325,15 +325,15 @@ export const margate: LocationPageContent = {
     "Rendering in Margate is a practical way to protect walls and sharpen kerb appeal at the same time.",
     "Tired cement render, stained finishes and cracked pebble-dash are common on older terraces, and a full re-render with proper preparation transforms how a property looks from the street.",
     "On newer builds and extensions, homeowners often want a through-coloured finish that ties the house, garden room and boundary walls together without repainting every few years.",
-    "<a href=\"/silicone-rendering-kent\">Silicone rendering</a> is our most popular finish across Margate.",
+    "<a href=\"/silicone-rendering-kent/\">Silicone rendering</a> is our most popular finish across Margate.",
     "It is flexible, water-repellent and self-cleaning, which suits coastal conditions on the Thanet coast.",
-    "For projects where a crisp, modern colour through the full depth of the render is the priority, <a href=\"/monocouche-rendering-kent\">monocouche rendering</a> is a strong choice on extensions, new elevations and full house work.",
+    "For projects where a crisp, modern colour through the full depth of the render is the priority, <a href=\"/monocouche-rendering-kent/\">monocouche rendering</a> is a strong choice on extensions, new elevations and full house work.",
     "We cover Margate as part of our Thanet coast patch from Whitstable, working alongside Ramsgate, Broadstairs and the east Kent towns further south.",
     "Jack leads every rendering project personally, from the first survey through to the final walk-round.",
     "We assess your walls, explain the preparation needed and quote clearly before work begins.",
     "Whether you need a full house re-render on a Victorian terrace, a front elevation refresh near the seafront or garden walls finished to match a recent extension, render in Margate is work we handle regularly on the Thanet coast.",
     "We machine spray our renders for consistency, finish by hand to a high standard, and leave every site tidy when the job is complete.",
-    "See our <a href=\"/areas-we-cover\">areas we cover</a> or <a href=\"/contact\">contact us</a> on 07707 564597 for a free, no-obligation quote on Margate rendering.",
+    "See our <a href=\"/areas-we-cover/\">areas we cover</a> or <a href=\"/contact/\">contact us</a> on 07707 564597 for a free, no-obligation quote on Margate rendering.",
   ],
   localImage: "/images/new-build-house-rendering-kent.jpg",
   localImageAlt: "New-build house rendering near Margate on the Thanet coast, Kent",
@@ -345,11 +345,11 @@ export const margate: LocationPageContent = {
   services: [
     {
       title: "Silicone rendering",
-      body: 'Flexible, durable and self-cleaning. <a href="/silicone-rendering-kent">Silicone rendering</a> suits Margate homes exposed to Thanet coastal weather, from seafront terraces to inland streets.',
+      body: 'Flexible, durable and self-cleaning. <a href="/silicone-rendering-kent/">Silicone rendering</a> suits Margate homes exposed to Thanet coastal weather, from seafront terraces to inland streets.',
     },
     {
       title: "Monocouche rendering",
-      body: 'Through-coloured, one-coat finish. Popular on extensions and newer Margate properties. <a href="/monocouche-rendering-kent">Learn about monocouche rendering</a>.',
+      body: 'Through-coloured, one-coat finish. Popular on extensions and newer Margate properties. <a href="/monocouche-rendering-kent/">Learn about monocouche rendering</a>.',
     },
     {
       title: "Full house rendering",
@@ -361,7 +361,7 @@ export const margate: LocationPageContent = {
     },
   ],
   servicesFooter:
-    'Read about <a href="/silicone-rendering-kent">silicone rendering in Kent</a> and <a href="/monocouche-rendering-kent">monocouche rendering in Kent</a>, or <a href="/contact">request a Margate quote</a>.',
+    'Read about <a href="/silicone-rendering-kent/">silicone rendering in Kent</a> and <a href="/monocouche-rendering-kent/">monocouche rendering in Kent</a>, or <a href="/contact/">request a Margate quote</a>.',
   whyTitle: "Thanet coast coverage for Margate",
   whyParagraphs: [
     "Kent Render Systems is based in Whitstable and covers Margate as part of our Thanet coast work. Jack, the owner, has nearly 20 years in the rendering trade and leads every project from survey to completion. If you are comparing quotes for render in Margate, we provide clear, itemised pricing so you know exactly what is included before work starts.",
@@ -372,15 +372,15 @@ export const margate: LocationPageContent = {
     "Experience with Victorian terraces and modern builds",
     "Coastal-grade silicone systems available",
     "Owner-led service from Jack on every job",
-    'Call 07707 564597 or <a href="/contact">request a quote online</a>',
+    'Call 07707 564597 or <a href="/contact/">request a quote online</a>',
   ],
   ctaTitle: "Arrange a rendering survey in Margate",
   ctaLead:
-    'For rendering in Margate, call 07707 564597 or complete our <a href="/contact">contact form</a>. We cover Margate, Ramsgate, Broadstairs and across Kent.',
+    'For rendering in Margate, call 07707 564597 or complete our <a href="/contact/">contact form</a>. We cover Margate, Ramsgate, Broadstairs and across Kent.',
 };
 
 export const ramsgate: LocationPageContent = {
-  path: "/rendering-ramsgate",
+  path: "/rendering-ramsgate/",
   town: "Ramsgate",
   title: "Rendering Ramsgate | Silicone & Monocouche Specialists",
   description:
@@ -388,7 +388,7 @@ export const ramsgate: LocationPageContent = {
   heroEyebrow: "Ramsgate harbour town rendering",
   h1: "Rendering in Ramsgate",
   heroLead:
-    'Ramsgate is a royal harbour town with fine period architecture, cliff-side streets and properties that face the sea from multiple angles. <a href="/">Kent Render Systems</a> covers Ramsgate as part of our Thanet area service from Whitstable, providing <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> for homes across the town.',
+    'Ramsgate is a royal harbour town with fine period architecture, cliff-side streets and properties that face the sea from multiple angles. <a href="/">Kent Render Systems</a> covers Ramsgate as part of our Thanet area service from Whitstable, providing <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> for homes across the town.',
   heroImage: "/images/monocouche-render-detached-house-kent.jpg",
   heroImageAlt: "Monocouche rendering on a detached house in Ramsgate, Kent",
   localTitle: "Ramsgate period architecture and coastal weathering",
@@ -402,16 +402,16 @@ export const ramsgate: LocationPageContent = {
     "The preparation is the critical part.",
     "Strip back failing render, repair the wall underneath, apply the right base coats and then machine spray the finish for consistency.",
     "That is the process that separates a render that lasts from one that fails within a few years.",
-    "For Ramsgate homes where coastal exposure is the main concern, <a href=\"/silicone-rendering-kent\">silicone rendering</a> is our most requested system.",
+    "For Ramsgate homes where coastal exposure is the main concern, <a href=\"/silicone-rendering-kent/\">silicone rendering</a> is our most requested system.",
     "It is flexible, water-repellent and self-cleaning.",
-    "On extensions, garden rooms and elevations where homeowners want a through-coloured finish without repainting, <a href=\"/monocouche-rendering-kent\">monocouche rendering</a> delivers a clean, even result.",
+    "On extensions, garden rooms and elevations where homeowners want a through-coloured finish without repainting, <a href=\"/monocouche-rendering-kent/\">monocouche rendering</a> delivers a clean, even result.",
     "We cover Ramsgate as part of our Thanet area work from Whitstable, alongside Margate and Broadstairs.",
     "Jack surveys every property personally and provides a clear, itemised quote.",
     "There is no obligation to proceed, and we are happy to talk through both systems before you decide.",
     "Whether you need render in Ramsgate on a harbour-side property, a Victorian terrace or a detached home on the cliffs, we tailor the approach to the building.",
     "Pebble-dash removal, damp-related repairs at substrate level and matching a new render to existing brick details are all part of the everyday Ramsgate work we quote for.",
     "We are fully insured, use approved materials from Baumit, Weber and EcoRend, and back our work with manufacturer guarantees.",
-    "View our <a href=\"/areas-we-cover\">areas we cover</a> or <a href=\"/contact\">contact us</a> on 07707 564597 to book a free Ramsgate rendering survey.",
+    "View our <a href=\"/areas-we-cover/\">areas we cover</a> or <a href=\"/contact/\">contact us</a> on 07707 564597 to book a free Ramsgate rendering survey.",
   ],
   localImage: "/images/render-job-kent.jpg",
   localImageAlt: "Completed render job on a property in the Ramsgate area, Kent",
@@ -423,11 +423,11 @@ export const ramsgate: LocationPageContent = {
   services: [
     {
       title: "Silicone rendering",
-      body: 'Flexible and water-repellent, with a self-cleaning surface. Our <a href="/silicone-rendering-kent">silicone render</a> suits Ramsgate homes exposed to harbour and coastal weather.',
+      body: 'Flexible and water-repellent, with a self-cleaning surface. Our <a href="/silicone-rendering-kent/">silicone render</a> suits Ramsgate homes exposed to harbour and coastal weather.',
     },
     {
       title: "Monocouche rendering",
-      body: 'Through-coloured, one-coat finish. No repainting required. See our <a href="/monocouche-rendering-kent">monocouche rendering</a> page for more on colours and application.',
+      body: 'Through-coloured, one-coat finish. No repainting required. See our <a href="/monocouche-rendering-kent/">monocouche rendering</a> page for more on colours and application.',
     },
     {
       title: "Full house rendering",
@@ -439,7 +439,7 @@ export const ramsgate: LocationPageContent = {
     },
   ],
   servicesFooter:
-    'Visit our <a href="/">homepage</a> for more about Kent Render Systems, or <a href="/contact">contact us</a> for a Ramsgate rendering quote.',
+    'Visit our <a href="/">homepage</a> for more about Kent Render Systems, or <a href="/contact/">contact us</a> for a Ramsgate rendering quote.',
   whyTitle: "Thanet area specialists covering Ramsgate",
   whyParagraphs: [
     "We are based in Whitstable and cover Ramsgate as part of our Thanet coast patch. Jack leads every rendering job personally, applying nearly 20 years of trade experience from first phone call to final tidy-up.",
@@ -450,15 +450,15 @@ export const ramsgate: LocationPageContent = {
     "Experience with period harbour-town properties",
     "Coastal-grade render systems available",
     "Machine-sprayed, manufacturer-approved application",
-    '<a href="/contact">Free surveys and quotes</a>',
+    '<a href="/contact/">Free surveys and quotes</a>',
   ],
   ctaTitle: "Get a free rendering quote in Ramsgate",
   ctaLead:
-    'For rendering in Ramsgate, call 07707 564597 or use our <a href="/contact">contact form</a> to arrange a free survey across the Thanet coast.',
+    'For rendering in Ramsgate, call 07707 564597 or use our <a href="/contact/">contact form</a> to arrange a free survey across the Thanet coast.',
 };
 
 export const broadstairs: LocationPageContent = {
-  path: "/rendering-broadstairs",
+  path: "/rendering-broadstairs/",
   town: "Broadstairs",
   title: "Rendering Broadstairs | Silicone & Monocouche Render",
   description:
@@ -466,7 +466,7 @@ export const broadstairs: LocationPageContent = {
   heroEyebrow: "Broadstairs seaside rendering",
   h1: "House Rendering in Broadstairs",
   heroLead:
-    'Broadstairs is an affluent Thanet seaside town known for Victorian villas, chalk cliffs and period properties that face the North Sea. <a href="/">Kent Render Systems</a> covers Broadstairs as part of our Thanet coast service from Whitstable, offering <a href="/silicone-rendering-kent">silicone rendering</a> and <a href="/monocouche-rendering-kent">monocouche rendering</a> for homes across the town.',
+    'Broadstairs is an affluent Thanet seaside town known for Victorian villas, chalk cliffs and period properties that face the North Sea. <a href="/">Kent Render Systems</a> covers Broadstairs as part of our Thanet coast service from Whitstable, offering <a href="/silicone-rendering-kent/">silicone rendering</a> and <a href="/monocouche-rendering-kent/">monocouche rendering</a> for homes across the town.',
   heroImage: "/images/silicone-render-bungalow-kent.png",
   heroImageAlt: "Silicone rendering on a coastal bungalow in Broadstairs, Kent",
   localTitle: "Broadstairs Victorian villas and chalk cliff exposure",
@@ -479,15 +479,15 @@ export const broadstairs: LocationPageContent = {
     "Rendering in Broadstairs is often about maintaining the smart appearance the town is known for while giving walls the protection they need.",
     "Failing cement render, hairline cracks that let moisture in and dated colour choices leave otherwise well-cared-for properties looking tired.",
     "A full re-render with proper preparation restores the exterior and reduces the maintenance burden for years to come.",
-    "<a href=\"/silicone-rendering-kent\">Silicone rendering</a> suits Broadstairs homes where coastal exposure and a low-maintenance finish are both priorities.",
+    "<a href=\"/silicone-rendering-kent/\">Silicone rendering</a> suits Broadstairs homes where coastal exposure and a low-maintenance finish are both priorities.",
     "It is flexible, breathable and self-cleaning, which helps walls near the sea stay in better condition.",
-    "For extensions, garden rooms and projects where a through-coloured modern finish is preferred, <a href=\"/monocouche-rendering-kent\">monocouche rendering</a> gives a crisp, even colour without repainting.",
+    "For extensions, garden rooms and projects where a through-coloured modern finish is preferred, <a href=\"/monocouche-rendering-kent/\">monocouche rendering</a> gives a crisp, even colour without repainting.",
     "We cover Broadstairs as part of our Thanet coast patch from Whitstable, working alongside Margate and Ramsgate.",
     "Jack leads every rendering project personally, from surveying your walls to the final walk-round.",
     "We quote clearly and without obligation, and we leave every site tidy.",
     "Whether you need a full house re-render on a Victorian villa, a single elevation refresh or garden walls and outbuildings finished to match the main property, Broadstairs rendering is work we handle on the Thanet coast.",
     "Properties on streets leading down to Viking Bay and Botany Bay often need a finish that copes with open sea exposure, and we discuss those conditions during every survey.",
-    "See our <a href=\"/areas-we-cover\">areas we cover</a> or <a href=\"/contact\">contact us</a> on 07707 564597 for a free quote on render in Broadstairs.",
+    "See our <a href=\"/areas-we-cover/\">areas we cover</a> or <a href=\"/contact/\">contact us</a> on 07707 564597 for a free quote on render in Broadstairs.",
   ],
   localImage: "/images/rendered-garden-feature-kent.jpg",
   localImageAlt: "Rendered garden feature on a Broadstairs area property, Kent",
@@ -499,11 +499,11 @@ export const broadstairs: LocationPageContent = {
   services: [
     {
       title: "Silicone rendering",
-      body: 'Flexible, durable and self-cleaning. <a href="/silicone-rendering-kent">Silicone rendering</a> is a strong choice for Broadstairs homes on exposed coastal and cliff-side sites.',
+      body: 'Flexible, durable and self-cleaning. <a href="/silicone-rendering-kent/">Silicone rendering</a> is a strong choice for Broadstairs homes on exposed coastal and cliff-side sites.',
     },
     {
       title: "Monocouche rendering",
-      body: 'Through-coloured, one-coat finish. Popular on extensions and garden rooms. <a href="/monocouche-rendering-kent">View our monocouche service</a>.',
+      body: 'Through-coloured, one-coat finish. Popular on extensions and garden rooms. <a href="/monocouche-rendering-kent/">View our monocouche service</a>.',
     },
     {
       title: "Full house rendering",
@@ -515,7 +515,7 @@ export const broadstairs: LocationPageContent = {
     },
   ],
   servicesFooter:
-    'Unsure which system suits your Broadstairs home? <a href="/contact">Get in touch</a> and we will recommend the right finish after a survey.',
+    'Unsure which system suits your Broadstairs home? <a href="/contact/">Get in touch</a> and we will recommend the right finish after a survey.',
   whyTitle: "Why Broadstairs homeowners choose us",
   whyParagraphs: [
     "Kent Render Systems is based in Whitstable and covers Broadstairs as part of our Thanet coast work. Jack, the owner, has nearly 20 years in the rendering and plastering trade and leads every project from first survey to final tidy-up. We are approved installers for Baumit, Weber and EcoRend, and we discuss colour, texture and finish options during every Broadstairs survey.",
@@ -526,9 +526,9 @@ export const broadstairs: LocationPageContent = {
     "Experience with Victorian villas and period homes",
     "Owner-led by Jack on every rendering job",
     "Manufacturer-approved materials and guarantees",
-    'Call 07707 564597 or <a href="/contact">request a quote online</a>',
+    'Call 07707 564597 or <a href="/contact/">request a quote online</a>',
   ],
   ctaTitle: "Book a free survey in Broadstairs",
   ctaLead:
-    'For rendering in Broadstairs, call 07707 564597 or complete our <a href="/contact">contact form</a>. We cover Broadstairs, Margate, Ramsgate and across Kent.',
+    'For rendering in Broadstairs, call 07707 564597 or complete our <a href="/contact/">contact form</a>. We cover Broadstairs, Margate, Ramsgate and across Kent.',
 };

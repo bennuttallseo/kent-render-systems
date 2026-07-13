@@ -7,14 +7,14 @@ const phoneHref = "tel:+447707564597";
 
 const breadcrumbs = [
   { name: "Home", path: "/" },
-  { name: "Areas We Cover", path: "/areas-we-cover" },
+  { name: "Areas We Cover", path: "/areas-we-cover/" },
 ];
 ---
 
 <Layout
   title="Areas We Cover | Kent Render Systems"
   description="Kent Render Systems covers towns across Kent and the south east London border. Find your local rendering page for silicone and monocouche. Free quotes."
-  path="/areas-we-cover"
+  path="/areas-we-cover/"
   breadcrumbs={breadcrumbs}
 >
   <section class="page-hero">
@@ -24,8 +24,8 @@ const breadcrumbs = [
         <h1>Areas We Cover</h1>
         <p class="lead">
           <a href="/">Kent Render Systems</a> is based in Whitstable and provides
-          specialist <a href="/silicone-rendering-kent">silicone rendering</a> and
-          <a href="/monocouche-rendering-kent">monocouche rendering</a> across Kent
+          specialist <a href="/silicone-rendering-kent/">silicone rendering</a> and
+          <a href="/monocouche-rendering-kent/">monocouche rendering</a> across Kent
           and the south east London border. From coastal towns on the north Kent
           coast to county towns in mid and west Kent, and suburban areas around
           Bromley and Orpington, we cover homeowners who want a durable, professional
@@ -33,7 +33,7 @@ const breadcrumbs = [
           and a free, no-obligation quote.
         </p>
         <div class="page-hero-cta">
-          <a class="btn btn--light" href="/contact">Get Your Free Quote</a>
+          <a class="btn btn--light" href="/contact/">Get Your Free Quote</a>
           <a class="btn btn--light" href={phoneHref}>Call {phone}</a>
         </div>
       </div>
@@ -76,11 +76,11 @@ const breadcrumbs = [
       <h2>Cannot see your town?</h2>
       <p>
         We cover Kent and the surrounding areas beyond the towns listed here.
-        If your postcode is not shown, <a href="/contact">contact us</a> anyway.
+        If your postcode is not shown, <a href="/contact/">contact us</a> anyway.
         Jack will let you know if we can help and arrange a free survey where
         appropriate.
       </p>
-      <a class="btn" href="/contact">Request a free quote</a>
+      <a class="btn" href="/contact/">Request a free quote</a>
     </div>
   </section>
 </Layout>

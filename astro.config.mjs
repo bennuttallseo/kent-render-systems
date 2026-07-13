@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://kentrendersystems.co.uk',
-  trailingSlash: 'never',
+  trailingSlash: 'always',
   integrations: [
     sitemap({
       filter: (page) =>
