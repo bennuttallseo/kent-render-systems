@@ -1,6 +1,7 @@
 ---
 import ContactSection from "./ContactSection.astro";
 import GoogleReviewsSection from "./GoogleReviewsSection.astro";
+import MeetJackTrust from "./MeetJackTrust.astro";
 import ServiceMap from "./ServiceMap.astro";
 
 interface Benefit {
@@ -54,6 +55,8 @@ interface Props {
   process: ProcessStep[];
   faqs: Faq[];
   reviewsLead: string;
+  meetJackLead: string;
+  meetJackParagraphs: string[];
   relatedService?: { name: string; href: string; body: string };
 }
 
@@ -83,6 +86,8 @@ const {
   process,
   faqs,
   reviewsLead,
+  meetJackLead,
+  meetJackParagraphs,
   relatedService,
 } = Astro.props;
 
@@ -213,6 +218,8 @@ const phoneIcon =
     </div>
   </div>
 </section>
+
+<MeetJackTrust lead={meetJackLead} paragraphs={meetJackParagraphs} />
 
 {coloursTitle && coloursParagraphs && (
   <section class="section" id="colours">

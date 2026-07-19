@@ -1,0 +1,56 @@
+---
+interface Props {
+  lead: string;
+  paragraphs: string[];
+}
+
+const { lead, paragraphs } = Astro.props;
+
+const jackImage = "/images/kent-render-systems-van.jpg";
+const jackImageAlt =
+  "Jack, rendering specialist and owner of Kent Render Systems, in front of the branded company van in Kent";
+---
+
+<section class="section meet-jack">
+  <div class="container meet-jack-grid">
+    <div class="meet-jack-text">
+      <div class="section-head">
+        <p class="eyebrow">Owner-led</p>
+        <h2>Meet Jack</h2>
+      </div>
+      <p class="lead">{lead}</p>
+      {paragraphs.map((p) => <p>{p}</p>)}
+    </div>
+    <div class="meet-jack-media">
+      <img
+        src={jackImage}
+        alt={jackImageAlt}
+        loading="lazy"
+        width="1200"
+        height="800"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .meet-jack-grid {
+    display: grid;
+    gap: 40px 56px;
+    align-items: center;
+  }
+  @media (min-width: 880px) {
+    .meet-jack-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .meet-jack-text p:last-child {
+    margin-bottom: 0;
+  }
+  .meet-jack-media img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+</style>
