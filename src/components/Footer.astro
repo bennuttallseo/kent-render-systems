@@ -71,9 +71,6 @@ const socialLinks = [
 
   <div class="container footer-bottom">
     <p>&copy; {year} Kent Render Systems. All rights reserved.</p>
-    <p class="footer-credit">
-      Created by <a href="https://eastkentseo.com/" target="_blank" rel="noopener noreferrer">East Kent SEO</a>
-    </p>
     <ul class="footer-social">
       {socialLinks.map((s) => (
         <li>
@@ -84,7 +81,9 @@ const socialLinks = [
         </li>
       ))}
     </ul>
-    <p>External rendering specialists serving Kent.</p>
+    <p class="footer-credit">
+      Created by <a href="https://eastkentseo.com/" target="_blank" rel="noopener noreferrer">East Kent SEO</a>
+    </p>
   </div>
 </footer>
 
@@ -184,25 +183,40 @@ const socialLinks = [
   .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-block: 22px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
     align-items: center;
-    justify-content: space-between;
+    justify-items: center;
     gap: 16px;
     font-size: 0.85rem;
     color: #7d8896;
+  }
+  @media (min-width: 760px) {
+    .footer-bottom {
+      grid-template-columns: 1fr auto 1fr;
+      justify-items: stretch;
+    }
+    .footer-bottom > p:first-child {
+      justify-self: start;
+    }
+    .footer-social {
+      justify-self: center;
+    }
+    .footer-credit {
+      justify-self: end;
+      text-align: right;
+    }
   }
   .footer-bottom p {
     margin: 0;
   }
   .footer-credit a {
-    color: #d8dee6;
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+    color: inherit;
+    font-weight: inherit;
+    text-decoration: none;
   }
   .footer-credit a:hover {
-    color: var(--gold);
+    color: inherit;
   }
   .footer-social {
     display: flex;
