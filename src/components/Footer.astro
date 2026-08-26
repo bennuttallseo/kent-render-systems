@@ -71,6 +71,9 @@ const socialLinks = [
 
   <div class="container footer-bottom">
     <p>&copy; {year} Kent Render Systems. All rights reserved.</p>
+    <p class="footer-credit">
+      Created by <a href="https://eastkentseo.com/" target="_blank" rel="noopener noreferrer">East Kent SEO</a>
+    </p>
     <ul class="footer-social">
       {socialLinks.map((s) => (
         <li>
@@ -191,6 +194,15 @@ const socialLinks = [
   }
   .footer-bottom p {
     margin: 0;
+  }
+  .footer-credit a {
+    color: #d8dee6;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .footer-credit a:hover {
+    color: var(--gold);
   }
   .footer-social {
     display: flex;
