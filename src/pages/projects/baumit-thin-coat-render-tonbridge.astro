@@ -1,0 +1,356 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import GoogleReviewsSection from "../../components/GoogleReviewsSection.astro";
+
+const town = "Tonbridge";
+const townPage = "/rendering-tonbridge";
+
+const phone = "07707 564597";
+const phoneHref = "tel:+447707564597";
+const path = "/projects/baumit-thin-coat-render-tonbridge";
+
+const facts = [
+  { label: "Location", value: `${town}, Kent` },
+  { label: "Property", value: "Three-storey period home" },
+  { label: "System", value: "Baumit thin coat render" },
+  { label: "Guarantee", value: "Manufacturer-backed" },
+];
+
+const reasons = [
+  {
+    title: "Every layer designed to work together",
+    text: "A render system is more than the coat you see. The basecoat, mesh, primer and finish are made to be used together, so they bond, flex and breathe as one. Mixing products from different sources is where problems start.",
+  },
+  {
+    title: "A proper guarantee",
+    text: "Because we carried out the work to Baumit's specification, the system qualifies for a manufacturer-backed guarantee. That is real peace of mind on a property of this size.",
+  },
+  {
+    title: "Applied in the right conditions",
+    text: "Manufacturer specifications include limits on weather and drying times. On this job that meant working around a long spell of heavy rain rather than rushing the finish. It took patience, but it is the only way to get a result that lasts.",
+  },
+  {
+    title: "Crisp detailing",
+    text: "Thin coat systems give sharp, clean lines around window reveals, sills and corners, which suits the proportions of a period home like this one.",
+  },
+];
+
+const gallery = [
+  {
+    src: "/images/projects/baumit-thin-coat-render-window-reveals-tonbridge.jpg",
+    alt: `Finished Baumit thin coat render around sash window reveals and sill on a period house in ${town}, Kent`,
+    caption: "Clean reveals and sills around the sash windows",
+  },
+  {
+    src: "/images/projects/baumit-thin-coat-render-finish-close-up.jpg",
+    alt: "Close-up of a fine textured Baumit thin coat render finish in natural light",
+    caption: "Close-up of the finished texture",
+  },
+];
+
+const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
+---
+
+<Layout
+  title={`Baumit Thin Coat Render in ${town} | Kent Render Systems`}
+  description={`A Baumit thin coat render system applied to manufacturer specification on a three-storey period home in ${town}, Kent, backed by a manufacturer guarantee.`}
+  path={path}
+  ogImage="/images/projects/baumit-thin-coat-render-tonbridge-period-house.jpg"
+  breadcrumbs={[
+    { name: "Home", path: "/" },
+    { name: "Projects", path: "/projects" },
+    { name: `Baumit Thin Coat Render, ${town}`, path },
+  ]}
+>
+  <!-- Hero -->
+  <section class="project-hero">
+    <div class="container project-hero-inner">
+      <div class="project-hero-text">
+        <p class="eyebrow">Completed project</p>
+        <h1>Baumit Thin Coat Render in {town}</h1>
+        <p class="lead">
+          A full Baumit thin coat render system on a large, three-storey period
+          home in {town}, carried out to the manufacturer's specification so the
+          finish comes with a manufacturer-backed guarantee.
+        </p>
+        <dl class="project-facts">
+          {facts.map((f) => (
+            <div>
+              <dt>{f.label}</dt>
+              <dd>{f.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+      <div class="project-hero-media">
+        <img
+          src="/images/projects/baumit-thin-coat-render-tonbridge-period-house.jpg"
+          alt={`Three-storey period house in ${town}, Kent, under full scaffolding during a Baumit thin coat render installation`}
+          width="1200"
+          height="1600"
+          fetchpriority="high"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- The job -->
+  <section class="section">
+    <div class="container narrow">
+      <div class="section-head">
+        <p class="eyebrow">The job</p>
+        <h2>What we did</h2>
+      </div>
+      <p>
+        This was a big one: a tall, three-storey period property in {town} that
+        needed full scaffolding on every elevation. We installed a Baumit thin
+        coat render system across the house, finishing neatly around the sash
+        windows, reveals and sills so the period character still comes through.
+      </p>
+      <p>
+        The weather was not on our side. The job ran through a long spell of
+        almost constant rain, and render cannot simply be pushed on in the wet.
+        We worked to the conditions Baumit sets out, waited when we had to, and
+        got there in the end with a finish we are proud of.
+      </p>
+      <p>
+        Because every stage was completed to the manufacturer's specification,
+        the customer has a manufacturer-backed guarantee on the system, not just
+        our word.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why a manufacturer system -->
+  <section class="section section--sand">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Why it matters</p>
+        <h2>Why we install to manufacturer specification</h2>
+      </div>
+      <ul class="benefit-grid">
+        {reasons.map((b) => (
+          <li class="card benefit">
+            <span class="benefit-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" set:html={checkIcon} />
+            </span>
+            <h3>{b.title}</h3>
+            <p>{b.text}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Project photos</p>
+        <h2>The finish up close</h2>
+      </div>
+      <ul class="project-gallery">
+        {gallery.map((g) => (
+          <li>
+            <figure>
+              <img src={g.src} alt={g.alt} loading="lazy" width="900" height="1600" />
+              <figcaption>{g.caption}</figcaption>
+            </figure>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="section section--sand">
+    <div class="container narrow">
+      <div class="section-head">
+        <p class="eyebrow">More from Kent Render Systems</p>
+        <h2>Planning to render your home?</h2>
+      </div>
+      <p>
+        Find out more about <a href={townPage}>rendering in {town}</a>, or
+        compare our <a href="/silicone-rendering-kent">silicone rendering</a>
+        and <a href="/monocouche-rendering-kent">monocouche rendering</a>
+        services to see which system suits your property.
+      </p>
+    </div>
+  </section>
+
+  <GoogleReviewsSection variant="blue" />
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="container final-inner">
+      <p class="eyebrow">Free no-obligation quote</p>
+      <h2>Got a rendering project in mind?</h2>
+      <p class="lead">
+        From a single elevation to a full three-storey house, Jack will come out,
+        take a look and give you a free, no-obligation quote.
+      </p>
+      <div class="final-actions">
+        <a class="btn btn--light" href="/contact">Get Your Free Quote</a>
+        <a class="btn btn--on-dark btn--ghost" href={phoneHref}>Call {phone}</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .project-hero {
+    background:
+      radial-gradient(900px 420px at 15% 0%, rgba(30, 91, 184, 0.42), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+    color: #e7ecf1;
+    padding-block: clamp(48px, 6vw, 96px);
+  }
+  .project-hero-inner {
+    display: grid;
+    gap: 40px 56px;
+    align-items: center;
+  }
+  @media (min-width: 900px) {
+    .project-hero-inner {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+  }
+  .project-hero .eyebrow {
+    color: var(--gold);
+  }
+  .project-hero h1 {
+    color: #fff;
+    font-size: clamp(2rem, 1.3rem + 2.8vw, 3.1rem);
+    margin-bottom: 0.45em;
+  }
+  .project-hero .lead {
+    color: #c7d0da;
+    max-width: 58ch;
+  }
+  .project-facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 24px;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+  }
+  .project-facts dt {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .project-facts dd {
+    margin: 4px 0 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: #fff;
+  }
+  .project-hero-media img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+  .narrow {
+    max-width: 760px;
+  }
+  .narrow p:last-child {
+    margin-bottom: 0;
+  }
+  .narrow a {
+    color: var(--terracotta-dark);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .narrow a:hover {
+    color: var(--terracotta);
+  }
+  .benefit-grid {
+    display: grid;
+    gap: 20px;
+  }
+  @media (min-width: 760px) {
+    .benefit-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .benefit h3 {
+    margin: 14px 0 8px;
+    font-size: 1.15rem;
+  }
+  .benefit p {
+    margin: 0;
+  }
+  .benefit-check {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: rgba(30, 91, 184, 0.1);
+    color: var(--terracotta-dark);
+  }
+  .benefit-check svg {
+    width: 20px;
+    height: 20px;
+  }
+  .project-gallery {
+    display: grid;
+    gap: 20px;
+    max-width: 860px;
+    margin-inline: auto;
+  }
+  @media (min-width: 640px) {
+    .project-gallery {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .project-gallery figure {
+    margin: 0;
+  }
+  .project-gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+  .project-gallery figcaption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .final-cta {
+    background:
+      radial-gradient(900px 420px at 15% 0%, rgba(30, 91, 184, 0.42), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+    color: #e7ecf1;
+    padding-block: clamp(64px, 6vw, 110px);
+    text-align: center;
+  }
+  .final-inner {
+    max-width: 720px;
+    margin-inline: auto;
+  }
+  .final-cta .eyebrow {
+    color: var(--gold);
+  }
+  .final-cta h2 {
+    color: #fff;
+  }
+  .final-cta .lead {
+    color: #c7d0da;
+    margin-bottom: 30px;
+  }
+  .final-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+  }
+</style>

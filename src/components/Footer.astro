@@ -1,6 +1,7 @@
 ---
 import { serviceLinks } from "../data/serviceLinks";
 import { footerAreaLinks } from "../data/locationHub";
+import { projects, projectsHubPath } from "../data/projects";
 
 interface Props {
   phone: string;
@@ -54,6 +55,16 @@ const socialLinks = [
     </div>
 
     <div class="footer-col">
+      <h4>Projects</h4>
+      <ul>
+        {projects.map((p) => (
+          <li><a href={p.href}>{p.footerLabel}</a></li>
+        ))}
+      </ul>
+      <a class="footer-areas-more" href={projectsHubPath}>View all projects &rarr;</a>
+    </div>
+
+    <div class="footer-col">
       <h4>Areas We Cover</h4>
       <ul>{areas.map((a) => <li>{a.href ? <a href={a.href}>{a.label}</a> : a.label}</li>)}</ul>
       <a class="footer-areas-more" href="/areas-we-cover">View all areas &rarr;</a>
@@ -99,10 +110,18 @@ const socialLinks = [
     gap: 36px;
     padding-bottom: 48px;
   }
-  @media (min-width: 760px) {
+  @media (min-width: 1100px) {
     .footer-grid {
-      grid-template-columns: 2fr 1fr 1fr 1.3fr;
-      gap: 40px;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr;
+      gap: 32px;
+    }
+  }
+  @media (min-width: 760px) and (max-width: 1099px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .footer-brand {
+      grid-column: 1 / -1;
     }
   }
   .footer-brand p {

@@ -1,0 +1,351 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import GoogleReviewsSection from "../../components/GoogleReviewsSection.astro";
+
+// EDIT BEFORE PUBLISHING: set the town where the job was carried out.
+// townPage must match an existing location page, e.g. "/rendering-whitstable".
+const town = "TOWN";
+const townPage = "/rendering-TOWN";
+
+const phone = "07707 564597";
+const phoneHref = "tel:+447707564597";
+const path = "/projects/baumit-silicone-render-garden-building";
+
+const facts = [
+  { label: "Location", value: `${town}, Kent` },
+  { label: "Property", value: "Detached outbuilding" },
+  { label: "Base coat", value: "Baumit StarContact" },
+  { label: "Finish", value: "Baumit SilikonTop" },
+];
+
+const benefits = [
+  {
+    title: "Silicone finish that stays clean",
+    text: "Baumit SilikonTop is a silicone render, so rain beads off the surface rather than soaking in. That helps the wall shed dirt and resist the green staining you often see on outbuildings tucked into the garden.",
+  },
+  {
+    title: "A strong, reinforced base",
+    text: "Baumit StarContact is an adhesive and reinforcing base coat. Bedded with mesh, it gives the silicone finish a solid, crack-resistant layer to sit on.",
+  },
+  {
+    title: "Breathable",
+    text: "Silicone render lets moisture vapour escape from the wall while keeping driving rain out, which matters on a building that may not be heated all year.",
+  },
+  {
+    title: "Colour through the render",
+    text: "The colour is in the render itself, so there is no painting to keep on top of. It works well with dark joinery like the black doors and fascias on this building.",
+  },
+];
+
+const gallery = [
+  {
+    src: "/images/projects/pebble-dash-patch-repair-basecoat-mesh.jpg",
+    alt: "Mesh and base coat applied to a section of pebble dash wall during a patch repair",
+    caption: "Patch repair to the original pebble dash: mesh and base coat stage",
+  },
+];
+
+const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
+---
+
+<Layout
+  title={`Baumit Silicone Render Outbuilding, ${town} | Kent Render Systems`}
+  description={`Baumit StarContact and SilikonTop silicone render on a detached garden building in ${town}, Kent, plus a pebble dash patch repair to the main house.`}
+  path={path}
+  ogImage="/images/projects/baumit-silicone-render-garden-building-kent.jpg"
+  breadcrumbs={[
+    { name: "Home", path: "/" },
+    { name: "Projects", path: "/projects" },
+    { name: `Silicone Render Outbuilding, ${town}`, path },
+  ]}
+>
+  <!-- Hero -->
+  <section class="project-hero">
+    <div class="container project-hero-inner">
+      <div class="project-hero-text">
+        <p class="eyebrow">Completed project</p>
+        <h1>Silicone Rendered Outbuilding in {town}</h1>
+        <p class="lead">
+          A detached garden building in {town} finished in a full Baumit silicone
+          render system, with a patch repair to the pebble dash on the original
+          house alongside it.
+        </p>
+        <dl class="project-facts">
+          {facts.map((f) => (
+            <div>
+              <dt>{f.label}</dt>
+              <dd>{f.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+      <div class="project-hero-media">
+        <img
+          src="/images/projects/baumit-silicone-render-garden-building-kent.jpg"
+          alt={`Detached gable-ended outbuilding in ${town}, Kent, finished in light silicone render with white sash windows and black double doors`}
+          width="1200"
+          height="1600"
+          fetchpriority="high"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- The job -->
+  <section class="section">
+    <div class="container narrow">
+      <div class="section-head">
+        <p class="eyebrow">The job</p>
+        <h2>What we did</h2>
+      </div>
+      <h3>Silicone render on the new outbuilding</h3>
+      <p>
+        The main part of this job was a detached, gable-ended building in the
+        garden. We applied Baumit StarContact as the base coat, then topped it
+        out in Baumit SilikonTop, a silicone render finish. The result is a clean,
+        even, light finish that sets off the white sash windows and the black
+        doors and fascias.
+      </p>
+      <h3>Pebble dash patch repair on the original house</h3>
+      <p>
+        We also patched in sections of the existing pebble dash on the main
+        house. Matching new work into old pebble dash is never easy, as the
+        texture and stone have weathered over the years. We cut back to sound
+        edges, built the patch up with mesh and base coat, and finished it to
+        blend in as closely as the original wall allows.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why silicone -->
+  <section class="section section--sand">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Why this system</p>
+        <h2>Why a Baumit silicone render system?</h2>
+      </div>
+      <ul class="benefit-grid">
+        {benefits.map((b) => (
+          <li class="card benefit">
+            <span class="benefit-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" set:html={checkIcon} />
+            </span>
+            <h3>{b.title}</h3>
+            <p>{b.text}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Project photos</p>
+        <h2>The repair in progress</h2>
+      </div>
+      <ul class="project-gallery">
+        {gallery.map((g) => (
+          <li>
+            <figure>
+              <img src={g.src} alt={g.alt} loading="lazy" width="1200" height="1600" />
+              <figcaption>{g.caption}</figcaption>
+            </figure>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="section section--sand">
+    <div class="container narrow">
+      <div class="section-head">
+        <p class="eyebrow">More from Kent Render Systems</p>
+        <h2>Rendering an outbuilding or extension?</h2>
+      </div>
+      <p>
+        Garden rooms, garages, annexes and extensions all benefit from a proper
+        render system. Find out more about our
+        <a href="/silicone-rendering-kent">silicone rendering in Kent</a>, or see
+        our work <a href={townPage}>rendering in {town}</a>.
+      </p>
+    </div>
+  </section>
+
+  <GoogleReviewsSection variant="blue" />
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="container final-inner">
+      <p class="eyebrow">Free no-obligation quote</p>
+      <h2>Need rendering or a render repair?</h2>
+      <p class="lead">
+        From new outbuildings to patching in existing finishes, Jack will come
+        out, take a look and give you a free, no-obligation quote.
+      </p>
+      <div class="final-actions">
+        <a class="btn btn--light" href="/contact">Get Your Free Quote</a>
+        <a class="btn btn--on-dark btn--ghost" href={phoneHref}>Call {phone}</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .project-hero {
+    background:
+      radial-gradient(900px 420px at 15% 0%, rgba(30, 91, 184, 0.42), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+    color: #e7ecf1;
+    padding-block: clamp(48px, 6vw, 96px);
+  }
+  .project-hero-inner {
+    display: grid;
+    gap: 40px 56px;
+    align-items: center;
+  }
+  @media (min-width: 900px) {
+    .project-hero-inner {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+  }
+  .project-hero .eyebrow {
+    color: var(--gold);
+  }
+  .project-hero h1 {
+    color: #fff;
+    font-size: clamp(2rem, 1.3rem + 2.8vw, 3.1rem);
+    margin-bottom: 0.45em;
+  }
+  .project-hero .lead {
+    color: #c7d0da;
+    max-width: 58ch;
+  }
+  .project-facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 24px;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+  }
+  .project-facts dt {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .project-facts dd {
+    margin: 4px 0 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: #fff;
+  }
+  .project-hero-media img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+  .narrow {
+    max-width: 760px;
+  }
+  .narrow p:last-child {
+    margin-bottom: 0;
+  }
+  .narrow a {
+    color: var(--terracotta-dark);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .narrow a:hover {
+    color: var(--terracotta);
+  }
+  .benefit-grid {
+    display: grid;
+    gap: 20px;
+  }
+  @media (min-width: 760px) {
+    .benefit-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .benefit h3 {
+    margin: 14px 0 8px;
+    font-size: 1.15rem;
+  }
+  .benefit p {
+    margin: 0;
+  }
+  .benefit-check {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: rgba(30, 91, 184, 0.1);
+    color: var(--terracotta-dark);
+  }
+  .benefit-check svg {
+    width: 20px;
+    height: 20px;
+  }
+  .narrow h3 {
+    margin: 1.4em 0 0.5em;
+    font-size: 1.2rem;
+  }
+  .project-gallery {
+    display: grid;
+    gap: 20px;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+  .project-gallery figure {
+    margin: 0;
+  }
+  .project-gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+  .project-gallery figcaption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .final-cta {
+    background:
+      radial-gradient(900px 420px at 15% 0%, rgba(30, 91, 184, 0.42), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+    color: #e7ecf1;
+    padding-block: clamp(64px, 6vw, 110px);
+    text-align: center;
+  }
+  .final-inner {
+    max-width: 720px;
+    margin-inline: auto;
+  }
+  .final-cta .eyebrow {
+    color: var(--gold);
+  }
+  .final-cta h2 {
+    color: #fff;
+  }
+  .final-cta .lead {
+    color: #c7d0da;
+    margin-bottom: 30px;
+  }
+  .final-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+  }
+</style>

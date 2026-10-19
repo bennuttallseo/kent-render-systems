@@ -79,7 +79,8 @@ const gallery = [
       </button>
     </div>
     <div class="gallery-cta">
-      <a class="btn btn--light" href="/contact">Get your project quoted</a>
+      <a class="btn btn--light" href="/projects">View project case studies</a>
+      <a class="btn btn--ghost btn--on-dark" href="/contact">Get your project quoted</a>
     </div>
   </div>
 </section>
@@ -258,7 +259,10 @@ const gallery = [
     background: linear-gradient(transparent, rgba(8, 14, 24, 0.78));
   }
   .gallery-cta {
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
     margin-top: 36px;
   }
 </style>

@@ -1,0 +1,370 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import GoogleReviewsSection from "../../components/GoogleReviewsSection.astro";
+
+// EDIT BEFORE PUBLISHING: set the town where the job was carried out.
+// townPage must match an existing location page, e.g. "/rendering-whitstable".
+const town = "TOWN";
+const townPage = "/rendering-TOWN";
+
+const phone = "07707 564597";
+const phoneHref = "tel:+447707564597";
+const path = "/projects/ecorend-quartz-render-plinth";
+
+const facts = [
+  { label: "Location", value: `${town}, Kent` },
+  { label: "Work carried out", value: "Plinth render" },
+  { label: "System", value: "Ecorend QR1 Quartz Render" },
+  { label: "Finish", value: "Dark grey stone effect" },
+];
+
+const benefits = [
+  {
+    title: "Tough where it needs to be",
+    text: "The plinth takes the most punishment on any wall: rain splashing back off the ground, garden tools, bins and the odd knock from a lawnmower. A quartz render is impact resistant and stands up to that far better than a standard finish.",
+  },
+  {
+    title: "Water resistant",
+    text: "The bottom of the wall stays wetter for longer than anywhere else. Quartz render is water resistant, helping protect the base of the property from the splashback and damp that cause staining and breakdown over time.",
+  },
+  {
+    title: "Flexible and crack resistant",
+    text: "QR1 is a highly flexible, anti-crack render, so it copes with the small movements every building makes without spoiling the finish.",
+  },
+  {
+    title: "Low maintenance, sharp look",
+    text: "A darker plinth hides dirt and splashes, so the house stays looking clean. It also gives a crisp, modern line against the lighter render above.",
+  },
+];
+
+const gallery = [
+  {
+    src: "/images/projects/quartz-render-plinth-side-elevation-kent.jpg",
+    alt: `Dark grey Ecorend quartz render plinth below a light textured render on a house in ${town}, Kent`,
+    caption: "Side elevation with the finished plinth line",
+  },
+  {
+    src: "/images/projects/ecorend-quartz-render-plinth-close-up.jpg",
+    alt: "Close-up of the stone effect texture of an Ecorend QR1 quartz render plinth",
+    caption: "Close-up of the quartz texture",
+  },
+  {
+    src: "/images/projects/ecorend-qr1-quartz-render-tub.jpg",
+    alt: "25kg tub of Ecorend QR1 Quartz Render on site",
+    caption: "Ecorend QR1 Quartz Render used on this job",
+  },
+];
+
+const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
+---
+
+<Layout
+  title={`Quartz Render Plinth in ${town}, Kent | Kent Render Systems`}
+  description={`A durable, low-maintenance Ecorend quartz render plinth completed by Kent Render Systems in ${town}, Kent. See the finished job and get a free quote.`}
+  path={path}
+  ogImage="/images/projects/quartz-render-plinth-house-front-kent.jpg"
+  breadcrumbs={[
+    { name: "Home", path: "/" },
+    { name: "Projects", path: "/projects" },
+    { name: `Quartz Render Plinth, ${town}`, path },
+  ]}
+>
+  <!-- Hero -->
+  <section class="project-hero">
+    <div class="container project-hero-inner">
+      <div class="project-hero-text">
+        <p class="eyebrow">Completed project</p>
+        <h1>Ecorend Quartz Render Plinth in {town}</h1>
+        <p class="lead">
+          A hard-wearing, stone effect plinth finished with Ecorend QR1 Quartz
+          Render, giving this {town} home a clean base line that is built to
+          handle the British weather.
+        </p>
+        <dl class="project-facts">
+          {facts.map((f) => (
+            <div>
+              <dt>{f.label}</dt>
+              <dd>{f.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+      <div class="project-hero-media">
+        <img
+          src="/images/projects/quartz-render-plinth-house-front-kent.jpg"
+          alt={`Front of a rendered house in ${town}, Kent, with a dark grey quartz render plinth and Kent Render Systems scaffold banner`}
+          width="1200"
+          height="1600"
+          fetchpriority="high"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- The job -->
+  <section class="section">
+    <div class="container narrow">
+      <div class="section-head">
+        <p class="eyebrow">The job</p>
+        <h2>What we did</h2>
+      </div>
+      <p>
+        The customer wanted the base of their home finished properly, with a
+        plinth that would look smart and stay looking smart. We applied Ecorend
+        QR1 Quartz Render around the plinth, creating a dark grey, stone effect
+        band that sits neatly below the lighter render above.
+      </p>
+      <p>
+        Getting a plinth right is all in the detail. The line between the plinth
+        and the main render needs to be straight and consistent along every
+        elevation, and the finish has to be even right down to ground level. The
+        texture and colour came out exactly as planned, and the result finishes
+        the property off perfectly.
+      </p>
+      <p>
+        As approved Ecorend installers, we apply the system to the manufacturer's
+        specification, so the finish performs as it should for years to come.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why quartz render -->
+  <section class="section section--sand">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Why quartz render</p>
+        <h2>Why choose a quartz render plinth?</h2>
+      </div>
+      <ul class="benefit-grid">
+        {benefits.map((b) => (
+          <li class="card benefit">
+            <span class="benefit-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" set:html={checkIcon} />
+            </span>
+            <h3>{b.title}</h3>
+            <p>{b.text}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Project photos</p>
+        <h2>The finished plinth</h2>
+      </div>
+      <ul class="project-gallery">
+        {gallery.map((g) => (
+          <li>
+            <figure>
+              <img src={g.src} alt={g.alt} loading="lazy" width="1200" height="1600" />
+              <figcaption>{g.caption}</figcaption>
+            </figure>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="section section--sand">
+    <div class="container narrow">
+      <div class="section-head">
+        <p class="eyebrow">More from Kent Render Systems</p>
+        <h2>Thinking about rendering your home?</h2>
+      </div>
+      <p>
+        A quartz plinth works well alongside a full render. See our
+        <a href="/silicone-rendering-kent">silicone rendering in Kent</a> and
+        <a href="/monocouche-rendering-kent">monocouche rendering in Kent</a>
+        services, or find out more about <a href={townPage}>rendering in {town}</a>.
+      </p>
+    </div>
+  </section>
+
+  <GoogleReviewsSection variant="blue" />
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="container final-inner">
+      <p class="eyebrow">Free no-obligation quote</p>
+      <h2>Want a finish like this on your home?</h2>
+      <p class="lead">
+        Whether it is a new plinth or a full render, Jack will come out, take a
+        look and give you a free, no-obligation quote.
+      </p>
+      <div class="final-actions">
+        <a class="btn btn--light" href="/contact">Get Your Free Quote</a>
+        <a class="btn btn--on-dark btn--ghost" href={phoneHref}>Call {phone}</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero */
+  .project-hero {
+    background:
+      radial-gradient(900px 420px at 15% 0%, rgba(30, 91, 184, 0.42), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+    color: #e7ecf1;
+    padding-block: clamp(48px, 6vw, 96px);
+  }
+  .project-hero-inner {
+    display: grid;
+    gap: 40px 56px;
+    align-items: center;
+  }
+  @media (min-width: 900px) {
+    .project-hero-inner {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+  }
+  .project-hero .eyebrow {
+    color: var(--gold);
+  }
+  .project-hero h1 {
+    color: #fff;
+    font-size: clamp(2rem, 1.3rem + 2.8vw, 3.1rem);
+    margin-bottom: 0.45em;
+  }
+  .project-hero .lead {
+    color: #c7d0da;
+    max-width: 58ch;
+  }
+  .project-facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 24px;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+  }
+  .project-facts dt {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .project-facts dd {
+    margin: 4px 0 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: #fff;
+  }
+  .project-hero-media img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Body text */
+  .narrow {
+    max-width: 760px;
+  }
+  .narrow p:last-child {
+    margin-bottom: 0;
+  }
+  .narrow a {
+    color: var(--terracotta-dark);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .narrow a:hover {
+    color: var(--terracotta);
+  }
+
+  /* Benefits */
+  .benefit-grid {
+    display: grid;
+    gap: 20px;
+  }
+  @media (min-width: 760px) {
+    .benefit-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .benefit h3 {
+    margin: 14px 0 8px;
+    font-size: 1.15rem;
+  }
+  .benefit p {
+    margin: 0;
+  }
+  .benefit-check {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: rgba(30, 91, 184, 0.1);
+    color: var(--terracotta-dark);
+  }
+  .benefit-check svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Gallery */
+  .project-gallery {
+    display: grid;
+    gap: 20px;
+  }
+  @media (min-width: 760px) {
+    .project-gallery {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .project-gallery figure {
+    margin: 0;
+  }
+  .project-gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+  .project-gallery figcaption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--muted, #5b6472);
+  }
+
+  /* Final CTA */
+  .final-cta {
+    background:
+      radial-gradient(900px 420px at 15% 0%, rgba(30, 91, 184, 0.42), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+    color: #e7ecf1;
+    padding-block: clamp(64px, 6vw, 110px);
+    text-align: center;
+  }
+  .final-inner {
+    max-width: 720px;
+    margin-inline: auto;
+  }
+  .final-cta .eyebrow {
+    color: var(--gold);
+  }
+  .final-cta h2 {
+    color: #fff;
+  }
+  .final-cta .lead {
+    color: #c7d0da;
+    margin-bottom: 30px;
+  }
+  .final-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+  }
+</style>

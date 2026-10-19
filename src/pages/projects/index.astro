@@ -1,0 +1,230 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { projects, projectsHubPath } from "../../data/projects";
+
+const phone = "07707 564597";
+const phoneHref = "tel:+447707564597";
+
+const breadcrumbs = [
+  { name: "Home", path: "/" },
+  { name: "Projects", path: projectsHubPath },
+];
+---
+
+<Layout
+  title="Rendering Projects in Kent | Kent Render Systems"
+  description="Case studies from Kent Render Systems: Baumit thin coat render, Ecorend quartz plinths and silicone outbuildings across Kent. See the finished work and get a free quote."
+  path={projectsHubPath}
+  ogImage="/images/projects/baumit-thin-coat-render-tonbridge-period-house.jpg"
+  breadcrumbs={breadcrumbs}
+>
+  <section class="page-hero">
+    <div class="container page-hero-grid">
+      <div class="page-hero-text">
+        <p class="eyebrow">Our work</p>
+        <h1>Rendering projects in Kent</h1>
+        <p class="lead">
+          Real jobs from <a href="/">Kent Render Systems</a>: manufacturer-approved
+          systems, proper preparation and finishes Jack stands behind. Browse the
+          case studies below for detail photos, systems used and what we delivered
+          on each property.
+        </p>
+        <div class="page-hero-cta">
+          <a class="btn btn--light" href="/contact">Get Your Free Quote</a>
+          <a class="btn btn--light" href={phoneHref}>Call {phone}</a>
+        </div>
+      </div>
+      <div class="page-hero-logo" aria-hidden="true">
+        <img src="/logo-stacked.png" alt="" width="794" height="717" loading="eager" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Case studies</p>
+        <h2>Completed projects</h2>
+        <p class="lead">
+          Select a project for photos, specification detail and links to our
+          <a href="/silicone-rendering-kent">silicone</a> and
+          <a href="/monocouche-rendering-kent">monocouche</a> services.
+        </p>
+      </div>
+      <ul class="project-grid">
+        {projects.map((project) => (
+          <li>
+            <a class="project-card card" href={project.href}>
+              <img
+                src={project.image}
+                alt={project.imageAlt}
+                loading="lazy"
+                width="1200"
+                height="900"
+              />
+              <div class="project-card-body">
+                <p class="project-location">{project.locationLabel}</p>
+                <h3>{project.title}</h3>
+                <p>{project.summary}</p>
+                <span class="project-cta">View project &rarr;</span>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--sand">
+    <div class="container hub-note">
+      <h2>Planning your own render project?</h2>
+      <p>
+        Jack surveys every property personally and quotes without obligation.
+        See <a href="/areas-we-cover">areas we cover</a> or
+        <a href="/contact">contact us</a> to discuss your home, extension or
+        outbuilding.
+      </p>
+      <a class="btn" href="/contact">Request a free quote</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-hero {
+    background:
+      radial-gradient(900px 420px at 15% 0%, rgba(30, 91, 184, 0.42), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+    color: #e7ecf1;
+    padding-block: clamp(56px, 6vw, 104px);
+  }
+  .page-hero-grid {
+    display: grid;
+    gap: 40px;
+    align-items: center;
+  }
+  @media (min-width: 880px) {
+    .page-hero-grid {
+      grid-template-columns: 1.15fr 0.85fr;
+    }
+  }
+  .page-hero .eyebrow {
+    color: var(--gold);
+  }
+  .page-hero h1 {
+    color: #fff;
+  }
+  .page-hero .lead {
+    color: #c7d0da;
+    max-width: 58ch;
+  }
+  .page-hero .lead a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .page-hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+  }
+  .page-hero-logo {
+    max-width: 320px;
+    margin-inline: auto;
+  }
+  .page-hero-logo img {
+    width: 100%;
+    height: auto;
+  }
+
+  .section-head .lead a {
+    color: var(--terracotta-dark);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .project-grid {
+    display: grid;
+    gap: 28px;
+  }
+  @media (min-width: 760px) {
+    .project-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 1100px) {
+    .project-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+  }
+  .project-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  .project-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 22px 24px 26px;
+  }
+  .project-location {
+    margin: 0 0 6px;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    color: var(--terracotta-dark);
+  }
+  .project-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+  }
+  .project-card-body > p {
+    margin: 0;
+    flex: 1;
+    color: var(--ink-soft);
+    font-size: 0.97rem;
+  }
+  .project-cta {
+    margin-top: 16px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--terracotta-dark);
+  }
+
+  .hub-note {
+    max-width: 720px;
+    margin-inline: auto;
+    text-align: center;
+  }
+  .hub-note h2 {
+    margin-bottom: 12px;
+  }
+  .hub-note p {
+    color: var(--ink-soft);
+    margin-bottom: 24px;
+  }
+  .hub-note a {
+    color: var(--terracotta-dark);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+</style>
