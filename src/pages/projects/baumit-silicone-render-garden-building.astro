@@ -2,17 +2,18 @@
 import Layout from "../../layouts/Layout.astro";
 import GoogleReviewsSection from "../../components/GoogleReviewsSection.astro";
 
-// EDIT BEFORE PUBLISHING: set the town where the job was carried out.
-// townPage must match an existing location page, e.g. "/rendering-whitstable".
-const town = "TOWN";
-const townPage = "/rendering-TOWN";
+const area = "Kent";
+const areasHubPage = "/areas-we-cover";
 
 const phone = "07707 564597";
 const phoneHref = "tel:+447707564597";
 const path = "/projects/baumit-silicone-render-garden-building";
+const pageHeading = `Baumit Silicone Render Outbuilding in ${area}`;
+const metaTitle = `${pageHeading} | Kent Render Systems`;
+const metaDescription = `Baumit StarContact and SilikonTop silicone render on a garden outbuilding in ${area}, plus pebble dash patch repair to the main house. Free quote.`;
 
 const facts = [
-  { label: "Location", value: `${town}, Kent` },
+  { label: "Location", value: area },
   { label: "Property", value: "Detached outbuilding" },
   { label: "Base coat", value: "Baumit StarContact" },
   { label: "Finish", value: "Baumit SilikonTop" },
@@ -49,14 +50,14 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
 ---
 
 <Layout
-  title={`Baumit Silicone Render Outbuilding, ${town} | Kent Render Systems`}
-  description={`Baumit StarContact and SilikonTop silicone render on a detached garden building in ${town}, Kent, plus a pebble dash patch repair to the main house.`}
+  title={metaTitle}
+  description={metaDescription}
   path={path}
   ogImage="/images/projects/baumit-silicone-render-garden-building-kent.jpg"
   breadcrumbs={[
     { name: "Home", path: "/" },
     { name: "Projects", path: "/projects" },
-    { name: `Silicone Render Outbuilding, ${town}`, path },
+    { name: `Silicone Render Outbuilding, ${area}`, path },
   ]}
 >
   <!-- Hero -->
@@ -64,9 +65,9 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
     <div class="container project-hero-inner">
       <div class="project-hero-text">
         <p class="eyebrow">Completed project</p>
-        <h1>Silicone Rendered Outbuilding in {town}</h1>
+        <h1>{pageHeading}</h1>
         <p class="lead">
-          A detached garden building in {town} finished in a full Baumit silicone
+          A detached garden building in {area} finished in a full Baumit silicone
           render system, with a patch repair to the pebble dash on the original
           house alongside it.
         </p>
@@ -82,9 +83,9 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
       <div class="project-hero-media">
         <img
           src="/images/projects/baumit-silicone-render-garden-building-kent.jpg"
-          alt={`Detached gable-ended outbuilding in ${town}, Kent, finished in light silicone render with white sash windows and black double doors`}
+          alt={`Detached gable-ended outbuilding in ${area}, finished in light silicone render with white sash windows and black double doors`}
           width="1200"
-          height="1600"
+          height="1200"
           fetchpriority="high"
         />
       </div>
@@ -149,7 +150,7 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
         {gallery.map((g) => (
           <li>
             <figure>
-              <img src={g.src} alt={g.alt} loading="lazy" width="1200" height="1600" />
+              <img src={g.src} alt={g.alt} loading="lazy" width="1200" height="1200" />
               <figcaption>{g.caption}</figcaption>
             </figure>
           </li>
@@ -169,7 +170,7 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
         Garden rooms, garages, annexes and extensions all benefit from a proper
         render system. Find out more about our
         <a href="/silicone-rendering-kent">silicone rendering in Kent</a>, or see
-        our work <a href={townPage}>rendering in {town}</a>.
+        our work <a href={areasHubPage}>rendering in {area}</a>.
       </p>
     </div>
   </section>
@@ -244,12 +245,17 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
     font-weight: 700;
     color: #fff;
   }
-  .project-hero-media img {
-    width: 100%;
+  .project-hero-media {
     aspect-ratio: 1 / 1;
-    object-fit: cover;
+    overflow: hidden;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
+  }
+  .project-hero-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .narrow {
     max-width: 760px;
@@ -307,13 +313,16 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
   }
   .project-gallery figure {
     margin: 0;
-  }
-  .project-gallery img {
-    width: 100%;
     aspect-ratio: 1 / 1;
-    object-fit: cover;
+    overflow: hidden;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
+  }
+  .project-gallery img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .project-gallery figcaption {
     margin-top: 10px;

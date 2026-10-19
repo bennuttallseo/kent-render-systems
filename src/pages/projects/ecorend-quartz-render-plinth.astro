@@ -2,17 +2,18 @@
 import Layout from "../../layouts/Layout.astro";
 import GoogleReviewsSection from "../../components/GoogleReviewsSection.astro";
 
-// EDIT BEFORE PUBLISHING: set the town where the job was carried out.
-// townPage must match an existing location page, e.g. "/rendering-whitstable".
-const town = "TOWN";
-const townPage = "/rendering-TOWN";
+const area = "Kent";
+const areasHubPage = "/areas-we-cover";
 
 const phone = "07707 564597";
 const phoneHref = "tel:+447707564597";
 const path = "/projects/ecorend-quartz-render-plinth";
+const pageHeading = `Ecorend Quartz Render Plinth in ${area}`;
+const metaTitle = `${pageHeading} | Kent Render Systems`;
+const metaDescription = `Ecorend QR1 quartz render plinth in ${area}: durable dark grey stone effect finish by Kent Render Systems. See project photos and get a free quote.`;
 
 const facts = [
-  { label: "Location", value: `${town}, Kent` },
+  { label: "Location", value: area },
   { label: "Work carried out", value: "Plinth render" },
   { label: "System", value: "Ecorend QR1 Quartz Render" },
   { label: "Finish", value: "Dark grey stone effect" },
@@ -40,7 +41,7 @@ const benefits = [
 const gallery = [
   {
     src: "/images/projects/quartz-render-plinth-side-elevation-kent.jpg",
-    alt: `Dark grey Ecorend quartz render plinth below a light textured render on a house in ${town}, Kent`,
+    alt: `Dark grey Ecorend quartz render plinth below a light textured render on a house in ${area}`,
     caption: "Side elevation with the finished plinth line",
   },
   {
@@ -59,14 +60,14 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
 ---
 
 <Layout
-  title={`Quartz Render Plinth in ${town}, Kent | Kent Render Systems`}
-  description={`A durable, low-maintenance Ecorend quartz render plinth completed by Kent Render Systems in ${town}, Kent. See the finished job and get a free quote.`}
+  title={metaTitle}
+  description={metaDescription}
   path={path}
   ogImage="/images/projects/quartz-render-plinth-house-front-kent.jpg"
   breadcrumbs={[
     { name: "Home", path: "/" },
     { name: "Projects", path: "/projects" },
-    { name: `Quartz Render Plinth, ${town}`, path },
+    { name: `Quartz Render Plinth, ${area}`, path },
   ]}
 >
   <!-- Hero -->
@@ -74,10 +75,10 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
     <div class="container project-hero-inner">
       <div class="project-hero-text">
         <p class="eyebrow">Completed project</p>
-        <h1>Ecorend Quartz Render Plinth in {town}</h1>
+        <h1>{pageHeading}</h1>
         <p class="lead">
           A hard-wearing, stone effect plinth finished with Ecorend QR1 Quartz
-          Render, giving this {town} home a clean base line that is built to
+          Render, giving this {area} home a clean base line that is built to
           handle the British weather.
         </p>
         <dl class="project-facts">
@@ -92,9 +93,9 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
       <div class="project-hero-media">
         <img
           src="/images/projects/quartz-render-plinth-house-front-kent.jpg"
-          alt={`Front of a rendered house in ${town}, Kent, with a dark grey quartz render plinth and Kent Render Systems scaffold banner`}
+          alt={`Front of a rendered house in ${area}, with a dark grey quartz render plinth and Kent Render Systems scaffold banner`}
           width="1200"
-          height="1600"
+          height="1200"
           fetchpriority="high"
         />
       </div>
@@ -160,7 +161,7 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
         {gallery.map((g) => (
           <li>
             <figure>
-              <img src={g.src} alt={g.alt} loading="lazy" width="1200" height="1600" />
+              <img src={g.src} alt={g.alt} loading="lazy" width="1200" height="1200" />
               <figcaption>{g.caption}</figcaption>
             </figure>
           </li>
@@ -180,7 +181,7 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
         A quartz plinth works well alongside a full render. See our
         <a href="/silicone-rendering-kent">silicone rendering in Kent</a> and
         <a href="/monocouche-rendering-kent">monocouche rendering in Kent</a>
-        services, or find out more about <a href={townPage}>rendering in {town}</a>.
+        services, or find out more about <a href={areasHubPage}>rendering in {area}</a>.
       </p>
     </div>
   </section>
@@ -256,12 +257,17 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
     font-weight: 700;
     color: #fff;
   }
-  .project-hero-media img {
-    width: 100%;
+  .project-hero-media {
     aspect-ratio: 1 / 1;
-    object-fit: cover;
+    overflow: hidden;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
+  }
+  .project-hero-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   /* Body text */
@@ -324,13 +330,16 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
   }
   .project-gallery figure {
     margin: 0;
-  }
-  .project-gallery img {
-    width: 100%;
     aspect-ratio: 1 / 1;
-    object-fit: cover;
+    overflow: hidden;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
+  }
+  .project-gallery img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .project-gallery figcaption {
     margin-top: 10px;

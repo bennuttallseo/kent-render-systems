@@ -34,7 +34,7 @@ for (const r of ["/", "/about", "/contact", "/areas-we-cover", "/silicone-render
 // Sitemap
 const sitemap = fs.readFileSync(path.join(DIST, "sitemap-0.xml"), "utf8");
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-if (sitemapUrls.length !== 32) add("important", `Sitemap has ${sitemapUrls.length} URLs (expected 32)`);
+if (sitemapUrls.length !== 38) add("important", `Sitemap has ${sitemapUrls.length} URLs (expected 38)`);
 for (const url of sitemapUrls) {
   const slug = url.replace(SITE, "") || "/";
   if (slug !== "/" && !slug.endsWith("/")) add("blocker", `Sitemap missing trailing slash: ${slug}`);

@@ -9,11 +9,16 @@ const breadcrumbs = [
   { name: "Home", path: "/" },
   { name: "Projects", path: projectsHubPath },
 ];
+
+const pageHeading = "Rendering projects in Kent";
+const metaTitle = "Rendering Projects in Kent | Kent Render Systems";
+const metaDescription =
+  "Baumit, Ecorend and silicone render case studies across Kent from Kent Render Systems. Project photos, systems used and free no-obligation quotes.";
 ---
 
 <Layout
-  title="Rendering Projects in Kent | Kent Render Systems"
-  description="Case studies from Kent Render Systems: Baumit thin coat render, Ecorend quartz plinths and silicone outbuildings across Kent. See the finished work and get a free quote."
+  title={metaTitle}
+  description={metaDescription}
   path={projectsHubPath}
   ogImage="/images/projects/baumit-thin-coat-render-tonbridge-period-house.jpg"
   breadcrumbs={breadcrumbs}
@@ -22,7 +27,7 @@ const breadcrumbs = [
     <div class="container page-hero-grid">
       <div class="page-hero-text">
         <p class="eyebrow">Our work</p>
-        <h1>Rendering projects in Kent</h1>
+        <h1>{pageHeading}</h1>
         <p class="lead">
           Real jobs from <a href="/">Kent Render Systems</a>: manufacturer-approved
           systems, proper preparation and finishes Jack stands behind. Browse the
@@ -35,7 +40,9 @@ const breadcrumbs = [
         </div>
       </div>
       <div class="page-hero-logo" aria-hidden="true">
-        <img src="/logo-stacked.png" alt="" width="794" height="717" loading="eager" />
+        <div class="page-hero-logo-panel">
+          <img src="/logo-stacked.png" alt="" width="794" height="717" loading="eager" />
+        </div>
       </div>
     </div>
   </section>
@@ -55,13 +62,15 @@ const breadcrumbs = [
         {projects.map((project) => (
           <li>
             <a class="project-card card" href={project.href}>
-              <img
-                src={project.image}
-                alt={project.imageAlt}
-                loading="lazy"
-                width="1200"
-                height="900"
-              />
+              <div class="project-card-media">
+                <img
+                  src={project.image}
+                  alt={project.imageAlt}
+                  loading="lazy"
+                  width="1200"
+                  height="1200"
+                />
+              </div>
               <div class="project-card-body">
                 <p class="project-location">{project.locationLabel}</p>
                 <h3>{project.title}</h3>
@@ -130,10 +139,19 @@ const breadcrumbs = [
     margin-top: 28px;
   }
   .page-hero-logo {
-    max-width: 320px;
-    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .page-hero-logo img {
+  .page-hero-logo-panel {
+    width: min(100%, 320px);
+    padding: clamp(22px, 3vw, 36px);
+    background: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+  }
+  .page-hero-logo-panel img {
+    display: block;
     width: 100%;
     height: auto;
   }
@@ -148,6 +166,11 @@ const breadcrumbs = [
   .project-grid {
     display: grid;
     gap: 28px;
+    align-items: stretch;
+  }
+  .project-grid > li {
+    display: flex;
+    min-width: 0;
   }
   @media (min-width: 760px) {
     .project-grid {
@@ -162,7 +185,9 @@ const breadcrumbs = [
   .project-card {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    flex: 1;
+    width: 100%;
+    min-height: 100%;
     padding: 0;
     overflow: hidden;
     text-decoration: none;
@@ -173,19 +198,25 @@ const breadcrumbs = [
     transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
   }
-  .project-card img {
-    width: 100%;
+  .project-card-media {
     aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+  .project-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
   .project-card-body {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 3.75rem 3.5rem 1fr auto;
     flex: 1;
     padding: 22px 24px 26px;
   }
   .project-location {
-    margin: 0 0 6px;
+    margin: 0;
+    line-height: 1.25;
     font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -193,17 +224,20 @@ const breadcrumbs = [
     color: var(--terracotta-dark);
   }
   .project-card h3 {
-    margin: 0 0 10px;
-    font-size: 1.25rem;
-  }
-  .project-card-body > p {
     margin: 0;
-    flex: 1;
+    align-self: start;
+    font-size: 1.25rem;
+    line-height: 1.35;
+  }
+  .project-card-body > p:not(.project-location) {
+    margin: 0;
     color: var(--ink-soft);
     font-size: 0.97rem;
+    line-height: 1.55;
   }
   .project-cta {
-    margin-top: 16px;
+    margin: 0;
+    padding-top: 18px;
     font-family: var(--font-display);
     font-weight: 700;
     color: var(--terracotta-dark);
@@ -221,10 +255,17 @@ const breadcrumbs = [
     color: var(--ink-soft);
     margin-bottom: 24px;
   }
-  .hub-note a {
+  .hub-note p a {
     color: var(--terracotta-dark);
     font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 3px;
+  }
+  .hub-note .btn {
+    color: #fff;
+    text-decoration: none;
+  }
+  .hub-note .btn:hover {
+    color: #fff;
   }
 </style>
