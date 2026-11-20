@@ -1,0 +1,95 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const phone = "07707 564597";
+const phoneHref = "tel:+447707564597";
+
+const links = [
+  { label: "Silicone rendering", href: "/silicone-rendering-kent" },
+  { label: "Monocouche rendering", href: "/monocouche-rendering-kent" },
+  { label: "Our projects", href: "/projects" },
+  { label: "Areas we cover", href: "/areas-we-cover" },
+  { label: "About Jack", href: "/about" },
+];
+---
+
+<Layout
+  title="Page Not Found | Kent Render Systems"
+  description="Sorry, that page could not be found. Find rendering services, projects and contact details for Kent Render Systems."
+  path="/404"
+  noindex
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Error 404</p>
+      <h1>Sorry, we can't find that page</h1>
+      <p class="lead">
+        The page may have moved or the link may be out of date. Try one of the
+        pages below, or get in touch and we will help you directly.
+      </p>
+      <div class="page-hero-cta">
+        <a class="btn btn--light" href="/">Back to the homepage</a>
+        <a class="btn btn--on-dark btn--ghost" href={phoneHref}>Call {phone}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Popular pages</h2>
+      <ul class="nf-links">
+        {links.map((l) => (
+          <li><a href={l.href}>{l.label}</a></li>
+        ))}
+        <li><a href="/contact">Get a free quote</a></li>
+      </ul>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-hero {
+    background:
+      radial-gradient(900px 420px at 15% 0%, rgba(30, 91, 184, 0.42), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+    color: #e7ecf1;
+    padding-block: clamp(56px, 6vw, 104px);
+  }
+  .page-hero .eyebrow {
+    color: var(--gold);
+  }
+  .page-hero h1 {
+    color: #fff;
+    font-size: clamp(2.1rem, 1.3rem + 3vw, 3.3rem);
+    margin-bottom: 0.45em;
+    max-width: 18ch;
+  }
+  .page-hero .lead {
+    color: #c7d0da;
+    margin-bottom: 30px;
+    max-width: 60ch;
+  }
+  .page-hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .nf-links {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .nf-links a {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-weight: 600;
+  }
+  .nf-links a:hover {
+    border-color: var(--terracotta);
+  }
+</style>

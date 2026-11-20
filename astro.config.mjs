@@ -12,7 +12,9 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: (page) =>
-        !page.includes('/locations') && !page.includes('/rendering-maidenstone'),
+        !page.includes('/locations') &&
+        !page.includes('/rendering-maidenstone') &&
+        !page.includes('/404'),
     }),
   ],
 });

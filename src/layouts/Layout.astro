@@ -12,6 +12,7 @@ interface Props {
   path?: string;
   ogImage?: string;
   breadcrumbs?: BreadcrumbItem[];
+  noindex?: boolean;
 }
 
 const {
@@ -20,6 +21,7 @@ const {
   path = "/",
   ogImage = "/images/rendering-kent-hero.jpg",
   breadcrumbs,
+  noindex = false,
 } = Astro.props;
 
 const pageUrl = canonicalUrl(path);
@@ -49,7 +51,7 @@ const business = {
 
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={pageUrl} />
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={pageUrl} />}
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={business.name} />
