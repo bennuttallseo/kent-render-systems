@@ -7,4 +7,8 @@ export const serviceLinks = [
     label: "Monocouche Rendering Kent",
     href: "/monocouche-rendering-kent",
   },
+  {
+    label: "Render Repair Kent",
+    href: "/render-repair-kent",
+  },
 ];

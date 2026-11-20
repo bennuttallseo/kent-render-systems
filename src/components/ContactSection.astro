@@ -124,6 +124,10 @@ const icons: Record<string, string> = {
     }
   }
 
+  .contact-grid > *,
+  .contact-meta {
+    min-width: 0;
+  }
   .contact-trust {
     display: grid;
     gap: 14px;
@@ -242,6 +246,7 @@ const icons: Record<string, string> = {
   .contact-value {
     font-weight: 600;
     color: var(--ink);
+    overflow-wrap: anywhere;
   }
   a.contact-value:hover {
     color: var(--terracotta-dark);

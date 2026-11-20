@@ -1,0 +1,145 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ServicePage from "../components/ServicePage.astro";
+
+const title = "Render Repair in Kent | Cracked & Blown Render | Kent Render Systems";
+const description =
+  "Render repair across Kent. Cracked, blown and damaged render and pebble dash patch repairs, or a full re-render. Free survey and itemised quote from Jack.";
+
+const process = [
+  {
+    step: "01",
+    title: "Free survey and diagnosis",
+    body: "Jack visits your property, tests the existing render for hollow and blown areas, and looks for the cause of the damage. You get honest advice on whether a repair or a re-render is the better option.",
+  },
+  {
+    step: "02",
+    title: "Cut back to sound render",
+    body: "Loose, cracked and blown render is cut out back to a firm edge and solid background, so the repair bonds to something sound rather than to failing material.",
+  },
+  {
+    step: "03",
+    title: "Rebuild and reinforce",
+    body: "The repair is built up in layers with the right base coat and reinforcing mesh, so the new section is strong and less likely to crack again at the joins.",
+  },
+  {
+    step: "04",
+    title: "Finish, match and clean up",
+    body: "The finish is blended in with the surrounding wall, or the whole elevation is re-coated for a uniform look. The site is left tidy and we walk the job with you before we leave.",
+  },
+];
+---
+
+<Layout title={title} description={description} path="/render-repair-kent">
+  <ServicePage
+    path="/render-repair-kent"
+    title={title}
+    description={description}
+    heroEyebrow="Render repair specialists"
+    heroH1="Render Repair Kent"
+    heroLead="Cracked, blown or tired render lets water into your walls. Kent Render Systems repairs damaged render and pebble dash across Kent, or replaces it with a modern render system when a repair is no longer the right answer."
+    heroImage="/images/projects/pebble-dash-patch-repair-basecoat-mesh.jpg"
+    heroImageAlt="Mesh and base coat applied to a section of pebble dash wall during a render patch repair in Kent"
+    whatIsTitle="When does render need repairing?"
+    whatIsLead="Render is your home's weather coat. Once it cracks or comes away from the wall, it stops keeping water out."
+    whatIsParagraphs={[
+      "The most common problems we see are hairline and structural cracks, blown or hollow-sounding render that has lost its bond with the wall, bulging sections, and damp patches where rain has found its way in behind the render. Older pebble dash and sand and cement renders are especially prone to cracking and coming away as they age.",
+      "Small areas of damage can usually be patch repaired. We cut out the failed render back to a sound edge, rebuild the area with base coat and mesh, and finish it to suit the rest of the wall. Matching new work into old render and pebble dash takes care, and it is where a time-served renderer makes the difference.",
+      "Where the damage is widespread, patching can become a false economy. In that case Jack will tell you honestly, and we can remove the old render, or render over a sound surface, with a modern silicone, monocouche or EcoRend system from our manufacturer-approved range.",
+    ]}
+    whatIsImage="/images/rendering-terraced-house-kent.jpg"
+    whatIsImageAlt="Rendered terraced house in Kent after external render work"
+    benefitsTitle="Why fix damaged render early?"
+    benefitsLead="Render problems rarely stay small. Dealing with them early protects the wall and usually keeps the cost down."
+    benefits={[
+      {
+        title: "Keeps water out",
+        body: "Cracks and blown render let rain soak into the wall behind. Repairing them stops moisture getting in and helps prevent damp problems inside the house.",
+        icon: "drop",
+      },
+      {
+        title: "Stops damage spreading",
+        body: "Water behind render expands in frost and pushes more render off the wall. A timely repair stops a small patch turning into a whole elevation.",
+        icon: "shield",
+      },
+      {
+        title: "Restores kerb appeal",
+        body: "Stained, cracked and patched walls drag down the look of a home. A well-matched repair or a fresh render finish makes the property look cared for again.",
+        icon: "sparkle",
+      },
+      {
+        title: "The right fix, not the quickest",
+        body: "Some walls need a patch, others need a new render system. We diagnose the cause first, so you pay for a repair that lasts rather than one that fails again.",
+        icon: "layers",
+      },
+    ]}
+    whyUsTitle="Why choose Kent Render Systems for render repair?"
+    whyUsLead="Repairs are harder to get right than new render. The new work has to bond properly, blend in, and not crack again at the joins."
+    whyUs={[
+      {
+        title: "Owner-led by Jack",
+        body: "Every repair is surveyed and led by Jack, who has nearly 20 years in the rendering and plastering trade. You get a specialist's diagnosis, not a guess.",
+      },
+      {
+        title: "Honest repair or replace advice",
+        body: "If a patch repair will do the job, we will say so. If the render is failing across the wall, we will explain why a re-render is better value in the long run.",
+      },
+      {
+        title: "Manufacturer-approved systems",
+        body: "We are approved installers for Baumit, Weber and EcoRend, so when we re-render we use proper systems applied to manufacturer standards, with backed guarantees.",
+      },
+      {
+        title: "Clean, tidy and careful",
+        body: "Repair work can be messy. We protect windows, paths and planting, and leave the site tidy at the end of every day.",
+      },
+    ]}
+    pricingTitle="Render repair prices in Kent"
+    pricingParagraphs={[
+      "Render repair prices depend on the size and number of damaged areas, how far the render has come away from the wall, access and whether scaffolding is needed. The type of finish being matched, such as pebble dash or a textured render, also affects the cost.",
+      "Because every wall is different, the best way to get an accurate price is a free survey. Jack will inspect the damage, explain whether a repair or a re-render makes more sense, and give you a clear, itemised quote before any work starts.",
+    ]}
+    pricingPoints={[
+      "Free survey and no-obligation quote",
+      "Honest advice on repair versus re-render",
+      "Clear, itemised pricing with no hidden extras",
+      "Small patch repairs through to full re-renders",
+      "Fully insured, owner-led service",
+    ]}
+    process={process}
+    faqs={[
+      {
+        q: "Can cracked render be repaired, or does it all need replacing?",
+        a: "Many cracks and small blown areas can be patch repaired by cutting out the damaged render and rebuilding it with base coat and mesh. If the render has failed across large areas of the wall, a re-render is usually the better long-term option. Jack will tell you which applies after a free survey.",
+      },
+      {
+        q: "How do I know if my render is blown?",
+        a: "Blown render has lost its bond with the wall behind. Common signs are bulging sections, cracks that keep opening, and areas that sound hollow when tapped. We test the wall during our survey to map out exactly which areas need attention.",
+      },
+      {
+        q: "Can you repair pebble dash?",
+        a: "Yes. We patch repair pebble dash by cutting back to sound material and rebuilding the area with base coat and mesh. Exact matches to old pebble dash can be difficult, so where the patch would stand out we can also render over sound pebble dash with a modern system for a uniform finish.",
+      },
+      {
+        q: "Can you remove tiles or old render and re-render the wall?",
+        a: "Yes. We remove failing render and wall tiles and re-render with a modern silicone, monocouche or EcoRend system. Our customers have used us to replace old render and to strip tiles from house fronts for a clean, modern finish.",
+      },
+      {
+        q: "Do you cover my area of Kent?",
+        a: "We cover Kent and the surrounding areas including Whitstable, Canterbury, Faversham, Maidstone, Tonbridge, Tunbridge Wells and the London border towns. Contact us to confirm we cover your location.",
+      },
+    ]}
+    reviewsTag="repair"
+    reviewsLead="Homeowners across Kent have trusted Jack to replace and repair their render. Here is what some of them said on Google."
+    meetJackLead="Jack Tewkesbury has been in the plastering and rendering trade for nearly 20 years, and repair work is where that experience matters most."
+    meetJackParagraphs={[
+      "As the owner of Kent Render Systems, Jack surveys and leads every render repair himself, from finding the cause of the damage to the final finish.",
+      "That experience means he can tell a cosmetic crack from a wall that needs re-rendering, and give you straight advice on which is right for your home.",
+      "Whether it is a single patch or a full re-render, you deal with Jack from the first visit to the final walk-round.",
+    ]}
+    relatedService={{
+      name: "Silicone Rendering Kent",
+      href: "/silicone-rendering-kent",
+      body: "If your render is beyond repair, silicone render is our most popular replacement. It is flexible, breathable and self-cleaning, and resists the cracking common in older sand and cement finishes.",
+    }}
+  />
+</Layout>
