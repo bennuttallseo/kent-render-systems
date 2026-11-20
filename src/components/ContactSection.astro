@@ -1,4 +1,7 @@
 ---
+import PullQuote from "./PullQuote.astro";
+import ReviewTrustLine from "./ReviewTrustLine.astro";
+
 const phone = "07707 564597";
 const phoneHref = "tel:+447707564597";
 const email = "info@kentrendersystems.co.uk";
@@ -97,6 +100,10 @@ const icons: Record<string, string> = {
         </li>
       ))}
     </ul>
+    <div class="contact-trust">
+      <ReviewTrustLine />
+      <PullQuote name="Iris" phrase="Communication was spot on" />
+    </div>
     <p class="areas-note">
       We cover Kent and the London border areas, including Bromley and Sidcup.
       See the full list of <a href="/areas-we-cover">areas we cover</a>.
@@ -115,6 +122,12 @@ const icons: Record<string, string> = {
       grid-template-columns: 1.2fr 0.8fr;
       gap: 56px;
     }
+  }
+
+  .contact-trust {
+    display: grid;
+    gap: 14px;
+    margin: 28px 0 0;
   }
 
   /* Form */

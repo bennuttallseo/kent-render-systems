@@ -1,0 +1,214 @@
+---
+import {
+  GBP_REVIEW_URL,
+  selectReviews,
+  splitReview,
+} from "../data/reviewsConfig";
+
+interface Props {
+  tag: string;
+  count?: number;
+  town?: string;
+  // Reviewer names to show first, under featuredHeading.
+  lead?: string[];
+  featuredHeading?: string;
+  restHeading?: string;
+  includeShort?: boolean;
+  id?: string;
+  variant?: "default" | "blue";
+  intro?: string;
+}
+
+const {
+  tag,
+  count = 3,
+  town,
+  lead = [],
+  featuredHeading,
+  restHeading,
+  includeShort = false,
+  id,
+  variant = "default",
+  intro = "We are proud of the work we do and the reputation we have built with our clients and homeowners across Kent. Here is what some of them have said on Google.",
+} = Astro.props;
+
+const selected = selectReviews({ tag, count, town, lead, includeShort });
+const groups =
+  featuredHeading && lead.length
+    ? [
+        { heading: featuredHeading, items: selected.slice(0, lead.length) },
+        { heading: restHeading, items: selected.slice(lead.length) },
+      ]
+    : [{ heading: undefined, items: selected }];
+
+const sectionClass = variant === "blue" ? "section reviews-bar" : "section";
+---
+
+<section class={sectionClass} id={id}>
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">Testimonials</p>
+      <h2>What our customers say</h2>
+      <p class="lead">{intro}</p>
+    </div>
+
+    {groups.filter((g) => g.items.length).map((group) => (
+      <div class="reviews-group">
+        {group.heading && <h3 class="reviews-group-heading">{group.heading}</h3>}
+        <ul class="reviews-grid">
+          {group.items.map((review) => {
+            const { head, tail } = splitReview(review.text);
+            return (
+              <li class="review-card">
+                <figure>
+                  <blockquote>
+                    <p>
+                      {head}
+                      {tail && <span class="review-more" data-review-more>{tail}</span>}
+                    </p>
+                  </blockquote>
+                  {tail && (
+                    <button class="review-toggle" type="button" aria-expanded="false" data-review-toggle>
+                      Read more
+                    </button>
+                  )}
+                  <figcaption>
+                    <span class="review-name">{review.name}</span>
+                    <span class="review-source">Google review</span>
+                  </figcaption>
+                </figure>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    ))}
+
+    <p class="reviews-cta">
+      <a href={GBP_REVIEW_URL} target="_blank" rel="noopener">
+        Reviewed us already? Leave yours on Google
+      </a>
+    </p>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>("[data-review-toggle]").forEach((btn) => {
+    const card = btn.closest(".review-card");
+    card?.classList.add("is-collapsed");
+    btn.addEventListener("click", () => {
+      const open = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!open));
+      btn.textContent = open ? "Read more" : "Show less";
+      card?.classList.toggle("is-collapsed", open);
+    });
+  });
+</script>
+
+<style>
+  .reviews-bar {
+    background:
+      radial-gradient(900px 420px at 15% 0%, rgba(30, 91, 184, 0.42), transparent 60%),
+      linear-gradient(150deg, #15203b, #1d2c50);
+  }
+  .reviews-bar .eyebrow {
+    color: var(--gold);
+  }
+  .reviews-bar h2,
+  .reviews-bar .reviews-group-heading {
+    color: #fff;
+  }
+  .reviews-bar .lead {
+    color: #c7d0da;
+  }
+  .reviews-group + .reviews-group {
+    margin-top: 40px;
+  }
+  .reviews-group-heading {
+    margin: 0 0 18px;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  .reviews-grid {
+    list-style: none;
+    margin: 8px 0 0;
+    padding: 0;
+    display: grid;
+    gap: 20px;
+  }
+  @media (min-width: 720px) {
+    .reviews-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1020px) {
+    .reviews-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .review-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 24px;
+  }
+  .review-card figure {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .review-card blockquote {
+    margin: 0;
+    flex: 1;
+  }
+  .review-card blockquote p {
+    margin: 0;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+  .review-card.is-collapsed .review-more {
+    display: none;
+  }
+  .review-toggle {
+    align-self: flex-start;
+    margin-top: 10px;
+    padding: 0;
+    background: none;
+    border: 0;
+    color: var(--terracotta);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .review-toggle:hover {
+    text-decoration: underline;
+  }
+  .review-card figcaption {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .review-name {
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .review-source {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .reviews-cta {
+    margin: 28px 0 0;
+    text-align: center;
+  }
+  .reviews-cta a {
+    font-weight: 600;
+  }
+  .reviews-bar .reviews-cta a {
+    color: #fff;
+  }
+</style>

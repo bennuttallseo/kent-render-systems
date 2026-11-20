@@ -1,6 +1,6 @@
 ---
 import ContactSection from "./ContactSection.astro";
-import GoogleReviewsSection from "./GoogleReviewsSection.astro";
+import Testimonials from "./Testimonials.astro";
 import ServiceMap from "./ServiceMap.astro";
 import WorkGallery from "./WorkGallery.astro";
 
@@ -215,7 +215,7 @@ const localSecondImageAlt = localImage2Alt ?? localImageAlt;
   </div>
 </section>
 
-<GoogleReviewsSection />
+<Testimonials tag="location" town={town} />
 
 <WorkGallery />
 

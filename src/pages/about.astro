@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import GoogleReviewsSection from "../components/GoogleReviewsSection.astro";
+import Testimonials from "../components/Testimonials.astro";
 
 const phone = "07707 564597";
 const phoneHref = "tel:+447707564597";
@@ -85,9 +85,14 @@ const checkIcon = '<path d="M20 6 9 17l-5-5"/>';
   </section>
 
   <!-- SECTION 2b — Reviews -->
-  <GoogleReviewsSection
+  <Testimonials
+    tag="about"
+    count={6}
+    lead={["Craig Deakin", "Alex Wear, Wear Builders Kent Ltd", "Dave Boorman"]}
+    featuredHeading="Trusted by Kent builders"
+    restHeading="And by homeowners across Kent"
     variant="blue"
-    lead="Homeowners across Kent trust Jack with their rendering. Here is what a few of them have said about working with Kent Render Systems."
+    intro="Builders and homeowners across Kent trust Jack with their rendering. Here is what a few of them have said about working with Kent Render Systems."
   />
 
   <!-- SECTION 4 — Accreditations -->

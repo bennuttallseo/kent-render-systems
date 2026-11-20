@@ -1,7 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ContactSection from "../components/ContactSection.astro";
-import GoogleReviewsSection from "../components/GoogleReviewsSection.astro";
+import Testimonials from "../components/Testimonials.astro";
+import ReviewTrustLine from "../components/ReviewTrustLine.astro";
 import { locationHrefByLabel } from "../data/locationHub";
 
 const areaHrefByLabel = locationHrefByLabel;
@@ -270,6 +271,9 @@ const icons: Record<string, string> = {
         <div class="hero-cta">
           <a class="btn" href="/contact">Get Your Free Quote</a>
           <a class="btn btn--ghost" href="/contact">View Our Work</a>
+        </div>
+        <div class="hero-trust">
+          <ReviewTrustLine tone="light" />
         </div>
       </div>
 
@@ -695,7 +699,7 @@ const icons: Record<string, string> = {
   </section>
 
   <!-- SECTION 12 — Reviews -->
-  <GoogleReviewsSection id="reviews" />
+  <Testimonials id="reviews" tag="home" count={6} />
 
   <!-- SECTION 13 — FAQ -->
   <section class="section faq-section" id="faq">
@@ -833,6 +837,9 @@ const icons: Record<string, string> = {
     flex-wrap: wrap;
     gap: 14px;
     margin-bottom: 0;
+  }
+  .hero-trust {
+    margin-top: 18px;
   }
   .hero-cta .btn--ghost {
     --btn-fg: #fff;

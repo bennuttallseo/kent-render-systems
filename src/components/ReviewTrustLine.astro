@@ -1,0 +1,36 @@
+---
+import { REVIEW_COUNT } from "../data/reviewsConfig";
+
+interface Props {
+  tone?: "light" | "dark";
+}
+
+const { tone = "dark" } = Astro.props;
+---
+
+<p class:list={["review-trust", `review-trust--${tone}`]}>
+  <span class="review-trust-stars" aria-hidden="true">★★★★★</span>
+  {REVIEW_COUNT} five-star Google reviews
+</p>
+
+<style>
+  .review-trust {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  .review-trust--dark {
+    color: var(--ink);
+  }
+  .review-trust--light {
+    color: #fff;
+  }
+  .review-trust-stars {
+    color: #f5b301;
+    letter-spacing: 1px;
+    font-size: 1.05rem;
+  }
+</style>

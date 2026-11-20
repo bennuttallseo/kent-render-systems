@@ -1,0 +1,42 @@
+---
+import { findReview } from "../data/reviewsConfig";
+
+interface Props {
+  name: string;
+  // Must be an exact phrase from that person's review in reviews.json.
+  phrase: string;
+}
+
+const { name, phrase } = Astro.props;
+const review = findReview(name);
+if (!review.text.includes(phrase)) {
+  throw new Error(`PullQuote: "${phrase}" is not in ${name}'s review`);
+}
+---
+
+<figure class="pull-quote">
+  <blockquote>“{phrase}”</blockquote>
+  <figcaption>{review.name}, Google review</figcaption>
+</figure>
+
+<style>
+  .pull-quote {
+    margin: 0;
+    padding: 14px 18px;
+    border-left: 3px solid var(--terracotta);
+    background: var(--white);
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+  .pull-quote blockquote {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--ink);
+  }
+  .pull-quote figcaption {
+    margin-top: 4px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+</style>

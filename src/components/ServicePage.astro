@@ -1,7 +1,8 @@
 ---
 import ContactSection from "./ContactSection.astro";
-import GoogleReviewsSection from "./GoogleReviewsSection.astro";
+import Testimonials from "./Testimonials.astro";
 import MeetJackTrust from "./MeetJackTrust.astro";
+import PullQuote from "./PullQuote.astro";
 import ServiceMap from "./ServiceMap.astro";
 
 interface Benefit {
@@ -55,6 +56,7 @@ interface Props {
   process: ProcessStep[];
   faqs: Faq[];
   reviewsLead: string;
+  reviewsTag: string;
   meetJackLead: string;
   meetJackParagraphs: string[];
   relatedService?: { name: string; href: string; body: string };
@@ -86,6 +88,7 @@ const {
   process,
   faqs,
   reviewsLead,
+  reviewsTag,
   meetJackLead,
   meetJackParagraphs,
   relatedService,
@@ -286,6 +289,9 @@ const phoneIcon =
         <h2>{pricingTitle}</h2>
       </div>
       {pricingParagraphs.map((p) => <p>{p}</p>)}
+      <div class="pricing-quote">
+        <PullQuote name="Colleen Kadwill" phrase="Price was very good as well" />
+      </div>
       <a class="btn" href="/contact">Request a Free Quote</a>
     </div>
     <ul class="pricing-points card">
@@ -319,7 +325,7 @@ const phoneIcon =
   </div>
 </section>
 
-<GoogleReviewsSection lead={reviewsLead} />
+<Testimonials tag={reviewsTag} intro={reviewsLead} />
 
 <ServiceMap />
 
@@ -610,6 +616,9 @@ const phoneIcon =
     color: var(--ink-soft);
   }
 
+  .pricing-quote {
+    margin: 4px 0 24px;
+  }
   .pricing-grid {
     display: grid;
     gap: 32px;

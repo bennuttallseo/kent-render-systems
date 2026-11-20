@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ContactSection from "../components/ContactSection.astro";
+import Testimonials from "../components/Testimonials.astro";
 
 const phone = "07707 564597";
 const phoneHref = "tel:+447707564597";
@@ -37,6 +38,14 @@ const phoneIcon =
   <section class="section">
     <ContactSection />
   </section>
+
+  <!-- SECTION 4a — Reviews -->
+  <Testimonials
+    tag="contact"
+    count={6}
+    includeShort
+    intro="Clean, tidy and on time. Here is what Kent homeowners have said on Google about working with Jack."
+  />
 
   <!-- SECTION 4b — Map -->
   <section class="section section--sand">
